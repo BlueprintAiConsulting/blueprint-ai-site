@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blueprint AI Consulting Co.</title>
+  <meta name="description" content="Blueprint AI Consulting Co. designs and implements practical AI systems that simplify operations using the tools you already use." />
+  <style>
+    :root{
+      --bg:#070c18;
+      --text:#e9eefc;
+      --muted:#b7c3ee;
+      --blue:#3aa0ff;
+      --blue2:#66d0ff;
+      --ok:#7dffb1;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1120px;
+      --grid: linear-gradient(to right, rgba(140,190,255,.08) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(140,190,255,.08) 1px, transparent 1px);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(900px 600px at 15% 10%, rgba(58,160,255,.22), transparent 60%),
+        radial-gradient(700px 500px at 85% 15%, rgba(102,208,255,.14), transparent 60%),
+        radial-gradient(900px 700px at 50% 100%, rgba(58,160,255,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.35;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:10px 0;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+    .mark{
+      width:42px; height:42px; border-radius:999px;
+      border:1px solid rgba(120,180,255,.30);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(102,208,255,.20), transparent 55%),
+        radial-gradient(circle at 70% 70%, rgba(58,160,255,.16), transparent 55%),
+        rgba(10,18,45,.55);
+      box-shadow: 0 0 0 6px rgba(58,160,255,.06);
+      position:relative;
+    }
+    .mark:before, .mark:after{
+      content:"";
+      position:absolute;
+      left:50%; top:50%;
+      width:18px; height:18px;
+      border:2px solid rgba(233,238,252,.80);
+      border-left:0; border-bottom:0;
+      transform: translate(-50%,-60%) rotate(45deg);
+      border-radius:2px;
+      opacity:.9;
+    }
+    .mark:after{
+      width:0; height:0; border:none;
+      left:50%; top:54%;
+      transform: translate(-50%,-50%);
+      box-shadow:
+        -10px 10px 0 0 rgba(233,238,252,.85),
+        10px 10px 0 0 rgba(233,238,252,.85);
+      filter: blur(.1px);
+    }
+    .brand-title{display:flex; flex-direction:column; letter-spacing:.2px;}
+    .brand-title strong{font-size:14px}
+    .brand-title span{font-size:12px; color:var(--muted)}
+    .navlinks{display:flex; gap:16px; align-items:center}
+    .navlinks a{text-decoration:none; color:var(--muted); font-size:13px; padding:8px 10px; border-radius:12px;}
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(120,180,255,.22);
+      background: rgba(12,20,48,.55);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:650;
+      font-size:14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    }
+    .btn:hover{border-color: rgba(120,180,255,.38); background: rgba(12,20,48,.70)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(58,160,255,.95), rgba(102,208,255,.75));
+      border-color: rgba(102,208,255,.55);
+      color:#061023;
+      box-shadow: 0 14px 40px rgba(58,160,255,.25);
+    }
+    .btn.primary:hover{filter:brightness(1.05)}
+    .btn.alt{background: rgba(255,255,255,.06);}
+
+    .hero{
+      margin-top:18px;
+      border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.18);
+      background:
+        radial-gradient(700px 500px at 0% 0%, rgba(58,160,255,.20), transparent 55%),
+        radial-gradient(700px 500px at 100% 0%, rgba(102,208,255,.14), transparent 55%),
+        rgba(10,16,40,.55);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:0;
+      background-image: var(--grid);
+      background-size: 44px 44px;
+      opacity:.7;
+      mask-image: radial-gradient(circle at 30% 20%, black 10%, transparent 68%);
+      pointer-events:none;
+    }
+    .hero-inner{padding:46px 22px; display:grid; gap:22px}
+    @media (min-width: 900px){
+      .hero-inner{grid-template-columns: 1.15fr .85fr; align-items:center; padding:60px 54px}
+    }
+    h1{margin:0; font-size:42px; line-height:1.06; letter-spacing:-.6px;
+      text-shadow: 0 0 22px rgba(102,208,255,.10);}
+    @media (min-width: 900px){ h1{font-size:56px} }
+    .sub{margin:12px 0 0 0; font-size:16px; color:var(--muted); max-width: 62ch;}
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .trust{margin-top:14px; font-size:13px; color:rgba(233,238,252,.78);
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+    .dot{width:8px; height:8px; border-radius:50%; background: var(--ok);
+      box-shadow: 0 0 22px rgba(125,255,177,.25);}
+
+    .card{border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(7,12,24,.50);
+      padding:18px;}
+    .card h3{margin:0 0 8px 0; font-size:14px; letter-spacing:.2px}
+    .card p{margin:0; color:var(--muted); font-size:13px}
+    .stack{display:grid; gap:12px}
+
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .pill{font-size:12px; color:rgba(233,238,252,.86);
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(255,255,255,.04);
+      padding:8px 10px; border-radius:999px;}
+
+    section{margin-top:22px}
+    .grid2{display:grid; gap:14px}
+    @media (min-width: 900px){ .grid2{grid-template-columns: 1fr 1fr} }
+    .grid3{display:grid; gap:14px}
+    @media (min-width: 900px){ .grid3{grid-template-columns: 1fr 1fr 1fr} }
+    .kicker{font-size:12px; color: rgba(102,208,255,.90);
+      letter-spacing:.18em; text-transform:uppercase;}
+    h2{margin:8px 0 0 0; font-size:26px; letter-spacing:-.2px}
+    .list{margin:12px 0 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:8px 0}
+    .offer{display:flex; flex-direction:column; gap:10px; height:100%;}
+    .offer strong{font-size:15px}
+    .small{font-size:12px; color:var(--muted)}
+
+    .cta{
+      margin-top:22px;
+      border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.18);
+      background:
+        radial-gradient(600px 420px at 20% 20%, rgba(58,160,255,.16), transparent 60%),
+        rgba(10,16,40,.55);
+      box-shadow: var(--shadow);
+      padding:22px;
+      display:grid;
+      gap:14px;
+    }
+    @media (min-width: 900px){
+      .cta{grid-template-columns: 1.2fr .8fr; align-items:start; padding:28px 28px}
+    }
+    footer{
+      margin:26px 0 10px;
+      color:rgba(233,238,252,.60);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .note{font-size:12px; color:rgba(233,238,252,.66); margin:0}
+    .contact-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Blueprint AI Consulting Co. Home">
+        <div class="mark" aria-hidden="true"></div>
+        <div class="brand-title">
+          <strong>Blueprint AI Consulting Co.</strong>
+          <span>AI systems around the tools you already use</span>
+        </div>
+      </a>
+
+      <div class="navlinks" aria-label="Primary">
+        <a href="#what">What we do</a>
+        <a href="#offers">Offers</a>
+        <a href="#values">Values</a>
+        <a class="btn" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </nav>
+
+    <header id="top" class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="kicker">Blueprint AI Consulting Co.</div>
+          <h1>Optimize your systems.<br/>Win back your life.</h1>
+          <p class="sub">
+            We build practical AI systems that remove manual work, reduce chaos, and make your business easier to run, using the tools you already know.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">Book a call</a>
+            <a class="btn" href="#offers">See offers</a>
+          </div>
+
+          <div class="trust">
+            <span class="dot" aria-hidden="true"></span>
+            <span>No tool pushing, no hype, systems that get used.</span>
+          </div>
+
+          <div class="pillrow" aria-label="Highlights">
+            <span class="pill">Automation</span>
+            <span class="pill">Workflow design</span>
+            <span class="pill">Training and adoption</span>
+            <span class="pill">Ongoing optimization</span>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <h3>Typical outcomes</h3>
+            <p>Fewer manual steps. Faster follow-up. Cleaner handoffs. Better visibility. Less stress.</p>
+          </div>
+          <div class="card">
+            <h3>Best fit</h3>
+            <p>Service businesses, small teams, and operators who want clarity and execution, not another tool.</p>
+          </div>
+          <div class="card">
+            <h3>Speed</h3>
+            <p>Start with an audit. Build the system. Train the team. Iterate based on real usage.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="what">
+      <div class="kicker">What we do</div>
+      <h2>AI systems that connect what you already use</h2>
+      <div class="grid2">
+        <div class="card">
+          <p>
+            We design and implement AI systems that connect your existing tools into one simple workflow.
+            We cut busywork, tighten communication, and help you run operations with less friction.
+          </p>
+          <ul class="list">
+            <li>Audit your workflow and identify bottlenecks</li>
+            <li>Design the system and automations</li>
+            <li>Build and deploy inside your current tools</li>
+            <li>Train your team and document everything</li>
+            <li>Support and improve based on results</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Common problems we fix</h3>
+          <ul class="list">
+            <li>Leads fall through the cracks</li>
+            <li>Follow-ups are inconsistent</li>
+            <li>Scheduling and handoffs are messy</li>
+            <li>Information lives in texts and memory</li>
+            <li>Too many tools, no real system</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers">
+      <div class="kicker">Offers</div>
+      <h2>Pick the level of help you need</h2>
+
+      <div class="grid3">
+        <div class="card offer">
+          <strong>Systems Audit and Action Plan</strong>
+          <div class="small">Clarity first. Know what to fix and what to ignore.</div>
+          <ul class="list">
+            <li>Workflow map and bottlenecks</li>
+            <li>Impact-ranked opportunities</li>
+            <li>30-day build plan</li>
+          </ul>
+          <div class="small">Values: clarity, precision, durable systems</div>
+        </div>
+
+        <div class="card offer">
+          <strong>Blueprint Buildout</strong>
+          <div class="small">We build the system around your current tools.</div>
+          <ul class="list">
+            <li>End-to-end workflow implementation</li>
+            <li>Automations for intake, follow-up, updates</li>
+          </ul>
+          <div class="small">Values: systems over tools, execution, adoption</div>
+        </div>
+
+        <div class="card offer">
+          <strong>Optimization Retainer</strong>
+          <div class="small">Ongoing improvements without restarting.</div>
+          <ul class="list">
+            <li>Monthly system tuning</li>
+            <li>New automations as needs change</li>
+            <li>Priority support and fixes</li>
+          </ul>
+          <div class="small">Values: execution, reliability, trust</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px" class="grid2">
+        <div class="card offer">
+          <strong>Team Training and Adoption</strong>
+          <div class="small">If the team is not using the system, nothing matters.</div>
+          <ul class="list">
+            <li>Training sessions</li>
+            <li>Simple operating rules</li>
+            <li>Quick reference guides</li>
+          </ul>
+          <div class="small">Values: people first, clarity, adoption</div>
+        </div>
+
+        <div class="card">
+          <h3>Not sure what you need</h3>
+          <p class="note">
+            Start with the Systems Audit. It gives you a clear plan, whether you build with us or not.
+          </p>
+          <div class="hero-actions" style="margin-top:12px">
+            <a class="btn primary" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">Book a call</a>
+            <a class="btn" href="#values">See values</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="values">
+      <div class="kicker">Values</div>
+      <h2>How we operate</h2>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Clarity over complexity</h3>
+          <p>If it does not simplify life, it is not worth building.</p>
+        </div>
+        <div class="card">
+          <h3>Build systems, not tool stacks</h3>
+          <p>We build an AI system around the tools you already use, so the team adopts it.</p>
+        </div>
+        <div class="card">
+          <h3>Systems beat hacks</h3>
+          <p>Shortcuts fail. Durable systems scale.</p>
+        </div>
+        <div class="card">
+          <h3>Execution matters</h3>
+          <p>AI only has value when it is implemented and used.</p>
+        </div>
+        <div class="card">
+          <h3>Trust through precision</h3>
+          <p>We do not overpromise. We build what works.</p>
+        </div>
+        <div class="card">
+          <h3>People first</h3>
+          <p>If your team hates it, the system failed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div>
+        <div class="kicker">Contact</div>
+        <h2>Schedule a call</h2>
+        <p class="sub">Pick a time that works, or call if you prefer.</p>
+        <div class="contact-actions">
+          <a class="btn primary" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">Open scheduling</a>
+          <a class="btn alt" href="tel:+17177798316">Call my cell</a>
+        </div>
+      </div>
+
+      <div class="card" style="padding:0; overflow:hidden">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/blueprintaiconsultingco"
+          style="min-width:320px;height:760px;">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Blueprint AI Consulting Co.</div>
+      <div>Optimize your systems. Win back your life.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
