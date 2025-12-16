@@ -240,4 +240,335 @@
     .list li{margin:8px 0}
     .offer{display:flex; flex-direction:column; gap:10px; height:100%;}
     .offer strong{font-size:15px}
-    .small{font-size:12px; color:var(--
+    .small{font-size:12px; color:var(--muted)}
+
+    .pricebar{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
+    .pricechip{
+      font-size:12px; color:rgba(233,238,252,.92);
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(255,255,255,.04);
+      padding:10px 12px;
+      border-radius:14px;
+    }
+
+    .tag{
+      margin-top:auto;
+      font-size:12px;
+      color:rgba(233,238,252,.92);
+      display:flex; align-items:center; gap:10px;
+      border-top:1px solid rgba(120,180,255,.12);
+      padding-top:12px;
+    }
+    .dot2{width:8px; height:8px; border-radius:50%; background: rgba(102,208,255,.95); box-shadow: 0 0 22px rgba(102,208,255,.25);}
+
+    footer{
+      margin-top:26px;
+      padding:22px 24px;
+      border-top:1px solid rgba(120,180,255,.14);
+      color:rgba(233,238,252,.70);
+      font-size:12px;
+      display:flex; justify-content:space-between; align-items:center; gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-left{display:flex; align-items:center; gap:12px}
+    .footer-logo{width:28px; height:28px; border-radius:8px; object-fit:contain}
+
+    .cta{
+      margin-top:18px;
+      border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.18);
+      background: rgba(10,16,40,.55);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      padding:18px;
+      display:grid;
+      gap:14px;
+    }
+    @media (min-width: 900px){ .cta{grid-template-columns: 1fr 1.2fr; padding:22px} }
+
+    .calendly-inline-widget{border-radius: 16px; overflow:hidden;}
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="logo.png" alt="Blueprint AI Consulting Co. logo" />
+          <div class="brand-title">
+            <strong>Blueprint AI Consulting Co.</strong>
+            <span>Practical AI systems built around your tools</span>
+          </div>
+        </a>
+
+        <div class="navlinks">
+          <a href="#what">What we do</a>
+          <a href="#offers">Offers</a>
+          <a href="#values">Values</a>
+          <a class="btn alt" href="#contact">Contact</a>
+          <a class="btn primary" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">
+            Book a session<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div id="top" class="wrap">
+    <main id="main" role="main">
+      <header class="hero" aria-label="Hero">
+        <div class="hero-inner">
+          <div>
+            <div class="kicker">Blueprint AI Consulting Co.</div>
+            <h1>Optimize your systems. Simplify your business. Win back your time.</h1>
+            <p class="sub">
+              We build practical AI systems that reduce busywork, tighten handoffs, and bring clarity to daily operations — using the tools you already use.
+            </p>
+
+            <div class="hero-actions" aria-label="Primary calls to action">
+              <a class="btn primary" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">
+                Book a discovery session<span class="sr-only"> (opens in a new tab)</span>
+              </a>
+              <a class="btn" href="#offers">View offers</a>
+              <a class="btn alt" href="#what">How it works</a>
+            </div>
+
+            <div class="trust" aria-label="Trust indicators">
+              <span class="dot" aria-hidden="true"></span>
+              <span>Local, practical builds. No overpromises. Fast implementation.</span>
+            </div>
+
+            <div class="pillrow" aria-label="Common tool stack">
+              <div class="pill">Google Workspace</div>
+              <div class="pill">Email</div>
+              <div class="pill">Sheets</div>
+              <div class="pill">Calendars</div>
+              <div class="pill">Text templates</div>
+              <div class="pill">Simple automations</div>
+            </div>
+          </div>
+
+          <div class="stack" aria-label="Hero highlights">
+            <div class="card">
+              <h3>What you get</h3>
+              <p>Cleaner workflows, less follow-up chaos, and repeatable systems your team actually uses.</p>
+            </div>
+            <div class="card">
+              <h3>Where it helps most</h3>
+              <p>Lead capture, follow-ups, scheduling, job tracking, checklists, and operational visibility.</p>
+            </div>
+            <div class="card">
+              <h3>Best fit</h3>
+              <p>Local operators and small teams who want clarity and execution, not another tool.</p>
+            </div>
+            <div class="card">
+              <h3>Start simple</h3>
+              <p>Begin with a Pilot or Audit, then build the core process and scale from there.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="what" aria-label="What we do">
+        <div class="kicker">What we do</div>
+        <h2>AI systems that connect what you already use</h2>
+        <div class="grid2">
+          <div class="card">
+            <p>
+              We design and implement AI systems that connect your existing tools into one simple workflow.
+              We cut busywork, tighten communication, and help you run operations with less friction.
+            </p>
+            <ul class="list">
+              <li>Audit your workflow and identify bottlenecks</li>
+              <li>Design the system and automations</li>
+              <li>Build and deploy inside your current tools</li>
+              <li>Train your team and document everything</li>
+              <li>Support and improve based on results</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Common problems we fix</h3>
+            <ul class="list">
+              <li>Leads fall through the cracks</li>
+              <li>Follow-ups are inconsistent</li>
+              <li>Scheduling and handoffs are messy</li>
+              <li>Information lives in texts and memory</li>
+              <li>Too many tools, no real system</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="offers" aria-label="Offers">
+        <div class="kicker">Offers</div>
+        <h2>Offers and pricing</h2>
+        <p class="sub">Pilot-first options for local small business operators. Discovery required before any Buildout or Blueprint.</p>
+
+        <div class="pricebar" aria-label="Price summary">
+          <div class="pricechip">Pilot: $300</div>
+          <div class="pricechip">Audit: $500</div>
+          <div class="pricechip">Workshop: $450</div>
+          <div class="pricechip">Sprint: $750</div>
+          <div class="pricechip">Core: from $1,200</div>
+          <div class="pricechip">Blueprint: from $2,500</div>
+          <div class="pricechip">Retainer: $600 per month</div>
+        </div>
+
+        <div style="margin-top:14px" class="grid3">
+          <div class="card offer">
+            <strong>Founding Client Pilot - $300</strong>
+            <div class="small">Timeline: 14 days | 14-day money-back guarantee</div>
+            <ul class="list">
+              <li>Map one workflow end-to-end</li>
+              <li>Implement one quick-win system</li>
+              <li>Simple handoff and next-step plan</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Best for a first quick win and testimonial</div>
+          </div>
+
+          <div class="card offer">
+            <strong>Systems Audit - $500</strong>
+            <div class="small">Timeline: 3 to 5 days | Clarity before building</div>
+            <ul class="list">
+              <li>Workflow map and bottleneck diagnosis</li>
+              <li>Top 3 fixes with a prioritized plan</li>
+              <li>Tool recommendations and rollout steps</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Deliverable: written plan you can follow</div>
+          </div>
+
+          <div class="card offer">
+            <strong>AI Team Workshop - $450</strong>
+            <div class="small">Timeline: 1 day | 2 hours live</div>
+            <ul class="list">
+              <li>Role-based training using your real tasks and examples</li>
+              <li>Prompting fundamentals, quality control, and safe-use rules</li>
+              <li>Build a shared prompt and template pack the team can reuse</li>
+              <li>Deliverables: custom prompt library, PDFs, and reusable templates</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Fast alignment for the whole team</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="grid3">
+          <div class="card offer">
+            <strong>Core Buildout - from $1,200</strong>
+            <div class="small">Timeline: 1 to 2 weeks | One core process implemented</div>
+            <ul class="list">
+              <li>One system built and implemented</li>
+              <li>Templates, tracking, and light automation</li>
+              <li>Short training so it sticks</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Includes setup, configuration, templates</div>
+          </div>
+
+          <div class="card offer">
+            <strong>AI Coaching Sprint - $750</strong>
+            <div class="small">Timeline: 2 weeks | 4 sessions (45 minutes each)</div>
+            <ul class="list">
+              <li>1:1 coaching tailored to your role and daily workflow</li>
+              <li>Build and refine prompts, templates, and a repeatable process</li>
+              <li>Between-session support for quick questions and revisions</li>
+              <li>Deliverables: custom prompt library, PDFs, and your workflow pack</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Best for a single operator leveling up fast</div>
+          </div>
+
+          <div class="card offer">
+            <strong>AI Office Hours Retainer - $600 per month</strong>
+            <div class="small">Timeline: ongoing | 60 minutes per week included</div>
+            <ul class="list">
+              <li>Weekly 1:1 office hours to apply AI to real work, live</li>
+              <li>Async questions between sessions, with quick responses</li>
+              <li>Small fixes, prompt upgrades, templates, and light workflow improvements</li>
+              <li>Monthly recap: wins, priority list, and next-step plan</li>
+              <li>Additional time: $120 per hour, billed in 30-minute blocks</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Upgrade or pause anytime</div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="grid2">
+          <div class="card offer">
+            <strong>The Blueprint - from $2,500</strong>
+            <div class="small">Timeline: 3 to 6 weeks | Multi-workflow operator build</div>
+            <ul class="list">
+              <li>Multiple workflows built and standardized</li>
+              <li>Weekly dashboard and operating rhythm</li>
+              <li>Team handoff and cleanup</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Builds a simple operating system for the business</div>
+          </div>
+
+          <div class="card">
+            <h3>Support</h3>
+            <p>
+              Support included: text or call with questions during normal business hours. If something turns into hands-on work outside the package, we handle it under the relevant offer terms.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="margin-top:14px">
+          <a class="btn primary" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">
+            Book a discovery session<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </section>
+
+      <section id="values" aria-label="Values">
+        <div class="kicker">Values</div>
+        <h2>How we operate</h2>
+
+        <div class="grid3">
+          <div class="card"><h3>Clarity over complexity</h3><p>If it does not simplify life, it is not worth building.</p></div>
+          <div class="card"><h3>Build systems, not tool stacks</h3><p>We build an AI system around the tools you already use, so the team adopts it.</p></div>
+          <div class="card"><h3>Systems beat hacks</h3><p>Shortcuts fail. Durable systems scale.</p></div>
+          <div class="card"><h3>Execution matters</h3><p>AI only has value when it is implemented and used.</p></div>
+          <div class="card"><h3>Trust through precision</h3><p>We do not overpromise. We build what works.</p></div>
+          <div class="card"><h3>People first</h3><p>If your team hates it, the system failed.</p></div>
+        </div>
+      </section>
+
+      <section id="contact" class="cta" aria-label="Contact">
+        <div>
+          <div class="kicker">Contact</div>
+          <h2>Schedule a discovery session</h2>
+          <p class="sub">Pick a time that works.</p>
+          <div class="hero-actions" style="margin-top:12px">
+            <a class="btn primary" href="https://calendly.com/blueprintaiconsultingco" target="_blank" rel="noopener">
+              Open scheduling<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+          <p style="margin-top:10px;color:rgba(233,238,252,.72);font-size:12px">
+            We do not sell tools. We build an AI system around the tools you already use.
+          </p>
+        </div>
+
+        <div class="card" style="padding:0; overflow:hidden" role="region" aria-label="Calendly scheduling widget">
+          <div class="calendly-inline-widget"
+               data-url="https://calendly.com/blueprintaiconsultingco"
+               style="min-width:320px;height:760px;"
+               title="Calendly scheduling widget"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer-left">
+        <img class="footer-logo" src="logo.png" alt="Blueprint AI Consulting Co. logo" />
+        <div>© <span id="year"></span> Blueprint AI Consulting Co.</div>
+      </div>
+      <div>Optimize your systems. Simplify your business. Win back your time.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
