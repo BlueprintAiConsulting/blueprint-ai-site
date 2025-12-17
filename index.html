@@ -229,21 +229,6 @@
     }
     @media (min-width: 900px){ .cta{grid-template-columns: 1fr 1.2fr; padding:22px} }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Blueprint AI Consulting Co.",
-        "url": "https://drewhufnagle-code.github.io/blueprint-ai-site/",
-        "logo": "https://drewhufnagle-code.github.io/blueprint-ai-site/logo.png",
-        "description": "Blueprint AI Consulting Co. builds practical AI systems around the tools you already use."
-      }
-    ]
-  }
-  </script>
 </head>
 
 <body>
@@ -362,11 +347,14 @@
       <section id="offers" aria-label="Offers">
         <div class="kicker">Offers</div>
         <h2>Offers and pricing</h2>
+        <p class="sub">Pilot-first options for local small business operators.</p>
+
         <div class="pricebar">
           <div class="pricechip">Pilot: $300</div>
           <div class="pricechip">Analysis: $500</div>
           <div class="pricechip">Workshop: $450</div>
           <div class="pricechip">Sprint: $750</div>
+          <div class="pricechip">Digital Front Door: $850</div>
           <div class="pricechip">Core: from $1,200</div>
           <div class="pricechip">Blueprint: from $2,500</div>
         </div>
@@ -381,6 +369,18 @@
               <li>Simple handoff and next-step plan</li>
             </ul>
           </div>
+
+          <div class="card offer">
+            <strong>The Digital Front Door - from $850</strong>
+            <div class="small">High-Speed Landing Page Revamp</div>
+            <ul class="list">
+              <li>Custom mobile-optimized landing page</li>
+              <li>Pre-integrated Google Calendar & Lead Forms</li>
+              <li>System-ready layout to feed your AI tools</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Perfect entry-point for new systems</div>
+          </div>
+
           <div class="card offer">
             <strong>Systems Analysis - $500</strong>
             <div class="small">Timeline: 3 to 5 days</div>
@@ -390,6 +390,9 @@
               <li>Tool recommendations and rollout steps</li>
             </ul>
           </div>
+        </div>
+
+        <div style="margin-top:14px" class="grid3">
           <div class="card offer">
             <strong>AI Team Workshop - $450</strong>
             <div class="small">Timeline: 1 day | 2 hours live</div>
@@ -397,6 +400,26 @@
               <li>Role-based training using your real tasks</li>
               <li>Prompting fundamentals and safe-use rules</li>
               <li>Custom prompt library for the team</li>
+            </ul>
+          </div>
+
+          <div class="card offer">
+            <strong>Core Buildout - from $1,200</strong>
+            <div class="small">Timeline: 1 to 2 weeks</div>
+            <ul class="list">
+              <li>One full system built and implemented</li>
+              <li>Templates, tracking, and automation setup</li>
+              <li>Short training so the new system sticks</li>
+            </ul>
+          </div>
+
+          <div class="card offer">
+            <strong>AI Coaching Sprint - $750</strong>
+            <div class="small">Timeline: 2 weeks | 4 sessions</div>
+            <ul class="list">
+              <li>1:1 coaching for daily workflow speed</li>
+              <li>Refine custom prompts and templates</li>
+              <li>Direct support for quick workflow wins</li>
             </ul>
           </div>
         </div>
@@ -476,7 +499,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    // Removed old Calendly script
   </script>
 </body>
 </html>
