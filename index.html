@@ -51,31 +51,17 @@
     .wrap{max-width:var(--max); margin:0 auto; padding:14px 24px 24px}
 
     .skip-link{
-      position:absolute;
-      left:-9999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
     }
     .skip-link:focus{
-      position:static;
-      width:auto;
-      height:auto;
-      padding:10px 12px;
-      margin:10px 0;
-      border-radius:12px;
-      border:1px solid rgba(120,180,255,.22);
-      background: rgba(12,20,48,.85);
-      display:inline-block;
+      position:static; width:auto; height:auto; padding:10px 12px; margin:10px 0;
+      border-radius:12px; border:1px solid rgba(120,180,255,.22);
+      background: rgba(12,20,48,.85); display:inline-block;
     }
 
     .site-header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background: rgba(7,12,24,.72);
-      backdrop-filter: blur(10px);
+      position:sticky; top:0; z-index:1000;
+      background: rgba(7,12,24,.72); backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(120,180,255,.14);
     }
     .header-inner{max-width:var(--max); margin:0 auto; padding:10px 24px;}
@@ -83,12 +69,8 @@
     .nav{display:flex; align-items:center; justify-content:space-between; gap:16px;}
     .brand{display:flex; align-items:center; gap:14px; text-decoration:none; min-width:0;}
     .brand-logo{
-      width:60px;
-      height:60px;
-      border-radius:14px;
-      object-fit:contain;
-      filter: drop-shadow(0 10px 25px rgba(58,160,255,.18));
-      flex:0 0 auto;
+      width:60px; height:60px; border-radius:14px; object-fit:contain;
+      filter: drop-shadow(0 10px 25px rgba(58,160,255,.18)); flex:0 0 auto;
     }
     .brand-title{display:flex; flex-direction:column; gap:2px; letter-spacing:.2px; min-width:0;}
     .brand-title strong{font-size:16px; line-height:1.05;}
@@ -100,57 +82,31 @@
 
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(120,180,255,.22);
-      background: rgba(12,20,48,.55);
-      color:var(--text);
-      text-decoration:none;
-      font-weight:650;
-      font-size:14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.22);
-      white-space:nowrap;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid rgba(120,180,255,.22); background: rgba(12,20,48,.55);
+      color:var(--text); text-decoration:none; font-weight:650; font-size:14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.22); white-space:nowrap;
     }
     .btn:hover{border-color: rgba(120,180,255,.38); background: rgba(12,20,48,.70)}
     .btn.primary{
       background: linear-gradient(135deg, rgba(58,160,255,.95), rgba(102,208,255,.75));
-      border-color: rgba(102,208,255,.55);
-      color:#061023;
+      border-color: rgba(102,208,255,.55); color:#061023;
       box-shadow: 0 14px 40px rgba(58,160,255,.25);
     }
     .btn.primary:hover{filter:brightness(1.05)}
     .btn.alt{background: rgba(255,255,255,.06);}
 
-    .sr-only{
-      position:absolute;
-      width:1px;
-      height:1px;
-      padding:0;
-      margin:-1px;
-      overflow:hidden;
-      clip:rect(0,0,0,0);
-      white-space:nowrap;
-      border:0;
-    }
-
     .hero{
-      margin-top:18px;
-      border-radius: var(--radius);
-      border:1px solid rgba(120,180,255,.18);
+      margin-top:18px; border-radius: var(--radius); border:1px solid rgba(120,180,255,.18);
       background:
         radial-gradient(700px 500px at 0% 0%, rgba(58,160,255,.20), transparent 55%),
         radial-gradient(700px 500px at 100% 0%, rgba(102,208,255,.14), transparent 55%),
         rgba(10,16,40,.55);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
+      box-shadow: var(--shadow); overflow:hidden; position:relative;
     }
     .hero:before{
-      content:"";
-      position:absolute; inset:0;
-      background-image: var(--grid);
-      background-size: 44px 44px;
-      opacity:.7;
+      content:""; position:absolute; inset:0; background-image: var(--grid);
+      background-size: 44px 44px; opacity:.7;
       mask-image: radial-gradient(circle at 30% 20%, black 10%, transparent 68%);
       pointer-events:none;
     }
@@ -187,47 +143,31 @@
 
     .pricebar{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
     .pricechip{
-      font-size:12px; color:rgba(233,238,252,.92);
-      border:1px solid rgba(120,180,255,.16);
-      background: rgba(255,255,255,.04);
-      padding:10px 12px;
-      border-radius:14px;
+      font-size:12px; color:rgba(233,238,252,.92); border:1px solid rgba(120,180,255,.16);
+      background: rgba(255,255,255,.04); padding:10px 12px; border-radius:14px;
     }
 
     .tag{
-      margin-top:auto;
-      font-size:12px;
-      color:rgba(233,238,252,.92);
-      display:flex; align-items:center; gap:10px;
-      border-top:1px solid rgba(120,180,255,.12);
+      margin-top:auto; font-size:12px; color:rgba(233,238,252,.92);
+      display:flex; align-items:center; gap:10px; border-top:1px solid rgba(120,180,255,.12);
       padding-top:12px;
     }
     .dot2{width:8px; height:8px; border-radius:50%; background: rgba(102,208,255,.95); box-shadow: 0 0 22px rgba(102,208,255,.25);}
 
     footer{
-      margin-top:26px;
-      padding:22px 24px;
-      border-top:1px solid rgba(120,180,255,.14);
-      color:rgba(233,238,252,.70);
-      font-size:12px;
-      display:flex; justify-content:space-between; align-items:center; gap:12px;
-      flex-wrap:wrap;
+      margin-top:26px; padding:22px 24px; border-top:1px solid rgba(120,180,255,.14);
+      color:rgba(233,238,252,.70); font-size:12px; display:flex; justify-content:space-between;
+      align-items:center; gap:12px; flex-wrap:wrap;
     }
     .footer-left{display:flex; align-items:center; gap:12px}
     .footer-logo{width:28px; height:28px; border-radius:8px; object-fit:contain}
 
     .cta{
-      margin-top:18px;
-      border-radius: var(--radius);
-      border:1px solid rgba(120,180,255,.18);
-      background: rgba(10,16,40,.55);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      padding:18px;
-      display:grid;
-      gap:14px;
+      margin-top:18px; border-radius: var(--radius); border:1px solid rgba(120,180,255,.18);
+      background: rgba(10,16,40,.55); box-shadow: var(--shadow); overflow:hidden;
+      padding:22px; display:grid; gap:14px;
     }
-    @media (min-width: 900px){ .cta{grid-template-columns: 1fr 1.2fr; padding:22px} }
+    @media (min-width: 900px){ .cta{grid-template-columns: 1fr 1.2fr; align-items: center;} }
   </style>
 </head>
 
@@ -347,8 +287,6 @@
       <section id="offers" aria-label="Offers">
         <div class="kicker">Offers</div>
         <h2>Offers and pricing</h2>
-        <p class="sub">Pilot-first options for local small business operators.</p>
-
         <div class="pricebar">
           <div class="pricechip">Pilot: $300</div>
           <div class="pricechip">Analysis: $500</div>
@@ -388,38 +326,6 @@
               <li>Workflow map and bottleneck diagnosis</li>
               <li>Top 3 fixes with a prioritized plan</li>
               <li>Tool recommendations and rollout steps</li>
-            </ul>
-          </div>
-        </div>
-
-        <div style="margin-top:14px" class="grid3">
-          <div class="card offer">
-            <strong>AI Team Workshop - $450</strong>
-            <div class="small">Timeline: 1 day | 2 hours live</div>
-            <ul class="list">
-              <li>Role-based training using your real tasks</li>
-              <li>Prompting fundamentals and safe-use rules</li>
-              <li>Custom prompt library for the team</li>
-            </ul>
-          </div>
-
-          <div class="card offer">
-            <strong>Core Buildout - from $1,200</strong>
-            <div class="small">Timeline: 1 to 2 weeks</div>
-            <ul class="list">
-              <li>One full system built and implemented</li>
-              <li>Templates, tracking, and automation setup</li>
-              <li>Short training so the new system sticks</li>
-            </ul>
-          </div>
-
-          <div class="card offer">
-            <strong>AI Coaching Sprint - $750</strong>
-            <div class="small">Timeline: 2 weeks | 4 sessions</div>
-            <ul class="list">
-              <li>1:1 coaching for daily workflow speed</li>
-              <li>Refine custom prompts and templates</li>
-              <li>Direct support for quick workflow wins</li>
             </ul>
           </div>
         </div>
@@ -467,23 +373,24 @@
         <div>
           <div class="kicker">Contact</div>
           <h2>Schedule a discovery session</h2>
-          <p class="sub">Select a service below to see real-time availability on Google Calendar.</p>
-          <div class="hero-actions" style="margin-top:12px">
+          <p class="sub">Select a service to view my real-time availability and book your session directly through Google Calendar.</p>
+          <div class="hero-actions" style="margin-top:20px">
             <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener">
-              Open Booking Page
+              Open Booking Calendar
             </a>
           </div>
+          <p style="margin-top:10px;color:rgba(233,238,252,.72);font-size:12px">
+            Secure booking powered by Google Workspace.
+          </p>
         </div>
 
-        <div class="card" style="padding:0; overflow:hidden; min-height:700px; background: #ffffff;" role="region">
-          <iframe 
-            src="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" 
-            style="border: 0" 
-            width="100%" 
-            height="700" 
-            frameborder="0" 
-            scrolling="yes">
-          </iframe>
+        <div class="card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(120, 180, 255, 0.3);">
+          <div style="font-size: 40px; margin-bottom: 20px;">📅</div>
+          <h3 style="margin:0 0 10px 0;">Live Availability</h3>
+          <p style="color:var(--muted); font-size:14px; margin-bottom:20px;">Google Calendar booking is now active for Pilot, Analysis, and Workshop sessions.</p>
+          <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener" style="width:100%;">
+            Check Available Dates
+          </a>
         </div>
       </section>
     </main>
