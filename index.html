@@ -5,21 +5,50 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <title>Blueprint AI Consulting Co. | Practical AI for Small Business</title>
-  <meta name="description" content="Stop the busywork. Blueprint AI Consulting Co. builds practical, automated systems using the tools you already use like Google Workspace and Email." />
+  <meta name="description" content="Blueprint AI Consulting Co. builds practical AI systems around the tools you already use." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#070c18" />
-
-  <meta property="og:title" content="Blueprint AI Consulting Co. | Optimize Your Systems" />
-  <meta property="og:description" content="Practical AI systems built around your existing tools. Win back your time today." />
-  <meta property="og:image" content="https://drewhufnagle-code.github.io/blueprint-ai-site/logo.png" />
-  <meta property="og:url" content="https://drewhufnagle-code.github.io/blueprint-ai-site/" />
-  <meta property="og:type" content="website" />
 
   <link rel="canonical" href="https://drewhufnagle-code.github.io/blueprint-ai-site/" />
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="logo.png" />
   
   <link rel="preconnect" href="https://calendar.google.com" />
+
+  <meta property="og:title" content="Blueprint AI Consulting Co." />
+  <meta property="og:description" content="Practical AI systems built around your existing tools." />
+  <meta property="og:url" content="https://drewhufnagle-code.github.io/blueprint-ai-site/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://drewhufnagle-code.github.io/blueprint-ai-site/logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Blueprint AI Consulting Co.",
+        "url": "https://drewhufnagle-code.github.io/blueprint-ai-site/",
+        "logo": "https://drewhufnagle-code.github.io/blueprint-ai-site/logo.png",
+        "description": "Blueprint AI Consulting Co. builds practical AI systems around the tools you already use."
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Blueprint AI Consulting Co.",
+        "makesOffer": [
+          { "@type": "Offer", "name": "Founding Client Pilot", "price": "300" },
+          { "@type": "Offer", "name": "The Digital Front Door", "price": "850" },
+          { "@type": "Offer", "name": "Systems Analysis", "price": "500" },
+          { "@type": "Offer", "name": "AI Team Workshop", "price": "450" },
+          { "@type": "Offer", "name": "AI Coaching Sprint", "price": "750" },
+          { "@type": "Offer", "name": "Core Buildout", "price": "1200" },
+          { "@type": "Offer", "name": "The Blueprint", "price": "2500" },
+          { "@type": "Offer", "name": "AI Office Hours Retainer", "price": "600" }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root{
@@ -36,6 +65,7 @@
               linear-gradient(to bottom, rgba(140,190,255,.08) 1px, transparent 1px);
     }
     *{box-sizing:border-box}
+    
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -47,6 +77,7 @@
       color:var(--text);
       line-height:1.35;
     }
+    
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:14px 24px 24px}
 
@@ -72,7 +103,7 @@
       width:60px; height:60px; border-radius:14px; object-fit:contain;
       filter: drop-shadow(0 10px 25px rgba(58,160,255,.18)); flex:0 0 auto;
     }
-    .brand-title{display:flex; flex-direction:column; gap:2px; letter-spacing:.2px; min-width:0;}
+    .brand-title{display:flex; flex-direction:column; gap:2px; letter-spacing:.2px;}
     .brand-title strong{font-size:16px; line-height:1.05;}
     .brand-title span{font-size:13px; color:var(--muted);}
 
@@ -135,18 +166,20 @@
     @media (min-width: 900px){ .grid3{grid-template-columns: 1fr 1fr 1fr} }
     .kicker{font-size:12px; color: rgba(102,208,255,.90); letter-spacing:.18em; text-transform:uppercase;}
     h2{margin:8px 0 0 0; font-size:26px; letter-spacing:-.2px}
-    .list{margin:12px 0 0 0; padding-left:18px; color:var(--muted)}
-    .list li{margin:8px 0}
+    .list{margin:12px 0 0 0; padding-left:18px; color:var(--muted); font-size: 13px;}
+    .list li{margin:6px 0}
     .offer{display:flex; flex-direction:column; gap:10px; height:100%;}
-    .offer strong{font-size:15px}
-    .small{font-size:12px; color:var(--muted)}
+    .offer strong{font-size:15px; display:block;}
+    .small{font-size:12px; color:var(--blue); margin-bottom: 4px; display:block;}
 
     .pricebar{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
     .pricechip{
-      font-size:12px; color:rgba(233,238,252,.92); border:1px solid rgba(120,180,255,.16);
-      background: rgba(255,255,255,.04); padding:10px 12px; border-radius:14px;
+      font-size:12px; color:rgba(233,238,252,.92);
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(255,255,255,.04);
+      padding:10px 12px;
+      border-radius:14px;
     }
-
     .tag{
       margin-top:auto; font-size:12px; color:rgba(233,238,252,.92);
       display:flex; align-items:center; gap:10px; border-top:1px solid rgba(120,180,255,.12);
@@ -154,20 +187,23 @@
     }
     .dot2{width:8px; height:8px; border-radius:50%; background: rgba(102,208,255,.95); box-shadow: 0 0 22px rgba(102,208,255,.25);}
 
+    /* New Compact Contact Section Styles */
+    .cta-compact{
+      margin-top:26px; border-radius: var(--radius); border:1px solid rgba(120,180,255,.18);
+      background: rgba(10,16,40,.65); box-shadow: var(--shadow); overflow:hidden;
+      padding:32px 24px; text-align:center;
+      display:flex; flex-direction:column; align-items:center; gap:18px;
+    }
+    .cta-compact h2{margin:0; font-size:24px;}
+    .cta-compact p{max-width:50ch; margin:0; color:var(--muted);}
+
     footer{
       margin-top:26px; padding:22px 24px; border-top:1px solid rgba(120,180,255,.14);
-      color:rgba(233,238,252,.70); font-size:12px; display:flex; justify-content:space-between;
-      align-items:center; gap:12px; flex-wrap:wrap;
+      color:rgba(233,238,252,.70); font-size:12px;
+      display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
     }
     .footer-left{display:flex; align-items:center; gap:12px}
     .footer-logo{width:28px; height:28px; border-radius:8px; object-fit:contain}
-
-    .cta{
-      margin-top:18px; border-radius: var(--radius); border:1px solid rgba(120,180,255,.18);
-      background: rgba(10,16,40,.55); box-shadow: var(--shadow); overflow:hidden;
-      padding:22px; display:grid; gap:14px;
-    }
-    @media (min-width: 900px){ .cta{grid-template-columns: 1fr 1.2fr; align-items: center;} }
   </style>
 </head>
 
@@ -188,9 +224,7 @@
         <div class="navlinks">
           <a href="#what">What we do</a>
           <a href="#offers">Offers</a>
-          <a href="#testimonials">Testimonials</a>
           <a href="#values">Values</a>
-          <a class="btn alt" href="#contact">Contact</a>
           <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener">
             Book a session
           </a>
@@ -210,7 +244,7 @@
               We build practical AI systems that reduce busywork, tighten handoffs, and bring clarity to daily operations — using the tools you already use.
             </p>
 
-            <div class="hero-actions">
+            <div class="hero-actions" aria-label="Primary calls to action">
               <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener">
                 Book a discovery session
               </a>
@@ -218,12 +252,12 @@
               <a class="btn alt" href="#what">How it works</a>
             </div>
 
-            <div class="trust">
+            <div class="trust" aria-label="Trust indicators">
               <span class="dot" aria-hidden="true"></span>
               <span>Local, practical builds. No overpromises. Fast implementation.</span>
             </div>
 
-            <div class="pillrow">
+            <div class="pillrow" aria-label="Common tool stack">
               <div class="pill">Google Workspace</div>
               <div class="pill">Email</div>
               <div class="pill">Sheets</div>
@@ -233,7 +267,7 @@
             </div>
           </div>
 
-          <div class="stack">
+          <div class="stack" aria-label="Hero highlights">
             <div class="card">
               <h3>What you get</h3>
               <p>Cleaner workflows, less follow-up chaos, and repeatable systems your team actually uses.</p>
@@ -287,74 +321,102 @@
       <section id="offers" aria-label="Offers">
         <div class="kicker">Offers</div>
         <h2>Offers and pricing</h2>
-        <div class="pricebar">
+        <p class="sub">Clear pricing for local small business operators.</p>
+        
+        <div class="pricebar" aria-label="Price summary">
           <div class="pricechip">Pilot: $300</div>
           <div class="pricechip">Analysis: $500</div>
           <div class="pricechip">Workshop: $450</div>
+          <div class="pricechip">Front Door: $850</div>
           <div class="pricechip">Sprint: $750</div>
-          <div class="pricechip">Digital Front Door: $850</div>
           <div class="pricechip">Core: from $1,200</div>
           <div class="pricechip">Blueprint: from $2,500</div>
+          <div class="pricechip">Retainer: $600/mo</div>
         </div>
 
         <div style="margin-top:14px" class="grid3">
           <div class="card offer">
             <strong>Founding Client Pilot - $300</strong>
-            <div class="small">Timeline: 14 days</div>
+            <span class="small">14 days | Quick Win</span>
             <ul class="list">
               <li>Map one workflow end-to-end</li>
-              <li>Implement one quick-win system</li>
+              <li>Implement one automation</li>
               <li>Simple handoff and next-step plan</li>
             </ul>
           </div>
 
           <div class="card offer">
             <strong>The Digital Front Door - from $850</strong>
-            <div class="small">High-Speed Landing Page Revamp</div>
+            <span class="small">1 Week | Web Revamp</span>
             <ul class="list">
               <li>Custom mobile-optimized landing page</li>
-              <li>Pre-integrated Google Calendar & Lead Forms</li>
-              <li>System-ready layout to feed your AI tools</li>
+              <li>Integrated Calendar & Lead Forms</li>
+              <li>Built to feed your AI systems</li>
             </ul>
-            <div class="tag"><span class="dot2"></span>Perfect entry-point for new systems</div>
           </div>
 
           <div class="card offer">
             <strong>Systems Analysis - $500</strong>
-            <div class="small">Timeline: 3 to 5 days</div>
+            <span class="small">3-5 Days | Diagnostic</span>
             <ul class="list">
-              <li>Workflow map and bottleneck diagnosis</li>
-              <li>Top 3 fixes with a prioritized plan</li>
-              <li>Tool recommendations and rollout steps</li>
+              <li>Workflow map and bottleneck check</li>
+              <li>Top 3 priority fixes identified</li>
+              <li>Tool recommendations and plan</li>
             </ul>
           </div>
         </div>
-      </section>
 
-      <section id="testimonials" aria-label="Testimonials">
-        <div class="kicker">Testimonials</div>
-        <h2>Real results for local businesses</h2>
-        <div class="grid3" style="margin-top:20px;">
-          <div class="card">
-            <p style="font-style: italic; color: var(--muted);">"Replace this with your first customer's quote. Mention a specific win, like how many hours they saved."</p>
-            <div style="margin-top:15px; display:flex; align-items:center; gap:10px;">
-              <div style="width:40px; height:40px; border-radius:50%; background:rgba(58,160,255,0.2); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--blue2);">A</div>
-              <div><strong>Customer Name</strong><span style="display:block; font-size:12px; color:var(--blue);">Company / Role</span></div>
-            </div>
+        <div style="margin-top:14px" class="grid3">
+          <div class="card offer">
+            <strong>AI Team Workshop - $450</strong>
+            <span class="small">1 Day | Team Training</span>
+            <ul class="list">
+              <li>Role-based training on real tasks</li>
+              <li>Prompting fundamentals & safety</li>
+              <li>Custom prompt library included</li>
+            </ul>
           </div>
-          <div class="card">
-            <p style="font-style: italic; color: var(--muted);">"Replace this with your second customer's quote. Focus on the tools they already had."</p>
-            <div style="margin-top:15px; display:flex; align-items:center; gap:10px;">
-              <div style="width:40px; height:40px; border-radius:50%; background:rgba(58,160,255,0.2); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--blue2);">B</div>
-              <div><strong>Customer Name</strong><span style="display:block; font-size:12px; color:var(--blue);">Company / Role</span></div>
-            </div>
+
+          <div class="card offer">
+            <strong>AI Coaching Sprint - $750</strong>
+            <span class="small">2 Weeks | 1:1 Coaching</span>
+            <ul class="list">
+              <li>4 sessions tailored to your role</li>
+              <li>Build personal workflow prompts</li>
+              <li>Direct support for daily tasks</li>
+            </ul>
           </div>
-          <div class="card" style="border-style: dashed; border-color: rgba(120, 180, 255, 0.4);">
-            <p style="font-style: italic; color: var(--muted);">"Currently working with our next Pilot client. Your success story could go here."</p>
-            <div style="margin-top:15px; display:flex; align-items:center; gap:10px;">
-              <div style="width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center;">...</div>
-              <div><strong>Founding Client</strong><span style="display:block; font-size:12px; color:var(--blue);">Pilot Phase</span></div>
-            </div>
+
+          <div class="card offer">
+            <strong>AI Office Hours - $600/mo</strong>
+            <span class="small">Monthly Retainer</span>
+            <ul class="list">
+              <li>Weekly 1:1 office hours live</li>
+              <li>Async support for quick fixes</li>
+              <li>Monthly priority planning</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="grid2">
+          <div class="card offer">
+            <strong>Core Buildout - from $1,200</strong>
+            <span class="small">1-2 Weeks | Full System</span>
+            <ul class="list">
+              <li>One complete system built (e.g., Hiring)</li>
+              <li>Templates, tracking, and automation</li>
+              <li>Team training for adoption</li>
+            </ul>
+          </div>
+
+          <div class="card offer">
+            <strong>The Blueprint - from $2,500</strong>
+            <span class="small">3-6 Weeks | Operations OS</span>
+            <ul class="list">
+              <li>Multiple workflows standardized</li>
+              <li>Weekly dashboard and operating rhythm</li>
+              <li>Full team handoff and cleanup</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -369,30 +431,17 @@
         </div>
       </section>
 
-      <section id="contact" class="cta" aria-label="Contact">
+      <section id="contact" class="cta-compact" aria-label="Contact">
         <div>
           <div class="kicker">Contact</div>
           <h2>Schedule a discovery session</h2>
-          <p class="sub">Select a service to view my real-time availability and book your session directly through Google Calendar.</p>
-          <div class="hero-actions" style="margin-top:20px">
-            <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener">
-              Open Booking Calendar
-            </a>
-          </div>
-          <p style="margin-top:10px;color:rgba(233,238,252,.72);font-size:12px">
-            Secure booking powered by Google Workspace.
-          </p>
+          <p>Select a service to view availability. Secure booking via Google Workspace.</p>
         </div>
-
-        <div class="card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(120, 180, 255, 0.3);">
-          <div style="font-size: 40px; margin-bottom: 20px;">📅</div>
-          <h3 style="margin:0 0 10px 0;">Live Availability</h3>
-          <p style="color:var(--muted); font-size:14px; margin-bottom:20px;">Google Calendar booking is now active for Pilot, Analysis, and Workshop sessions.</p>
-          <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener" style="width:100%;">
-            Check Available Dates
-          </a>
-        </div>
+        <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener" style="min-width:200px">
+          Open Booking Calendar
+        </a>
       </section>
+
     </main>
 
     <footer role="contentinfo">
