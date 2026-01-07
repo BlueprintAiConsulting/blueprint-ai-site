@@ -4,83 +4,89 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Blueprint AI Consulting Co. | Practical Systems & Coaching</title>
-  <meta name="description" content="Make AI Work for You. We build practical AI systems and provide coaching that reduces busywork." />
+  <title>Blueprint AI Consulting Co. | We Implement Real Systems Fast</title>
+  <meta name="description" content="We implement practical Artificial Intelligence (AI) systems and deploy custom apps for home service businesses, coaches, and operators who wear too many hats." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#070c18" />
 
-  <link rel="canonical" href="https://drewhufnagle-code.github.io/blueprint-ai-site/" />
+  <!-- Update if your canonical URL is different -->
+  <link rel="canonical" href="https://blueprintaiconsulting.github.io/new-creation-site/" />
 
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="logo.png" />
 
   <meta property="og:title" content="Blueprint AI Consulting Co." />
-  <meta property="og:description" content="Make AI Work for You. Not the Other Way Around." />
-  <meta property="og:url" content="https://drewhufnagle-code.github.io/blueprint-ai-site/" />
+  <meta property="og:description" content="We don’t just design concepts. We implement real-life solutions and deploy personalized apps for your business, fast." />
+  <meta property="og:url" content="https://blueprintaiconsulting.github.io/new-creation-site/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://drewhufnagle-code.github.io/blueprint-ai-site/logo.png" />
+  <meta property="og:image" content="logo.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blueprint AI Consulting Co." />
-  <meta name="twitter:description" content="Make AI Work for You. Not the Other Way Around." />
-  <meta name="twitter:image" content="https://drewhufnagle-code.github.io/blueprint-ai-site/logo.png" />
+  <meta name="twitter:description" content="We implement real-life solutions and deploy personalized apps for your business, fast." />
+  <meta name="twitter:image" content="logo.png" />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --bg:#070c18;
+      --panel: rgba(10,16,40,.55);
+      --panel2: rgba(7,12,24,.56);
       --text:#e9eefc;
-      /* BRIGHTER TEXT COLOR FOR READABILITY (#e2e8f0) */
-      --muted:#e2e8f0;
+      --muted:#cfd8ee;
+
       --blue:#3aa0ff;
       --blue2:#66d0ff;
-      --ok:#7dffb1;
+
+      /* Bright green accent (money hints / action / highlights) */
+      --green:#22e58b;
+      --green2:#7dffb1;
+
       --shadow: 0 20px 60px rgba(0,0,0,.45);
       --radius: 18px;
       --max: 1120px;
+
       --grid: linear-gradient(to right, rgba(140,190,255,.08) 1px, transparent 1px),
               linear-gradient(to bottom, rgba(140,190,255,.08) 1px, transparent 1px);
     }
+
     *{box-sizing:border-box}
-    
-    /* GLOBAL IMAGE FIX */
-    img { max-width: 100%; height: auto; }
+    img{max-width:100%; height:auto}
 
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       background:
         radial-gradient(900px 600px at 15% 10%, rgba(58,160,255,.22), transparent 60%),
         radial-gradient(700px 500px at 85% 15%, rgba(102,208,255,.14), transparent 60%),
         radial-gradient(900px 700px at 50% 100%, rgba(58,160,255,.10), transparent 60%),
         var(--bg);
       color:var(--text);
-      line-height:1.5; /* Slightly increased for mobile readability */
+      line-height:1.55;
       -webkit-font-smoothing: antialiased;
     }
     a{color:inherit}
-    
-    /* Responsive Wrapper padding */
+
     .wrap{
-        max-width:var(--max); 
-        margin:0 auto; 
-        padding:14px 16px 24px; /* Reduced side padding for mobile */
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 16px 24px;
     }
-    @media (min-width: 768px) {
-        .wrap { padding: 14px 24px 24px; }
+    @media (min-width: 768px){
+      .wrap{padding:14px 24px 24px}
     }
 
     .skip-link{
-      position:absolute;
-      left:-9999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
+      position:absolute; left:-9999px; top:auto;
+      width:1px; height:1px; overflow:hidden;
     }
     .skip-link:focus{
       position:static;
-      width:auto;
-      height:auto;
+      width:auto; height:auto;
       padding:10px 12px;
       margin:10px 0;
       border-radius:12px;
@@ -89,60 +95,94 @@
       display:inline-block;
     }
 
+    /* Header */
     .site-header{
       position:sticky;
       top:0;
       z-index:1000;
-      background: rgba(7,12,24,.85); /* Slightly darker for better contrast */
+      background: rgba(7,12,24,.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(120,180,255,.14);
     }
-    .header-inner{max-width:var(--max); margin:0 auto; padding:10px 16px;}
-    @media (min-width: 768px) { .header-inner { padding: 10px 24px; } }
-
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px;}
-    .brand{display:flex; align-items:center; gap:14px; text-decoration:none; min-width:0;}
+    .header-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:10px 16px;
+    }
+    @media (min-width: 768px){
+      .header-inner{padding:10px 24px}
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      min-width:0;
+    }
     .brand-logo{
-      width:50px; /* Slightly smaller on mobile */
-      height:50px;
-      border-radius:12px;
+      width:52px; height:52px;
+      border-radius:14px;
       object-fit:contain;
       filter: drop-shadow(0 10px 25px rgba(58,160,255,.18));
       flex:0 0 auto;
     }
-    @media (min-width: 768px) { .brand-logo { width: 60px; height: 60px; border-radius: 14px; } }
-
-    .brand-title{display:flex; flex-direction:column; gap:2px; letter-spacing:.2px; min-width:0;}
-    .brand-title strong{font-size:15px; line-height:1.1;}
-    @media (min-width: 768px) { .brand-title strong { font-size: 16px; } }
-    .brand-title span{font-size:12px; color:var(--muted);}
-    @media (min-width: 768px) { .brand-title span { font-size: 13px; } }
-
-    /* MOBILE NAV OPTIMIZATION */
-    .navlinks{display:flex; gap:8px; align-items:center; justify-content:flex-end;}
-    
-    @media (max-width: 900px) {
-        .nav { flex-direction: column; align-items: flex-start; gap: 12px; }
-        .navlinks {
-            width: 100%;
-            justify-content: flex-start;
-            overflow-x: auto; /* Horizontal Scroll */
-            padding-bottom: 8px; /* Space for scroll */
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
-            /* Hide scrollbar visually but allow scrolling */
-            scrollbar-width: none; 
-        }
-        .navlinks::-webkit-scrollbar { display: none; }
-        .navlinks a { 
-            background: rgba(255,255,255,0.03); 
-            border: 1px solid rgba(255,255,255,0.05);
-        }
+    .brand-title{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      letter-spacing:.2px;
+      min-width:0;
+    }
+    .brand-title strong{font-size:15px; line-height:1.1}
+    .brand-title span{font-size:12px; color:var(--muted)}
+    @media (min-width: 900px){
+      .brand-title strong{font-size:16px}
+      .brand-title span{font-size:13px}
     }
 
-    .navlinks a{text-decoration:none; color:var(--muted); font-size:13px; padding:8px 12px; border-radius:12px;}
-    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .navlinks{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      justify-content:flex-end;
+    }
 
+    .navlinks a.link{
+      text-decoration:none;
+      color:var(--muted);
+      font-size:13px;
+      padding:8px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      background: transparent;
+      white-space:nowrap;
+    }
+    .navlinks a.link:hover{
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      border-color: rgba(255,255,255,.06);
+    }
+
+    @media (max-width: 980px){
+      .nav{flex-direction:column; align-items:flex-start; gap:12px;}
+      .navlinks{
+        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
+        padding-bottom:8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width:none;
+      }
+      .navlinks::-webkit-scrollbar{display:none;}
+    }
+
+    /* Buttons */
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 14px;
@@ -151,46 +191,53 @@
       background: rgba(12,20,48,.55);
       color:var(--text);
       text-decoration:none;
-      font-weight:650;
+      font-weight:700;
       font-size:14px;
       box-shadow: 0 10px 30px rgba(0,0,0,.22);
       white-space:nowrap;
-      cursor: pointer;
-      transition: transform 0.1s ease;
+      cursor:pointer;
+      transition: transform 0.1s ease, filter 0.1s ease;
     }
-    .btn:active { transform: scale(0.98); }
-    .btn:hover{border-color: rgba(120,180,255,.38); background: rgba(12,20,48,.70)}
+    .btn:active{transform: scale(0.98);}
+    .btn:hover{
+      border-color: rgba(120,180,255,.38);
+      background: rgba(12,20,48,.70);
+    }
+
+    /* Primary = Green (money hint / action) */
     .btn.primary{
+      background: linear-gradient(135deg, rgba(34,229,139,.95), rgba(125,255,177,.75));
+      border-color: rgba(125,255,177,.55);
+      color:#041114;
+      box-shadow: 0 14px 40px rgba(34,229,139,.22);
+    }
+    .btn.primary:hover{filter:brightness(1.04);}
+
+    /* Secondary = Blue */
+    .btn.secondary{
       background: linear-gradient(135deg, rgba(58,160,255,.95), rgba(102,208,255,.75));
       border-color: rgba(102,208,255,.55);
       color:#061023;
       box-shadow: 0 14px 40px rgba(58,160,255,.25);
     }
-    .btn.primary:hover{filter:brightness(1.05)}
-    .btn.alt{background: rgba(255,255,255,.06);}
+    .btn.secondary:hover{filter:brightness(1.04);}
 
-    /* FIXED: Mobile Button Wrapping */
-    @media (max-width: 600px) {
-        .btn { 
-            white-space: normal; /* Allow text to wrap */
-            text-align: center;
-            height: auto; /* Allow height to grow */
-            line-height: 1.3;
-        }
+    .btn.ghost{
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.10);
+    }
+
+    @media (max-width: 600px){
+      .btn{white-space:normal; text-align:center; line-height:1.25;}
     }
 
     .sr-only{
-      position:absolute;
-      width:1px;
-      height:1px;
-      padding:0;
-      margin:-1px;
-      overflow:hidden;
-      clip:rect(0,0,0,0);
-      white-space:nowrap;
-      border:0;
+      position:absolute; width:1px; height:1px;
+      padding:0; margin:-1px; overflow:hidden;
+      clip:rect(0,0,0,0); white-space:nowrap; border:0;
     }
 
+    /* Hero */
     .hero{
       margin-top:18px;
       border-radius: var(--radius);
@@ -198,6 +245,7 @@
       background:
         radial-gradient(700px 500px at 0% 0%, rgba(58,160,255,.20), transparent 55%),
         radial-gradient(700px 500px at 100% 0%, rgba(102,208,255,.14), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(34,229,139,.10), transparent 60%),
         rgba(10,16,40,.55);
       box-shadow: var(--shadow);
       overflow:hidden;
@@ -208,138 +256,394 @@
       position:absolute; inset:0;
       background-image: var(--grid);
       background-size: 44px 44px;
-      opacity:.7;
+      opacity:.72;
       mask-image: radial-gradient(circle at 30% 20%, black 10%, transparent 68%);
       pointer-events:none;
     }
-    .hero-inner{padding:32px 18px; display:grid; gap:22px}
-    @media (min-width: 900px){ .hero-inner{grid-template-columns: 1.15fr .85fr; align-items:center; padding:60px 54px} }
-
-    h1{margin:0; font-size:32px; line-height:1.1; letter-spacing:-.6px; text-shadow: 0 0 22px rgba(102,208,255,.10);}
-    @media (min-width: 768px) { h1 { font-size: 40px; } }
-    @media (min-width: 900px){ h1{font-size:56px} }
-    
-    .sub{margin:12px 0 0 0; font-size:16px; color:var(--muted); max-width: 70ch;}
-    
-    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px}
-    /* Stack buttons on mobile */
-    @media (max-width: 600px) {
-        .hero-actions { flex-direction: column; }
-        .hero-actions .btn { width: 100%; padding: 16px; font-size: 16px; } 
+    .hero-inner{
+      padding:32px 18px;
+      display:grid;
+      gap:22px;
+      position:relative;
+    }
+    @media (min-width: 900px){
+      .hero-inner{
+        grid-template-columns: 1.2fr .8fr;
+        align-items:center;
+        padding:60px 54px;
+      }
     }
 
-    .trust{margin-top:14px; font-size:13px; color:rgba(233,238,252,.90); display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
-    .dot{width:8px; height:8px; border-radius:50%; background: var(--ok); box-shadow: 0 0 22px rgba(125,255,177,.25);}
+    .kicker{
+      font-size:12px;
+      color: rgba(102,208,255,.92);
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-weight:800;
+      margin-bottom: 10px;
+      display:block;
+    }
 
-    .card{border-radius: var(--radius); border:1px solid rgba(120,180,255,.16); background: rgba(7,12,24,.50); padding:18px;}
-    .card h3{margin:0 0 8px 0; font-size:14px; letter-spacing:.2px; color: var(--blue2);}
-    .card p{margin:0; color:var(--muted); font-size:13px}
-    .stack{display:grid; gap:12px}
+    h1{
+      margin:0;
+      font-size:32px;
+      line-height:1.08;
+      letter-spacing:-.6px;
+      text-shadow: 0 0 22px rgba(102,208,255,.10);
+    }
+    @media (min-width: 768px){ h1{font-size:42px;} }
+    @media (min-width: 900px){ h1{font-size:56px;} }
 
-    section{margin-top:32px}
-    
-    .grid2{display:grid; gap:14px; grid-template-columns: 1fr;}
-    @media (min-width: 900px){ .grid2{grid-template-columns: 1fr 1fr} }
-    
-    .grid3{display:grid; gap:14px; grid-template-columns: 1fr;}
-    @media (min-width: 900px){ .grid3{grid-template-columns: 1fr 1fr 1fr} }
+    .sub{
+      margin:12px 0 0 0;
+      font-size:16px;
+      color:var(--muted);
+      max-width: 75ch;
+    }
 
-    .kicker{font-size:12px; color: rgba(102,208,255,.90); letter-spacing:.18em; text-transform:uppercase; font-weight: 700; margin-bottom: 8px; display: block;}
-    h2{margin:0 0 16px 0; font-size:26px; letter-spacing:-.2px; line-height: 1.2;}
-    
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:22px;
+    }
+    @media (max-width: 600px){
+      .hero-actions{flex-direction:column;}
+      .hero-actions .btn{width:100%; padding:16px; font-size:16px;}
+    }
+
+    .trust-row{
+      margin-top:16px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      color: rgba(233,238,252,.88);
+      font-size:13px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(255,255,255,.04);
+    }
+    .dot{
+      width:9px; height:9px; border-radius:50%;
+      background: var(--green);
+      box-shadow: 0 0 22px rgba(34,229,139,.25);
+      flex:0 0 auto;
+    }
+    .dot.blue{
+      background: rgba(102,208,255,.95);
+      box-shadow: 0 0 22px rgba(102,208,255,.22);
+    }
+
+    /* Cards / Sections */
+    section{margin-top:34px}
+    h2{
+      margin:0 0 16px 0;
+      font-size:26px;
+      letter-spacing:-.2px;
+      line-height:1.2;
+    }
+    @media (min-width: 900px){
+      h2{font-size:30px}
+    }
+
+    .card{
+      border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.16);
+      background: var(--panel2);
+      padding:18px;
+    }
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:14px;
+      letter-spacing:.2px;
+      color: var(--blue2);
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .grid2{display:grid; gap:14px; grid-template-columns:1fr;}
+    .grid3{display:grid; gap:14px; grid-template-columns:1fr;}
+    @media (min-width: 900px){
+      .grid2{grid-template-columns:1fr 1fr;}
+      .grid3{grid-template-columns:1fr 1fr 1fr;}
+    }
+
     .list{margin:12px 0 0 0; padding-left:18px; color:var(--muted)}
     .list li{margin:8px 0}
-    .offer{display:flex; flex-direction:column; gap:10px; height:100%;}
-    .offer strong{font-size:15px; color: #fff;}
-    .small{font-size:12px; color:var(--muted)}
 
-    .pricebar{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(125,255,177,.28);
+      background: rgba(34,229,139,.10);
+      color: rgba(233,238,252,.94);
+      font-size:12px;
+      font-weight:700;
+      margin-top:12px;
+    }
+    .badge .dot{
+      width:8px; height:8px;
+      box-shadow: 0 0 18px rgba(34,229,139,.22);
+    }
+
+    /* Shipped work cards */
+    .work{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      height:100%;
+    }
+    .work strong{
+      font-size:15px;
+      color:#fff;
+      letter-spacing:-.1px;
+    }
+    .meta{
+      font-size:12px;
+      color:rgba(233,238,252,.78);
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(255,255,255,.04);
+      font-size:12px;
+      color: rgba(233,238,252,.88);
+    }
+    .chip.green{
+      border-color: rgba(125,255,177,.26);
+      background: rgba(34,229,139,.08);
+    }
+
+    .shot{
+      border-radius: 14px;
+      border:1px solid rgba(120,180,255,.14);
+      background:
+        radial-gradient(600px 260px at 15% 20%, rgba(58,160,255,.20), transparent 60%),
+        radial-gradient(520px 240px at 80% 10%, rgba(34,229,139,.16), transparent 62%),
+        rgba(7,12,24,.45);
+      padding:14px;
+      color: rgba(233,238,252,.85);
+      font-size:12px;
+    }
+    .shot img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.06);
+      display:block;
+    }
+    .shot .note{
+      margin:0;
+      color: rgba(233,238,252,.80);
+    }
+
+    /* Offers */
+    .pricebar{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
     .pricechip{
-      font-size:12px; color:rgba(233,238,252,.92);
+      font-size:12px;
+      color:rgba(233,238,252,.92);
       border:1px solid rgba(120,180,255,.16);
       background: rgba(255,255,255,.04);
       padding:10px 12px;
       border-radius:14px;
     }
+    .pricechip.green{
+      border-color: rgba(125,255,177,.26);
+      background: rgba(34,229,139,.08);
+    }
 
+    .offer{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      height:100%;
+    }
+    .offer strong{font-size:15px; color:#fff;}
+    .small{font-size:12px; color:rgba(233,238,252,.78)}
     .tag{
       margin-top:auto;
       font-size:12px;
-      color:rgba(233,238,252,.92);
-      display:flex; align-items:center; gap:10px;
+      color:rgba(233,238,252,.90);
+      display:flex;
+      align-items:center;
+      gap:10px;
       border-top:1px solid rgba(120,180,255,.12);
       padding-top:12px;
     }
-    .dot2{width:8px; height:8px; border-radius:50%; background: rgba(102,208,255,.95); box-shadow: 0 0 22px rgba(102,208,255,.25);}
+    .dot2{
+      width:8px; height:8px; border-radius:50%;
+      background: rgba(102,208,255,.95);
+      box-shadow: 0 0 22px rgba(102,208,255,.25);
+    }
+    .dot2.green{
+      background: var(--green);
+      box-shadow: 0 0 22px rgba(34,229,139,.22);
+    }
 
+    /* Lead magnet form */
+    .form{
+      display:grid;
+      gap:12px;
+      margin-top:12px;
+    }
+    .field{
+      display:grid;
+      gap:6px;
+    }
+    label{
+      font-size:12px;
+      color: rgba(233,238,252,.86);
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    input{
+      appearance:none;
+      width:100%;
+      border-radius:14px;
+      border:1px solid rgba(120,180,255,.18);
+      background: rgba(7,12,24,.55);
+      color: var(--text);
+      padding:12px 12px;
+      font-size:14px;
+      outline:none;
+    }
+    input:focus{
+      border-color: rgba(125,255,177,.44);
+      box-shadow: 0 0 0 3px rgba(34,229,139,.12);
+    }
+    .form-row{
+      display:grid;
+      gap:12px;
+    }
+    @media (min-width: 900px){
+      .form-row{grid-template-columns:1fr 1fr;}
+    }
+    .fineprint{
+      margin:10px 0 0 0;
+      font-size:12px;
+      color: rgba(233,238,252,.70);
+    }
+    .fineprint a{
+      color: rgba(125,255,177,.92);
+      text-decoration:none;
+    }
+
+    /* About */
+    .about-grid{
+      display:grid;
+      gap:18px;
+      align-items:start;
+    }
+    @media (min-width: 900px){
+      .about-grid{grid-template-columns:1.35fr .65fr; align-items:center;}
+    }
+    .profile-pic{
+      width:100%;
+      max-width:340px;
+      border-radius:14px;
+      border:1px solid rgba(120,180,255,.22);
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      display:block;
+      margin: 0 auto;
+    }
+    .mini-pic{
+      width:100%;
+      max-width:340px;
+      border-radius:14px;
+      border:1px solid rgba(125,255,177,.22);
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      display:block;
+      margin: 14px auto 0;
+    }
+
+    /* Testimonial */
+    .quote-card{
+      border-left: 4px solid rgba(34,229,139,.90);
+      text-align:left;
+    }
+    .quote-text{
+      font-size:16px;
+      font-style: italic;
+      color:#fff;
+      margin-bottom:16px;
+      display:block;
+      line-height:1.55;
+    }
+    .quote-author{
+      font-style: normal;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* CTA block */
+    .cta{
+      margin-top:18px;
+      border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.18);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      padding:24px 18px;
+      display:grid;
+      gap:18px;
+      align-items:center;
+      position:relative;
+    }
+    .cta:before{
+      content:"";
+      position:absolute; inset:0;
+      background-image: var(--grid);
+      background-size: 44px 44px;
+      opacity:.25;
+      mask-image: radial-gradient(circle at 25% 10%, black 10%, transparent 65%);
+      pointer-events:none;
+    }
+    .cta > *{position:relative;}
+    @media (min-width: 900px){
+      .cta{grid-template-columns: 1fr .65fr; padding:22px;}
+    }
+
+    /* Footer */
     footer{
       margin-top:26px;
       padding:22px 24px;
       border-top:1px solid rgba(120,180,255,.14);
-      color:rgba(233,238,252,.70);
+      color:rgba(233,238,252,.72);
       font-size:12px;
-      display:flex; justify-content:space-between; align-items:center; gap:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
       flex-wrap:wrap;
     }
     .footer-left{display:flex; flex-direction:column; gap:8px;}
     .footer-branding{display:flex; align-items:center; gap:12px;}
     .footer-logo{width:28px; height:28px; border-radius:8px; object-fit:contain}
-
-    .cta{
-      margin-top:18px;
-      border-radius: var(--radius);
-      border:1px solid rgba(120,180,255,.18);
-      background: rgba(10,16,40,.55);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      padding:24px 18px;
-      display:grid;
-      gap:24px;
-      align-items: center;
-    }
-    @media (min-width: 900px){ .cta{grid-template-columns: 1fr 0.5fr; padding:22px} }
-
-    /* NEW STYLES FOR ABOUT SECTION IMAGE */
-    .about-grid {
-      display: grid;
-      gap: 2rem;
-      align-items: start;
-    }
-    /* Stack on mobile, side-by-side on desktop */
-    @media (min-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1.5fr 1fr;
-        align-items: center;
-      }
-    }
-    .profile-pic {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 12px;
-      border: 2px solid rgba(120,180,255,.22);
-      box-shadow: 0 10px 30px rgba(0,0,0,.3);
-      display: block;
-      margin: 0 auto;
-    }
-    
-    /* TESTIMONIAL STYLE */
-    .quote-card {
-      text-align: left;
-      border-left: 4px solid var(--blue);
-    }
-    .quote-text {
-      font-size: 16px;
-      font-style: italic;
-      color: #fff;
-      margin-bottom: 16px;
-      display: block;
-      line-height: 1.5;
-    }
-    .quote-author {
-      font-style: normal;
-      color: var(--muted);
-      font-size: 14px;
-    }
   </style>
 </head>
 
@@ -353,18 +657,28 @@
           <img class="brand-logo" src="logo.png" alt="Blueprint AI Consulting Co. logo" />
           <div class="brand-title">
             <strong>Blueprint AI Consulting Co.</strong>
-            <span>Practical systems & coaching built around you.</span>
+            <span>Implement real systems. Deploy custom apps. Fast.</span>
           </div>
         </a>
 
         <div class="navlinks">
-          <a href="#what">How it works</a>
-          <a href="#offers">Offers</a>
-          <a href="#values">Values</a>
-          <a href="#about">About</a>
-          <a class="btn alt" href="#contact">Contact</a>
-          <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener">
-            Book<span class="sr-only"> a session</span>
+          <a class="link" href="#how">How it works</a>
+          <a class="link" href="#work">What we’ve shipped</a>
+          <a class="link" href="#offers">Offers</a>
+          <a class="link" href="#blueprint">Free AI Blueprint</a>
+          <a class="link" href="#about">About</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+
+          <!-- PRIMARY: Messenger -->
+          <a class="btn primary" href="YOUR_MESSENGER_URL_HERE" target="_blank" rel="noopener">
+            Message me
+            <span class="sr-only"> on Facebook Messenger</span>
+          </a>
+
+          <!-- SECONDARY: Booking -->
+          <a class="btn secondary" href="YOUR_BOOKING_URL_HERE" target="_blank" rel="noopener">
+            Book a call
+            <span class="sr-only"> (opens in a new tab)</span>
           </a>
         </div>
       </nav>
@@ -373,217 +687,327 @@
 
   <div id="top" class="wrap">
     <main id="main" role="main">
+
+      <!-- HERO -->
       <header class="hero" aria-label="Hero">
         <div class="hero-inner">
           <div>
             <div class="kicker">Blueprint AI Consulting Co.</div>
-            <h1>Make AI Work for You.<br>Not the Other Way Around.</h1>
+            <h1>We implement real-life AI systems and deploy custom apps for your business, fast.</h1>
             <p class="sub">
-              You don’t need to be a tech expert to automate your business. We design the blueprint and coach you on the tools—so you stay in control.
+              Built for home service businesses and coaches who want fewer dropped leads, cleaner follow-up, simpler operations, and systems that actually get used.
             </p>
 
             <div class="hero-actions" aria-label="Primary calls to action">
-              <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener">
-                Book a discovery session<span class="sr-only"> (opens in a new tab)</span>
-              </a>
-              <a class="btn" href="#what">See How It Works</a>
+              <a class="btn primary" href="YOUR_MESSENGER_URL_HERE" target="_blank" rel="noopener">Message me on Facebook</a>
+              <a class="btn secondary" href="YOUR_BOOKING_URL_HERE" target="_blank" rel="noopener">Book a free discovery call</a>
+              <a class="btn" href="#blueprint">Get the Free AI Blueprint</a>
             </div>
 
-            <div class="trust" aria-label="Trust indicators">
+            <div class="trust-row" aria-label="Trust indicators">
+              <span class="pill"><span class="dot" aria-hidden="true"></span>Shipped: 2 production apps</span>
+              <span class="pill"><span class="dot blue" aria-hidden="true"></span>10 years in tech</span>
+              <span class="pill"><span class="dot" aria-hidden="true"></span>Coach-first teaching style</span>
+            </div>
+
+            <div class="badge" aria-label="Guarantee">
               <span class="dot" aria-hidden="true"></span>
-              <span>Hands-on partnership. No overpromises. Fast implementation.</span>
+              Money-back satisfaction guarantee on defined scopes
             </div>
-            
-            </div>
+          </div>
 
-          <div class="stack" aria-label="Hero highlights">
+          <div class="grid2" aria-label="Hero highlights">
             <div class="card">
-              <h3>Real Clarity</h3>
-              <p>Clear priorities and clear next steps, built around how you run your day.</p>
+              <h3>Home services</h3>
+              <p>Lead capture, follow-up, pipeline, quoting, scheduling, and “where did that customer info go?” fixes.</p>
             </div>
             <div class="card">
-              <h3>Where it helps most</h3>
-              <p>We turn both redundant manual tasks and overly complex systems into reliable automated blueprints.</p>
+              <h3>Coaches & programs</h3>
+              <p>Player development tracking, evaluation systems, practice planning workflows, and coach-friendly dashboards.</p>
             </div>
             <div class="card">
-              <h3>Best fit</h3>
-              <p>You feel behind on AI and want a simple way to catch up OR You run a business and wear too many hats</p>
+              <h3>Build before we buy</h3>
+              <p>We map your workflow first, then build a system inside tools you already use—so it sticks.</p>
+            </div>
+            <div class="card">
+              <h3>Implementation, not theory</h3>
+              <p>You leave with working deliverables: templates, automations, and apps—plus training to run it.</p>
             </div>
           </div>
         </div>
       </header>
 
-      <section id="what" aria-label="What we do">
+      <!-- HOW -->
+      <section id="how" aria-label="How it works">
         <div class="kicker">How we work</div>
-        <h2>We Build Before We Buy.</h2>
+        <h2>Simple process. Real output.</h2>
+
         <div class="grid2">
           <div class="card">
-            <h3>Is Your Business Stuck in Your Head?</h3>
-            <p>If you stopped working today, would your business stop too? We fix the hidden costs of manual work:</p>
+            <h3>What we fix</h3>
             <ul class="list">
-              <li>Leads fall through the cracks</li>
-              <li>Follow-ups are inconsistent</li>
-              <li>Information lives in texts and memory</li>
-              <li>You feel behind on AI, but lack time</li>
-              <li>Too many tools, no real system</li>
+              <li>Leads falling through the cracks</li>
+              <li>Inconsistent follow-up</li>
+              <li>Information trapped in texts, memory, or random notes</li>
+              <li>Too many tools and no system</li>
+              <li>Artificial Intelligence (AI) feels confusing, so it never gets used</li>
             </ul>
           </div>
+
           <div class="card">
-            <h3>Our Process</h3>
+            <h3>The Blueprint method</h3>
             <ul class="list">
-              <li><strong>1. Map the Mess:</strong> We map out your manual workflow to spot the roadblocks.</li>
-              <li><strong>2. Design the Blueprint:</strong> We create a plan for how the process <em>should</em> run.</li>
-              <li><strong>3. Build & Automate:</strong> We implement the solution inside your existing tools.</li>
-              <li><strong>4. Hand Over the Keys:</strong> We train you to use it so you aren't dependent on us.</li>
+              <li><strong>1) Map it:</strong> We map the real workflow (not the “ideal” one).</li>
+              <li><strong>2) Design it:</strong> We design the simplest system that solves the bottleneck.</li>
+              <li><strong>3) Build it:</strong> We implement it inside your tools (or deploy a custom app if needed).</li>
+              <li><strong>4) Hand it off:</strong> We train you, document it, and make it easy to run.</li>
             </ul>
           </div>
         </div>
       </section>
 
+      <!-- SHIPPED WORK -->
+      <section id="work" aria-label="What we’ve shipped">
+        <div class="kicker">Proof</div>
+        <h2>Real builds that exist today.</h2>
+        <p class="sub">This is the current state of the business: shipped systems, deployed apps, and practical workflows.</p>
+
+        <div class="grid2" style="margin-top:14px;">
+          <div class="card work">
+            <strong>Operations Command Center</strong>
+            <div class="meta">
+              <span class="chip green">Operations</span>
+              <span class="chip">Tracking</span>
+              <span class="chip">Automation</span>
+            </div>
+            <ul class="list">
+              <li>Centralizes jobs, scheduling, and admin work</li>
+              <li>Reduces missed follow-ups and scattered info</li>
+              <li>Built to be simple enough to run daily</li>
+            </ul>
+            <div class="shot" aria-label="Optional screenshot area">
+              <p class="note">Optional: add a screenshot file named <strong>ops_command_center.jpg</strong> to show it here.</p>
+              <img src="ops_command_center.jpg" alt="Operations Command Center screenshot" loading="lazy"
+                   onerror="this.style.display='none';" />
+            </div>
+          </div>
+
+          <div class="card work">
+            <strong>Player Development Command Center</strong>
+            <div class="meta">
+              <span class="chip green">Coaching</span>
+              <span class="chip">Evaluations</span>
+              <span class="chip">Development</span>
+            </div>
+            <ul class="list">
+              <li>Tracks player development across a program</li>
+              <li>Creates clarity for coaches, players, and parents</li>
+              <li>Built as a proof-of-concept for any sport, any age</li>
+            </ul>
+            <div class="shot" aria-label="Optional screenshot area">
+              <p class="note">Optional: add a screenshot file named <strong>player_dev_command_center.jpg</strong> to show it here.</p>
+              <img src="player_dev_command_center.jpg" alt="Player Development Command Center screenshot" loading="lazy"
+                   onerror="this.style.display='none';" />
+            </div>
+          </div>
+        </div>
+
+        <div class="grid3" style="margin-top:14px;">
+          <div class="card">
+            <h3>Common wins</h3>
+            <p>Cleaner pipelines, faster response, fewer missed leads, less admin, and less mental load.</p>
+          </div>
+          <div class="card">
+            <h3>What we build</h3>
+            <p>Customer Relationship Management (CRM) setup, lead trackers, quoting workflows, job tracking, dashboards, and lightweight custom apps.</p>
+          </div>
+          <div class="card">
+            <h3>How we teach</h3>
+            <p>Coach-style training: fundamentals, repetition, real examples, and systems that fit your routine.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFERS -->
       <section id="offers" aria-label="Offers">
         <div class="kicker">Offers</div>
-        <h2>Simple, Transparent Pricing.</h2>
-        <p class="sub">No hidden fees. No long-term lock-ins. Just clear next steps.</p>
+        <h2>Clear options. Transparent pricing.</h2>
+        <p class="sub">No long-term lock-ins. Defined scope when possible. Custom quote when needed.</p>
 
+        <!-- NOTE: If you literally meant $2.99 etc, change these numbers. -->
         <div class="pricebar" aria-label="Price summary">
-          <div class="pricechip">Hourly: Custom</div>
-          <div class="pricechip">Pilot: $300</div>
-          <div class="pricechip">Sprint: $750</div>
-          <div class="pricechip">Front Door: $500</div>
-          <div class="pricechip">Core: $1,200+</div>
+          <div class="pricechip green">Pilot: $299</div>
+          <div class="pricechip">Sprint: $799</div>
+          <div class="pricechip">Systems Analysis: $499</div>
+          <div class="pricechip">Front Door: $499</div>
+          <div class="pricechip">Core Buildout: $1299+</div>
+          <div class="pricechip green">Blueprint CRM: $1499+</div>
         </div>
 
-        <h3 style="margin-top:24px; font-size:18px; color:var(--muted)">Start Here (Quick Wins)</h3>
-        
-        <p style="margin:4px 0 0 0; font-size:13px; color:var(--ok); display:flex; align-items:center; gap:6px;">
-          <span role="img" aria-label="shield">🛡️</span> Not satisfied? We offer a 100% Money-Back Satisfaction Guarantee.
+        <div style="margin-top:14px" class="grid2">
+          <div class="card offer">
+            <strong>Blueprint Pilot — $299</strong>
+            <div class="small">Fast win | Low risk | 1 focused bottleneck</div>
+            <ul class="list">
+              <li>Identify one roadblock that costs you time or money</li>
+              <li>Build the fix inside your current tools</li>
+              <li>Quick training so you can run it same week</li>
+            </ul>
+            <div class="tag"><span class="dot2 green"></span>Best first step</div>
+          </div>
+
+          <div class="card offer">
+            <strong>Systems Analysis — $499</strong>
+            <div class="small">Diagnostic | Clear plan | Prioritized fixes</div>
+            <ul class="list">
+              <li>Workflow map + bottleneck identification</li>
+              <li>Top 3 fixes ranked by impact</li>
+              <li>Blueprint plan (what to build next and why)</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Clarity and direction</div>
+          </div>
+
+          <div class="card offer">
+            <strong>AI Coaching Sprint — $799</strong>
+            <div class="small">Hands-on training | Your real work, not theory</div>
+            <ul class="list">
+              <li>Private sessions tailored to your workflow</li>
+              <li>Reusable templates and prompts</li>
+              <li>Practical assistant setup you can keep using</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Learn it and keep it</div>
+          </div>
+
+          <div class="card offer">
+            <strong>Digital Front Door — $499</strong>
+            <div class="small">Website or landing page | Mobile-first | Lead-ready</div>
+            <ul class="list">
+              <li>Clean page that looks professional on phones</li>
+              <li>Clear calls-to-action (message, book, capture)</li>
+              <li>Basic integration for lead capture</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Stop losing visitors</div>
+          </div>
+
+          <div class="card offer">
+            <strong>Core Buildout — from $1299</strong>
+            <div class="small">Implementation | Real system | One major workflow end-to-end</div>
+            <ul class="list">
+              <li>Design + implementation for a key process</li>
+              <li>Templates, tracking, and automation setup</li>
+              <li>Documentation + training</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>Build the system</div>
+          </div>
+
+          <div class="card offer">
+            <strong>Blueprint CRM Build — from $1499</strong>
+            <div class="small">Sales pipeline only (v1) | Lead-to-close clarity</div>
+            <ul class="list">
+              <li>Pipeline stages customized to your business</li>
+              <li>Lead capture + follow-up workflow</li>
+              <li>Owner-friendly “Today view” so it gets used</li>
+            </ul>
+            <div class="tag"><span class="dot2 green"></span>Most requested</div>
+          </div>
+        </div>
+
+        <p class="fineprint">
+          Want the fastest path? Start with the <strong>Blueprint Pilot</strong> or grab the <strong>Free AI Blueprint</strong> below.
+        </p>
+      </section>
+
+      <!-- LEAD MAGNET -->
+      <section id="blueprint" aria-label="Free AI Blueprint">
+        <div class="kicker">Free resource</div>
+        <h2>Free AI Blueprint</h2>
+        <p class="sub">
+          Get a simple, practical blueprint you can apply immediately to capture leads, tighten follow-up, and reduce busywork.
         </p>
 
-        <div style="margin-top:14px" class="grid2">
-          
-          <div class="card offer">
-            <strong>The Hometown Blueprint - $300</strong>
-            <div class="small">Timeline: 14 days | Low Risk</div>
-            <div class="small" style="color:var(--ok); margin-top:2px;"><strong>Target Savings:</strong> 2–5 Hours/Week</div>
-            <ul class="list">
-              <li>Identify one specific roadblock</li>
-              <li>Build the solution to fix it</li>
-              <li>Training so you can use it immediately</li>
-            </ul>
-            <div class="tag"><span class="dot2"></span>Best for testing the waters</div>
-          </div>
-
-          <div class="card offer">
-            <strong>AI Coaching Sprint - $750</strong>
-            <div class="small">Timeline: 2 weeks | Hands-on Training</div>
-            <div class="small" style="color:var(--ok); margin-top:2px;"><strong>Target Savings:</strong> 5–10 Hours/Week</div>
-            <ul class="list">
-              <li>4 private sessions using your real work</li>
-              <li>Build a custom AI assistant tailored to your business</li>
-              <li>Create reusable templates so you don't start from scratch</li>
-            </ul>
-            <div class="tag"><span class="dot2"></span>Learn to fish</div>
-          </div>
-
-          <div class="card offer">
-            <strong>Systems Analysis - $500</strong>
-            <div class="small">Timeline: 3 to 5 days | Diagnostic</div>
-            <ul class="list">
-              <li>Workflow map and roadblock check</li>
-              <li>Top 3 priority fixes identified</li>
-              <li>Tool recommendations and plan</li>
-            </ul>
-            <div class="tag"><span class="dot2"></span>Deep dive audit</div>
-          </div>
-
-          <div class="card offer">
-            <strong>Hourly Strategy Session</strong>
-            <div class="small">Timeline: 1 Hour | Individual & Business Rates</div>
-            <ul class="list">
-              <li>"Unstick" a specific problem</li>
-              <li>Review your current setup</li>
-              <li>Live building & technical help</li>
-            </ul>
-            <div class="tag"><span class="dot2"></span>Pay as you go</div>
-          </div>
-
-        </div>
-
-        <h3 style="margin-top:32px; font-size:18px; color:var(--muted)">Scale Up (Build The System)</h3>
-        
-        <div style="margin-top:14px" class="grid2">
-          
-          <div class="card offer">
-            <strong>Hometown Digital Front Door (Intro Rate) - $500</strong>
-            <div class="small">Timeline: 1 Week | Web Revamp</div>
-            <div class="small" style="color:var(--ok); margin-top:2px;"><strong>Target Savings:</strong> 3+ Hours/Week (Admin)</div>
-            <ul class="list">
-              <li>Custom landing page (simple website)</li>
-              <li>Designed for mobile</li>
-              <li>Integrated Booking & Lead Forms</li>
-            </ul>
-            <div class="tag"><span class="dot2"></span>A professional face</div>
-          </div>
-
-          <div class="card offer">
-            <strong>Core Buildout - from $1,200</strong>
-            <div class="small">Timeline: 1-2 Weeks | Full System</div>
-            <div class="small" style="color:var(--ok); margin-top:2px;"><strong>Target Savings:</strong> 10+ Hours/Week</div>
-            <ul class="list">
-              <li>End-to-end design & implementation</li>
-              <li>Templates, tracking, and automation setup</li>
-              <li>For one major roadblock (e.g., Hiring)</li>
-            </ul>
-            <div class="tag"><span class="dot2"></span>Solve a specific pain</div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="values" aria-label="Values">
-        <div class="kicker">Values</div>
-        <h2>Principles That Save You Time.</h2>
-
-        <div class="grid3">
+        <div class="grid2" style="margin-top:14px;">
           <div class="card">
-            <h3>Process First, Tech Second</h3>
-            <p>Technology amplifies your process. If we automate a bad process, we just create chaos faster. We fix the workflow <em>before</em> we add the AI.</p>
+            <h3>Get it by email</h3>
+
+            <!-- GitHub Pages note:
+                 You need a form backend. Easiest: Formspree.
+                 Replace the action URL below with your endpoint (example: https://formspree.io/f/abcxyz)
+            -->
+            <form class="form" action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+              </div>
+
+              <input type="hidden" name="_subject" value="New Free AI Blueprint request" />
+              <button class="btn primary" type="submit">Send me the Free AI Blueprint</button>
+
+              <p class="fineprint">
+                No spam. If you prefer Messenger, message me the word <strong>BLUEPRINT</strong>.
+              </p>
+            </form>
           </div>
+
           <div class="card">
-            <h3>Clarity Over Complexity</h3>
-            <p>If a system is too hard for your team to use, it has failed. We design for the human on the other side of the screen, keeping things simple.</p>
-          </div>
-          <div class="card">
-            <h3>Empowerment, Not Dependency</h3>
-            <p>We don't build "black boxes" that only we can fix. We document everything and train you to run the system without us.</p>
+            <h3>Prefer a fast conversation?</h3>
+            <p>
+              If you want the quickest path to a result, message me your business type (roofer, landscaper, pressure washing, coach, etc.) and what you want fixed first.
+            </p>
+            <div style="margin-top:14px; display:grid; gap:12px;">
+              <a class="btn primary" href="YOUR_MESSENGER_URL_HERE" target="_blank" rel="noopener">Message me “BLUEPRINT”</a>
+              <a class="btn secondary" href="YOUR_BOOKING_URL_HERE" target="_blank" rel="noopener">Book a free discovery call</a>
+            </div>
+
+            <p class="fineprint">
+              Fastest outcomes usually start with one focused bottleneck (lead capture, follow-up, pipeline, quoting, scheduling).
+            </p>
           </div>
         </div>
       </section>
 
-      <section id="about" aria-label="About Me">
+      <!-- ABOUT -->
+      <section id="about" aria-label="About">
         <div class="kicker">About</div>
         <h2>Hi, I’m Drew.</h2>
+
         <div class="card about-grid" style="margin-top:14px">
-          <div class="about-text">
-            <p>I’m the founder of Blueprint AI Consulting Co. I help business owners and everyday people simplify life and work with practical AI, automation, and simple systems that reduce stress and give you real time back.</p>
-            <br>
-            <p>My path into this started with a Bachelor of Science from the University of Pittsburgh, then work at <strong>Uber Advanced Technologies Group</strong>, where I was around early machine learning and automation. I saw what AI can do when it is built correctly. I also saw why most people bounce off it. It feels technical, unclear, and disconnected from real routines.</p>
-            <br>
-            <p>I’m also a <strong>high school baseball coach</strong>. Coaching shaped how I do this work. You do not improve by hearing a speech or buying a tool. You improve with fundamentals, a plan, repetition, and someone who can teach it in a way that fits your day. That is my approach with AI.</p>
-            <br>
-            <p><strong>AI is here whether we like it or not.</strong> The people who learn how to use it faster, in a practical way, will be in a better position. My job is to make that learning curve easier.</p>
-            <br>
-            <p>If you want less chaos and a setup that actually works day to day, Blueprint AI is built for you.</p>
+          <div>
+            <p style="margin:0; color:var(--muted);">
+              I’m the founder of Blueprint AI Consulting Co. I build practical systems and custom apps that reduce busywork, tighten operations, and give you real time back.
+            </p>
+            <p style="margin:12px 0 0 0; color:var(--muted);">
+              I’ve spent 10 years in tech and I coach high school baseball. That combination shaped my approach: fundamentals, a clear plan, repetition, and tools that fit real routines.
+            </p>
+            <p style="margin:12px 0 0 0; color:var(--muted);">
+              I don’t just talk strategy. I implement. You leave with working deliverables and the ability to run them without depending on me forever.
+            </p>
+
+            <div class="badge" style="margin-top:14px;">
+              <span class="dot" aria-hidden="true"></span>
+              “Implement real solutions, fast.”
+            </div>
           </div>
-          <div class="about-image-container">
-            <img src="webselfie.jpeg" alt="Drew Hufnagle" class="profile-pic">
+
+          <div>
+            <img src="webselfie.jpeg" alt="Drew Hufnagle" class="profile-pic" loading="lazy">
+            <!-- Optional phone photo. Add to repo as webselfie_phone.jpg. Auto-hides if missing. -->
+            <img src="webselfie_phone.jpg" alt="Drew on phone (optional)" class="mini-pic" loading="lazy"
+                 onerror="this.style.display='none';" />
           </div>
         </div>
       </section>
 
+      <!-- TESTIMONIAL -->
       <section id="testimonials" aria-label="Testimonials">
         <div class="kicker">Testimonials</div>
-        <h2>What Clients Say.</h2>
+        <h2>What clients say.</h2>
+
         <div class="card quote-card" style="margin-top:14px">
           <span class="quote-text">
             "For someone who pushed against AI and being an old-school type of guy, I can see the benefit of using this tool for many different areas of my life. It will help my life in areas of scheduling, bidding, tracking my cost, and other areas of business.
@@ -592,6 +1016,7 @@
             <br><br>
             I’ve come to know how to use it myself with the lessons he has given me. I can’t say how thankful I am for his insight and teaching this God-loving, blue-collar worker that technology isn’t always the enemy. Just when you use it for the wrong things."
           </span>
+
           <div class="quote-author">
             <strong>Chad G.</strong><br>
             Owner/Operator of God's Grace Lawn Care
@@ -599,28 +1024,25 @@
         </div>
       </section>
 
+      <!-- CONTACT -->
       <section id="contact" class="cta" aria-label="Contact">
         <div>
           <div class="kicker">Contact</div>
-          <h2>Ready to win back your time?</h2>
-          <p class="sub">You are one conversation away from a clearer business.</p>
-          
-          <p style="margin-top:10px;color:rgba(233,238,252,.72);font-size:12px">
-            No pressure sales. 15-minute chat. You leave with at least one actionable tip.
-          </p>
-          
-          <p style="margin-top:14px; font-size:14px; color:var(--muted);">
-            General questions? Just want to know more?<br>
-            <a href="mailto:Blueprintaiconsultingco@gmail.com" style="color:var(--blue); text-decoration:none;">Blueprintaiconsultingco@gmail.com</a>
+          <h2>Want a simpler business week?</h2>
+          <p class="sub">Message me first. Book a call if you want a deeper walkthrough. Grab the Free AI Blueprint if you want to start solo.</p>
+
+          <p class="fineprint" style="margin-top:12px;">
+            Email: <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
           </p>
         </div>
 
-        <div style="text-align:center;">
-          <a class="btn primary" href="https://calendar.app.google/Ck7sNZfCW2rPB9mq9" target="_blank" rel="noopener" style="padding: 1.2rem 2rem; font-size: 1.1rem; width: 100%;">
-            Book Your Free Discovery Session<span class="sr-only"> (opens in a new tab)</span>
-          </a>
+        <div style="display:grid; gap:12px;">
+          <a class="btn primary" href="YOUR_MESSENGER_URL_HERE" target="_blank" rel="noopener">Message me</a>
+          <a class="btn secondary" href="YOUR_BOOKING_URL_HERE" target="_blank" rel="noopener">Book a free discovery call</a>
+          <a class="btn" href="#blueprint">Get the Free AI Blueprint</a>
         </div>
       </section>
+
     </main>
 
     <footer role="contentinfo">
@@ -629,14 +1051,28 @@
           <img class="footer-logo" src="logo.png" alt="Blueprint AI Consulting Co. logo" />
           <div>© <span id="year"></span> Blueprint AI Consulting Co.</div>
         </div>
-        <div><a href="mailto:Blueprintaiconsultingco@gmail.com" style="text-decoration:none; color:inherit;">Blueprintaiconsultingco@gmail.com</a></div>
+        <div><a href="mailto:YOUR_EMAIL_HERE" style="text-decoration:none; color:inherit;">YOUR_EMAIL_HERE</a></div>
       </div>
-      <div>Increase productivity. Optimize your systems. Win back your time.</div>
+      <div>Implement real systems. Win back time.</div>
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Basic structured data (edit as desired) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Blueprint AI Consulting Co.",
+    "description": "Practical AI systems implementation and custom app deployment for home service businesses and coaches.",
+    "url": "https://blueprintaiconsulting.github.io/new-creation-site/",
+    "logo": "logo.png",
+    "areaServed": ["Central Pennsylvania", "United States"],
+    "sameAs": ["YOUR_MESSENGER_URL_HERE"]
+  }
   </script>
 </body>
 </html>
