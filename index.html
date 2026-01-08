@@ -4,12 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Blueprint AI Consulting Co. | We Implement Real Systems Fast</title>
+  <title>Blueprint AI Consulting Co. | AI Tools Built Around Your Operations</title>
   <meta name="description" content="We design, build, and deploy AI tools tailored to your operations. Practical systems and custom apps for home service businesses, coaches, and operators." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#070c18" />
 
-  <!-- Canonical domain -->
   <link rel="canonical" href="https://blueprintaiconsultingco.com/" />
 
   <link rel="icon" href="logo.png" type="image/png" />
@@ -42,7 +41,7 @@
       --blue:#3aa0ff;
       --blue2:#66d0ff;
 
-      /* Slightly darker neon green, still “glowy” */
+      /* Slightly darker neon green (still glowy) */
       --green:#18d676;
       --green2:#5cff9c;
 
@@ -56,6 +55,7 @@
 
     *{box-sizing:border-box}
     img{max-width:100%; height:auto}
+    a{color:inherit}
 
     body{
       margin:0;
@@ -69,7 +69,6 @@
       line-height:1.55;
       -webkit-font-smoothing: antialiased;
     }
-    a{color:inherit}
 
     .wrap{
       max-width:var(--max);
@@ -95,7 +94,7 @@
       display:inline-block;
     }
 
-    /* Header */
+    /* Header (~10% smaller, no tagline) */
     .site-header{
       position:sticky;
       top:0;
@@ -104,8 +103,6 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(120,180,255,.14);
     }
-
-    /* ~10% smaller header block */
     .header-inner{
       max-width:var(--max);
       margin:0 auto;
@@ -114,7 +111,6 @@
     @media (min-width: 768px){
       .header-inner{padding:9px 24px}
     }
-
     .nav{
       display:flex;
       align-items:center;
@@ -135,14 +131,7 @@
       filter: drop-shadow(0 10px 25px rgba(58,160,255,.18));
       flex:0 0 auto;
     }
-    .brand-title{
-      display:flex;
-      flex-direction:column;
-      gap:0;
-      letter-spacing:.2px;
-      min-width:0;
-    }
-    .brand-title strong{font-size:14px; line-height:1.1}
+    .brand-title strong{font-size:14px; line-height:1.1; letter-spacing:.2px;}
     @media (min-width: 900px){
       .brand-title strong{font-size:15px}
     }
@@ -153,8 +142,6 @@
       align-items:center;
       justify-content:flex-end;
     }
-
-    /* Header nav sizing only (keeps site-wide buttons unchanged) */
     .navlinks a.link{
       text-decoration:none;
       color:var(--muted);
@@ -170,7 +157,6 @@
       color:var(--text);
       border-color: rgba(255,255,255,.06);
     }
-
     @media (max-width: 980px){
       .nav{flex-direction:column; align-items:flex-start; gap:12px;}
       .navlinks{
@@ -193,7 +179,7 @@
       background: rgba(12,20,48,.55);
       color:var(--text);
       text-decoration:none;
-      font-weight:700;
+      font-weight:800;
       font-size:14px;
       box-shadow: 0 10px 30px rgba(0,0,0,.22);
       white-space:nowrap;
@@ -205,15 +191,11 @@
       border-color: rgba(120,180,255,.38);
       background: rgba(12,20,48,.70);
     }
-
-    /* Header buttons slightly smaller */
     .navlinks .btn{
       padding:10px 12px;
       font-size:13px;
       border-radius:13px;
     }
-
-    /* Primary = Green */
     .btn.primary{
       background: linear-gradient(135deg, rgba(24,214,118,.96), rgba(92,255,156,.70));
       border-color: rgba(92,255,156,.52);
@@ -221,8 +203,6 @@
       box-shadow: 0 14px 40px rgba(24,214,118,.18);
     }
     .btn.primary:hover{filter:brightness(1.04);}
-
-    /* Secondary = Blue */
     .btn.secondary{
       background: linear-gradient(135deg, rgba(58,160,255,.95), rgba(102,208,255,.75));
       border-color: rgba(102,208,255,.55);
@@ -230,12 +210,10 @@
       box-shadow: 0 14px 40px rgba(58,160,255,.25);
     }
     .btn.secondary:hover{filter:brightness(1.04);}
-
     .btn.ghost{
       background: rgba(255,255,255,.06);
       border-color: rgba(255,255,255,.10);
     }
-
     @media (max-width: 600px){
       .btn{white-space:normal; text-align:center; line-height:1.25;}
     }
@@ -350,7 +328,25 @@
       box-shadow: 0 0 22px rgba(102,208,255,.22);
     }
 
-    /* Cards / Sections */
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(92,255,156,.26);
+      background: rgba(24,214,118,.10);
+      color: rgba(233,238,252,.94);
+      font-size:12px;
+      font-weight:800;
+      margin-top:12px;
+    }
+    .badge .dot{
+      width:8px; height:8px;
+      box-shadow: 0 0 18px rgba(24,214,118,.20);
+    }
+
+    /* Sections / Cards */
     section{margin-top:34px}
     h2{
       margin:0 0 16px 0;
@@ -390,25 +386,7 @@
     .list{margin:12px 0 0 0; padding-left:18px; color:var(--muted)}
     .list li{margin:8px 0}
 
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(92,255,156,.26);
-      background: rgba(24,214,118,.10);
-      color: rgba(233,238,252,.94);
-      font-size:12px;
-      font-weight:700;
-      margin-top:12px;
-    }
-    .badge .dot{
-      width:8px; height:8px;
-      box-shadow: 0 0 18px rgba(24,214,118,.20);
-    }
-
-    /* Shipped work cards */
+    /* Work / Proof */
     .work{
       display:flex;
       flex-direction:column;
@@ -455,15 +433,11 @@
       color: rgba(233,238,252,.85);
       font-size:12px;
     }
-    .shot img{
+    .shot img, .shot video{
       width:100%;
       border-radius:12px;
       border:1px solid rgba(255,255,255,.06);
       display:block;
-    }
-    .shot .note{
-      margin:0;
-      color: rgba(233,238,252,.80);
     }
 
     /* Offers */
@@ -514,54 +488,6 @@
       box-shadow: 0 0 22px rgba(24,214,118,.22);
     }
 
-    /* Lead magnet form */
-    .form{
-      display:grid;
-      gap:12px;
-      margin-top:12px;
-    }
-    .field{
-      display:grid;
-      gap:6px;
-    }
-    label{
-      font-size:12px;
-      color: rgba(233,238,252,.86);
-      font-weight:700;
-      letter-spacing:.2px;
-    }
-    input{
-      appearance:none;
-      width:100%;
-      border-radius:14px;
-      border:1px solid rgba(120,180,255,.18);
-      background: rgba(7,12,24,.55);
-      color: var(--text);
-      padding:12px 12px;
-      font-size:14px;
-      outline:none;
-    }
-    input:focus{
-      border-color: rgba(92,255,156,.38);
-      box-shadow: 0 0 0 3px rgba(24,214,118,.12);
-    }
-    .form-row{
-      display:grid;
-      gap:12px;
-    }
-    @media (min-width: 900px){
-      .form-row{grid-template-columns:1fr 1fr;}
-    }
-    .fineprint{
-      margin:10px 0 0 0;
-      font-size:12px;
-      color: rgba(233,238,252,.70);
-    }
-    .fineprint a{
-      color: rgba(92,255,156,.92);
-      text-decoration:none;
-    }
-
     /* About */
     .about-grid{
       display:grid;
@@ -590,7 +516,7 @@
       margin: 14px auto 0;
     }
 
-    /* Testimonial */
+    /* Testimonials */
     .quote-card{
       border-left: 4px solid rgba(24,214,118,.88);
       text-align:left;
@@ -599,14 +525,45 @@
       font-size:16px;
       font-style: italic;
       color:#fff;
-      margin-bottom:16px;
-      display:block;
+      margin:0 0 14px 0;
       line-height:1.55;
     }
     .quote-author{
       font-style: normal;
       color: var(--muted);
       font-size: 14px;
+      margin:0;
+    }
+
+    /* FAQ */
+    details{
+      border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(7,12,24,.56);
+      padding:14px 16px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:#fff;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none;}
+    details p{
+      margin:10px 0 0 0;
+      color: var(--muted);
+      font-size:13px;
+    }
+
+    /* Google Form embed */
+    .gform-embed{
+      width:100%;
+      height:920px;
+      border:0;
+      border-radius:14px;
+    }
+    @media (max-width: 600px){
+      .gform-embed{ height:1080px; }
     }
 
     /* CTA block */
@@ -653,6 +610,16 @@
     .footer-left{display:flex; flex-direction:column; gap:8px;}
     .footer-branding{display:flex; align-items:center; gap:12px;}
     .footer-logo{width:28px; height:28px; border-radius:8px; object-fit:contain}
+
+    .fineprint{
+      margin:10px 0 0 0;
+      font-size:12px;
+      color: rgba(233,238,252,.70);
+    }
+    .fineprint a{
+      color: rgba(92,255,156,.92);
+      text-decoration:none;
+    }
   </style>
 </head>
 
@@ -671,20 +638,23 @@
 
         <div class="navlinks">
           <a class="link" href="#how">How it works</a>
-          <a class="link" href="#work">What we’ve shipped</a>
+          <a class="link" href="#proof">Proof</a>
           <a class="link" href="#offers">Offers</a>
+          <a class="link" href="#roofers">Roofers</a>
           <a class="link" href="#blueprint">Free AI Blueprint</a>
+          <a class="link" href="#testimonials">Testimonials</a>
+          <a class="link" href="#faq">FAQ</a>
           <a class="link" href="#about">About</a>
           <a class="btn ghost" href="#contact">Contact</a>
 
-          <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" target="_blank" rel="noopener">
+          <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">
             Message me
             <span class="sr-only"> on Facebook</span>
           </a>
 
-          <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" target="_blank" rel="noopener">
+          <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">
             Book a call
-            <span class="sr-only"> (opens in a new tab)</span>
+            <span class="sr-only"> (opens in same tab)</span>
           </a>
         </div>
       </nav>
@@ -699,23 +669,24 @@
         <div class="hero-inner">
           <div>
             <div class="kicker">Blueprint AI Consulting Co.</div>
-
             <h1>We design, build, and deploy AI tools tailored to your operations.</h1>
 
             <p class="sub">
               Built for home service businesses and coaches who want fewer dropped leads, cleaner follow-up, simpler operations, and systems that actually get used.
             </p>
 
+            <!-- CTAs: Primary (Message), Secondary (Blueprint), Tertiary (Book) -->
             <div class="hero-actions" aria-label="Primary calls to action">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" target="_blank" rel="noopener">Message me on Facebook</a>
-              <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" target="_blank" rel="noopener">Book a free discovery call</a>
-              <a class="btn" href="#blueprint">Get the Free AI Blueprint</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me on Facebook</a>
+              <a class="btn secondary" href="#blueprint">Get the Free AI Blueprint</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
             </div>
 
             <div class="trust-row" aria-label="Trust indicators">
               <span class="pill"><span class="dot" aria-hidden="true"></span>Shipped: 2 production apps</span>
               <span class="pill"><span class="dot blue" aria-hidden="true"></span>10 years in tech</span>
               <span class="pill"><span class="dot" aria-hidden="true"></span>Coach-first teaching style</span>
+              <span class="pill"><span class="dot blue" aria-hidden="true"></span>Serving Central PA + remote builds nationwide</span>
             </div>
 
             <div class="badge" aria-label="Guarantee">
@@ -734,8 +705,8 @@
               <p>Player development tracking, evaluation systems, practice planning workflows, and coach-friendly dashboards.</p>
             </div>
             <div class="card">
-              <h3>Build before we buy</h3>
-              <p>We map your workflow first, then build a system inside tools you already use—so it sticks.</p>
+              <h3>Build before you buy</h3>
+              <p>We map your workflow first, then build the simplest system that fits how you actually operate.</p>
             </div>
             <div class="card">
               <h3>Implementation, not theory</h3>
@@ -765,7 +736,7 @@
           <div class="card">
             <h3>The Blueprint method</h3>
             <ul class="list">
-              <li><strong>1) Map it:</strong> We map the real workflow (not the “ideal” one).</li>
+              <li><strong>1) Map it:</strong> We map your real workflow (not the ideal one).</li>
               <li><strong>2) Design it:</strong> We design the simplest system that solves the bottleneck.</li>
               <li><strong>3) Build it:</strong> We implement it inside your tools (or deploy a custom app if needed).</li>
               <li><strong>4) Hand it off:</strong> We train you, document it, and make it easy to run.</li>
@@ -774,11 +745,11 @@
         </div>
       </section>
 
-      <!-- SHIPPED WORK -->
-      <section id="work" aria-label="What we’ve shipped">
+      <!-- PROOF -->
+      <section id="proof" aria-label="Proof">
         <div class="kicker">Proof</div>
         <h2>Real builds that exist today.</h2>
-        <p class="sub">This is the current state of the business: shipped systems, deployed apps, and practical workflows.</p>
+        <p class="sub">Here’s what we’ve already shipped: working systems and deployed apps.</p>
 
         <div class="grid2" style="margin-top:14px;">
           <div class="card work">
@@ -793,10 +764,9 @@
               <li>Reduces missed follow-ups and scattered info</li>
               <li>Built to be simple enough to run daily</li>
             </ul>
-            <div class="shot" aria-label="Optional screenshot area">
-              <p class="note">Optional: add a screenshot file named <strong>ops_command_center.jpg</strong> to show it here.</p>
-              <img src="ops_command_center.jpg" alt="Operations Command Center screenshot" loading="lazy"
-                   onerror="this.style.display='none';" />
+            <div class="shot" style="margin-top:10px;">
+              <img src="ops_command_center.jpg" alt="Operations Command Center screenshot"
+                   loading="lazy" onerror="this.parentElement.style.display='none';" />
             </div>
           </div>
 
@@ -812,11 +782,20 @@
               <li>Creates clarity for coaches, players, and parents</li>
               <li>Built as a proof-of-concept for any sport, any age</li>
             </ul>
-            <div class="shot" aria-label="Optional screenshot area">
-              <p class="note">Optional: add a screenshot file named <strong>player_dev_command_center.jpg</strong> to show it here.</p>
-              <img src="player_dev_command_center.jpg" alt="Player Development Command Center screenshot" loading="lazy"
-                   onerror="this.style.display='none';" />
+            <div class="shot" style="margin-top:10px;">
+              <img src="player_dev_command_center.jpg" alt="Player Development Command Center screenshot"
+                   loading="lazy" onerror="this.parentElement.style.display='none';" />
             </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h3>Optional (high-converting): 60–90 sec demo video</h3>
+          <p class="fineprint">Drop a file named <strong>demo.mp4</strong> in your repo and it will render here automatically.</p>
+          <div class="shot" style="margin-top:12px;">
+            <video controls preload="metadata">
+              <source src="demo.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
@@ -825,73 +804,264 @@
       <section id="offers" aria-label="Offers">
         <div class="kicker">Offers</div>
         <h2>Clear options. Transparent pricing.</h2>
-        <p class="sub">No long-term lock-ins. Defined scope when possible. Custom quote when needed.</p>
+        <p class="sub">Defined scope where possible. Custom quote when needed.</p>
 
         <div class="pricebar" aria-label="Price summary">
-          <div class="pricechip green">Pilot: $299</div>
-          <div class="pricechip">Sprint: $799</div>
-          <div class="pricechip">Systems Analysis: $499</div>
-          <div class="pricechip">Front Door: $499</div>
-          <div class="pricechip">Core Buildout: $1299+</div>
-          <div class="pricechip green">Blueprint CRM: $1499+</div>
+          <div class="pricechip green">Quick Win Build (Pilot): $299</div>
+          <div class="pricechip">AI Coaching Sprint: $799</div>
+          <div class="pricechip">Workflow Audit (Systems Analysis): $499</div>
+          <div class="pricechip">Lead-Ready Website Sprint (Front Door): $499</div>
+          <div class="pricechip">Operations Buildout (Core): $1299+</div>
+          <div class="pricechip green">Blueprint CRM Build: $1499+</div>
         </div>
 
-        <p class="fineprint">
-          Want the fastest path? Start with the <strong>Blueprint Pilot</strong> or grab the <strong>Free AI Blueprint</strong> below.
+        <div class="grid2" style="margin-top:14px;">
+          <div class="card offer">
+            <strong>Quick Win Build — $299</strong>
+            <div class="small">Best first step • 7 days • One bottleneck, fixed</div>
+            <ul class="list">
+              <li>1 workflow mapped (how you actually work)</li>
+              <li>1 build delivered (tracker, pipeline, automation, or mini system)</li>
+              <li>Simple “Today view” so it gets used</li>
+              <li>15–30 min handoff training</li>
+            </ul>
+            <div class="tag"><span class="dot2 green"></span>
+              <a class="btn primary" style="width:100%;" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">
+                Message me “QUICK WIN”
+              </a>
+            </div>
+          </div>
+
+          <div class="card offer">
+            <strong>Workflow Audit — $499</strong>
+            <div class="small">Clarity-first • 3 priorities • Build plan included</div>
+            <ul class="list">
+              <li>Workflow map + bottleneck diagnosis</li>
+              <li>Top 3 fixes ranked by impact</li>
+              <li>Tool recommendations (keep it lean)</li>
+              <li>Build blueprint: what to implement next and why</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>
+              <a class="btn secondary" style="width:100%;" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">
+                Book the audit call
+              </a>
+            </div>
+          </div>
+
+          <div class="card offer">
+            <strong>AI Coaching Sprint — $799</strong>
+            <div class="small">Hands-on training • Your real work • Templates included</div>
+            <ul class="list">
+              <li>Private coaching sessions tailored to your workflow</li>
+              <li>Reusable prompts + templates</li>
+              <li>Assistant setup you can keep using</li>
+              <li>Process you can teach your team</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>
+              <a class="btn primary" style="width:100%;" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">
+                Message me “COACHING”
+              </a>
+            </div>
+          </div>
+
+          <div class="card offer">
+            <strong>Lead-Ready Website Sprint — $499</strong>
+            <div class="small">Fast • Mobile-first • Built to capture leads</div>
+            <ul class="list">
+              <li>One clean landing page (or refresh)</li>
+              <li>Clear calls-to-action (message, book, capture)</li>
+              <li>Lead capture wiring (forms + tracking)</li>
+              <li>Basic credibility blocks (proof + FAQ)</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>
+              <a class="btn secondary" style="width:100%;" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">
+                Book the sprint call
+              </a>
+            </div>
+          </div>
+
+          <div class="card offer">
+            <strong>Operations Buildout — from $1299</strong>
+            <div class="small">One major workflow end-to-end • Implementation + training</div>
+            <ul class="list">
+              <li>Design + build for a key process (lead → close, job tracking, quoting)</li>
+              <li>Automations + templates + dashboards</li>
+              <li>Documentation + training</li>
+              <li>Launch support</li>
+            </ul>
+            <div class="tag"><span class="dot2"></span>
+              <a class="btn primary" style="width:100%;" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">
+                Message me “BUILDOUT”
+              </a>
+            </div>
+          </div>
+
+          <div class="card offer">
+            <strong>Blueprint CRM Build — from $1499</strong>
+            <div class="small">Sales pipeline v1 • Stops leads from slipping • Owner-friendly</div>
+            <ul class="list">
+              <li>Pipeline stages customized to your business</li>
+              <li>Lead capture + follow-up workflow</li>
+              <li>Daily “Today view” + reminders</li>
+              <li>Handoff training so you can run it</li>
+            </ul>
+            <div class="tag"><span class="dot2 green"></span>
+              <a class="btn primary" style="width:100%;" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">
+                Message me “CRM”
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="fineprint" style="margin-top:12px;">
+          Want the fastest path? Start with <strong>Quick Win Build</strong> or grab the <strong>Free AI Blueprint</strong> below.
         </p>
       </section>
 
-      <!-- LEAD MAGNET -->
+      <!-- ROOFERS (mini landing) -->
+      <section id="roofers" aria-label="Roofers">
+        <div class="kicker">Roofing businesses</div>
+        <h2>A simple pipeline that stops missed leads.</h2>
+        <p class="sub">Roofers lose money on follow-up, quoting delays, and “we meant to call them back.”</p>
+
+        <div class="grid2" style="margin-top:14px;">
+          <div class="card">
+            <h3>Common roofing bottlenecks</h3>
+            <ul class="list">
+              <li>Leads from Facebook/Google not logged anywhere</li>
+              <li>Quotes delayed, follow-up inconsistent</li>
+              <li>Jobs scheduled without clean handoff notes</li>
+              <li>“Who’s handling this one?” confusion</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>What we build for roofers (v1)</h3>
+            <ul class="list">
+              <li>One pipeline: New Lead → Scheduled → Quoted → Won/Lost</li>
+              <li>One “Today view” for owner follow-up</li>
+              <li>Lead capture + notes + next action</li>
+              <li>Basic reminders so leads don’t rot</li>
+            </ul>
+
+            <div style="margin-top:12px; display:grid; gap:10px;">
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “ROOFER”</a>
+              <a class="btn secondary" href="#blueprint">Get the Free AI Blueprint</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="fineprint" style="margin-top:12px;">
+          Later, we can split this into a dedicated page (<strong>/roofers/</strong>) for ads and local search.
+        </p>
+      </section>
+
+      <!-- FREE BLUEPRINT (Google Form embed) -->
       <section id="blueprint" aria-label="Free AI Blueprint">
         <div class="kicker">Free resource</div>
         <h2>Free AI Blueprint</h2>
         <p class="sub">
-          Get a simple, practical blueprint you can apply immediately to capture leads, tighten follow-up, and reduce busywork.
+          A simple, practical blueprint you can apply immediately to capture leads, tighten follow-up, and reduce busywork.
         </p>
 
         <div class="grid2" style="margin-top:14px;">
           <div class="card">
             <h3>Get it by email</h3>
+            <p class="fineprint" style="margin-top:8px;">
+              Fill this out and we’ll send the Free AI Blueprint to the email you enter.
+            </p>
 
-            <!-- GitHub Pages note:
-                 You need a form backend. Easiest: Formspree.
-                 Replace the action URL below with your endpoint (example: https://formspree.io/f/abcxyz)
-            -->
-            <form class="form" action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
-              <div class="form-row">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input id="name" name="name" autocomplete="name" required />
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" required />
-                </div>
-              </div>
+            <div class="shot" style="margin-top:12px;">
+              <iframe
+                class="gform-embed"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdc5BAzjItuaRQkZadhzkM5Q5R3Np1AFY2ko66DiOYJXydlBw/viewform?embedded=true"
+                loading="lazy">
+                Loading…
+              </iframe>
+            </div>
 
-              <input type="hidden" name="_subject" value="New Free AI Blueprint request" />
-              <button class="btn primary" type="submit">Send me the Free AI Blueprint</button>
-
-              <p class="fineprint">
-                No spam. If you prefer Facebook, message me the word <strong>BLUEPRINT</strong>.
-              </p>
-            </form>
+            <p class="fineprint" style="margin-top:12px;">
+              If the form doesn’t load, open it here:
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdc5BAzjItuaRQkZadhzkM5Q5R3Np1AFY2ko66DiOYJXydlBw/viewform">
+                Free AI Blueprint form
+              </a>
+            </p>
           </div>
 
           <div class="card">
             <h3>Prefer a fast conversation?</h3>
             <p>
-              If you want the quickest path to a result, message me your business type (roofer, landscaper, pressure washing, coach, etc.) and what you want fixed first.
+              Message me your business type (roofer, landscaper, pressure washing, coach, etc.) and the #1 bottleneck you want fixed first.
             </p>
+
             <div style="margin-top:14px; display:grid; gap:12px;">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" target="_blank" rel="noopener">Message me “BLUEPRINT”</a>
-              <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" target="_blank" rel="noopener">Book a free discovery call</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “BLUEPRINT”</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
             </div>
 
             <p class="fineprint">
-              Fastest outcomes usually start with one focused bottleneck (lead capture, follow-up, pipeline, quoting, scheduling).
+              Fastest outcomes usually start with one focused bottleneck (lead capture or follow-up).
             </p>
           </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIAL -->
+      <section id="testimonials" aria-label="Testimonials">
+        <div class="kicker">Testimonials</div>
+        <h2>What clients say.</h2>
+
+        <div class="card quote-card" style="margin-top:14px">
+          <p class="quote-text">
+            “For someone who pushed against AI and being an old-school type of guy, I can see the benefit of using this tool for many different areas of my life. It will help my life in areas of scheduling, bidding, tracking my cost, and other areas of business.
+            <br><br>
+            I can see the time-saving benefits and systems that Drew has built for my business to run more efficiently without much thinking on my part. Sometimes letting the computer do the work in parts of our business makes sense.
+            <br><br>
+            I’ve come to know how to use it myself with the lessons he has given me. I can’t say how thankful I am for his insight and teaching this God-loving, blue-collar worker that technology isn’t always the enemy.”
+          </p>
+          <p class="quote-author">
+            <strong>Chad G.</strong><br>
+            Owner/Operator, God’s Grace Lawn Care
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" aria-label="FAQ">
+        <div class="kicker">FAQ</div>
+        <h2>Quick answers before you reach out.</h2>
+
+        <div class="grid2" style="margin-top:14px;">
+          <details open>
+            <summary>Do I need to be “techy” for this to work?</summary>
+            <p>No. The goal is a system you can run daily. I build for owners and crews, then train you in plain language.</p>
+          </details>
+
+          <details>
+            <summary>What tools do you build in?</summary>
+            <p>Whatever fits your workflow. In many cases we use simple tools first. If you need a custom app, we deploy that too.</p>
+          </details>
+
+          <details>
+            <summary>How fast can we ship a first version?</summary>
+            <p>Quick Win Builds are designed to ship fast. Larger buildouts depend on scope, but the goal is always an early working version.</p>
+          </details>
+
+          <details>
+            <summary>What does “custom app” mean?</summary>
+            <p>A lightweight app tailored to your process—pipeline, notes, follow-up, job tracking, dashboards—built so your team actually uses it.</p>
+          </details>
+
+          <details>
+            <summary>Do you offer support after launch?</summary>
+            <p>Yes. You’ll also get documentation and training so you’re not dependent on me for basic changes.</p>
+          </details>
+
+          <details>
+            <summary>What should I start with?</summary>
+            <p>If you’re unsure, start with the Free AI Blueprint or a Quick Win Build focused on your biggest bottleneck (often lead capture or follow-up).</p>
+          </details>
         </div>
       </section>
 
@@ -916,11 +1086,15 @@
               <span class="dot" aria-hidden="true"></span>
               Money-back satisfaction guarantee on defined scopes
             </div>
+
+            <p class="fineprint" style="margin-top:12px;">
+              Email: <a href="mailto:blueprintaiconsultingco@gmail.com">blueprintaiconsultingco@gmail.com</a>
+            </p>
           </div>
 
           <div>
             <img src="webselfie.jpeg" alt="Drew Hufnagle" class="profile-pic" loading="lazy">
-            <img src="webselfie_phone.jpg" alt="Drew on phone (optional)" class="mini-pic" loading="lazy"
+            <img src="webselfie_phone.jpg" alt="Drew on phone" class="mini-pic" loading="lazy"
                  onerror="this.style.display='none';" />
           </div>
         </div>
@@ -931,7 +1105,7 @@
         <div>
           <div class="kicker">Contact</div>
           <h2>Want a simpler business week?</h2>
-          <p class="sub">Message me first. Book a call if you want a deeper walkthrough. Grab the Free AI Blueprint if you want to start solo.</p>
+          <p class="sub">Message me first. Grab the Free AI Blueprint if you want to start solo. Book a call if you want a deeper walkthrough.</p>
 
           <p class="fineprint" style="margin-top:12px;">
             Email: <a href="mailto:blueprintaiconsultingco@gmail.com">blueprintaiconsultingco@gmail.com</a>
@@ -939,9 +1113,9 @@
         </div>
 
         <div style="display:grid; gap:12px;">
-          <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" target="_blank" rel="noopener">Message me</a>
-          <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" target="_blank" rel="noopener">Book a free discovery call</a>
-          <a class="btn" href="#blueprint">Get the Free AI Blueprint</a>
+          <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me</a>
+          <a class="btn secondary" href="#blueprint">Get the Free AI Blueprint</a>
+          <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
         </div>
       </section>
 
@@ -959,7 +1133,7 @@
           </a>
         </div>
       </div>
-      <div>Win back time. Build systems that stick.</div>
+      <div>Serving Central PA + remote builds nationwide.</div>
     </footer>
   </div>
 
@@ -975,6 +1149,7 @@
     "description": "We design, build, and deploy AI tools tailored to your operations. Practical AI systems implementation and custom app deployment.",
     "url": "https://blueprintaiconsultingco.com/",
     "logo": "logo.png",
+    "email": "blueprintaiconsultingco@gmail.com",
     "areaServed": ["Central Pennsylvania", "United States"],
     "sameAs": ["https://www.facebook.com/Blueprintaiconsultingco"]
   }
