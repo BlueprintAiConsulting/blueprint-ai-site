@@ -582,7 +582,7 @@
           <h3>Quick demo (60–90 sec)</h3>
           <p class="fineprint">A short walkthrough of the kinds of systems we ship. If the video doesn’t load, message me and I’ll send the link.</p>
           <div class="shot" style="margin-top:12px;">
-            <video id="demoVideo" controls preload="metadata" playsinline aria-label="Demo walkthrough video">
+            <video id="demoVideo" controls preload="metadata" playsinline aria-label="Demo walkthrough video (60–90 seconds)">
               <source data-src="demo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -981,6 +981,7 @@
 
       const loadVideo = () => {
         const src = source?.getAttribute("data-src");
+        // Avoid reloading if the source has already been attached
         if (!src || source.hasAttribute("src")) return;
         source.setAttribute("src", src);
         demoVideo.load();
