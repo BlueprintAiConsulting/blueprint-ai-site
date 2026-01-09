@@ -30,12 +30,10 @@
       --panel: rgba(7,12,24,.52);
       --panel2: rgba(10,16,40,.58);
       --text:#e9eefc;
-      --muted:#cfd8ea;
 
       /* Primary glow (blue) */
       --blue:#3aa0ff;
       --blue2:#66d0ff;
-      --blue3:#8cbcff;
 
       /* Accent glow (money green) - slightly darker but still neon */
       --green:#12d35f;
@@ -63,7 +61,6 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
 
-      /* Neon blue glow baseline */
       background:
         radial-gradient(1100px 760px at 14% 8%, rgba(58,160,255,.36), transparent 60%),
         radial-gradient(900px 680px at 86% 12%, rgba(102,208,255,.22), transparent 62%),
@@ -82,7 +79,6 @@
       overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
     }
 
-    /* Top bar */
     .topbar{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(12px);
@@ -90,7 +86,7 @@
       border-bottom: 1px solid rgba(120,180,255,.14);
     }
 
-    header{padding:13px 0;} /* slightly smaller */
+    header{padding:13px 0;}
     nav{display:flex; align-items:center; justify-content:space-between; gap:14px;}
 
     .brand{display:flex; align-items:center; gap:12px; min-width:240px;}
@@ -129,7 +125,6 @@
       min-width:240px; flex-wrap:wrap;
     }
 
-    /* Buttons */
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 14px;
@@ -158,7 +153,6 @@
     }
     .btn.primary:hover{filter:brightness(1.05);}
 
-    /* Secondary header CTA: Text me with money-green glow */
     .btn.green{
       border-color: rgba(18,211,95,.55);
       background: rgba(18,211,95,.10);
@@ -170,7 +164,6 @@
       filter:brightness(1.02);
     }
 
-    /* Layout */
     main{padding:26px 0 62px;}
     section{padding:36px 0; border-top:1px solid rgba(120,180,255,.12);}
     section:first-of-type{border-top:none;}
@@ -239,7 +232,6 @@
       color:rgba(233,238,252,.95);
     }
 
-    /* Green glow accents (money) */
     .pill.money{
       border-color: rgba(18,211,95,.34);
       box-shadow: 0 0 26px rgba(18,211,95,.18);
@@ -285,7 +277,6 @@
       text-underline-offset: 3px;
     }
 
-    /* Right column visuals */
     .side{display:grid; gap:12px;}
 
     .image-card{
@@ -329,7 +320,6 @@
       color: rgba(236,255,246,.92);
     }
 
-    /* Compact step cards */
     .steps{
       display:grid;
       grid-template-columns:repeat(4, minmax(0, 1fr));
@@ -356,7 +346,6 @@
     }
     .step p{margin:8px 0 0; color:rgba(207,216,234,.92); font-weight:650; font-size:13px; line-height:1.5;}
 
-    /* Proof cards */
     .grid2{
       display:grid;
       grid-template-columns:repeat(2, minmax(0, 1fr));
@@ -383,7 +372,6 @@
     }
     .shot video{width:100%; display:block;}
 
-    /* Offers */
     .offers{
       display:grid;
       grid-template-columns:repeat(3, minmax(0, 1fr));
@@ -424,7 +412,6 @@
     }
     .offer .cta2{margin-top:12px;}
 
-    /* Testimonials */
     .quote-card{
       border-color:rgba(120,180,255,.16);
       background: rgba(7,12,24,.50);
@@ -444,7 +431,6 @@
       font-size:13px;
     }
 
-    /* Footer */
     .footer{
       padding:34px 0 44px;
       border-top:1px solid rgba(120,180,255,.14);
@@ -501,7 +487,6 @@
             <a href="#contact">Contact</a>
           </div>
 
-          <!-- HEADER BUTTONS UPDATED -->
           <div class="cta">
             <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me</a>
             <a class="btn green" href="sms:+17173478749">Text me</a>
@@ -522,10 +507,9 @@
             <h1>We design, build, and deploy AI tools tailored to your operations.</h1>
 
             <p class="sub">
-              For home service businesses and coaches who want fewer dropped leads, tighter follow-up, and a system they will actually use.
+              For home service businesses and coaches who want fewer dropped leads, tighter follow-up, and a system that runs clean every day.
             </p>
 
-            <!-- Keep hero clean: two actions (header always has Message/Text) -->
             <div class="hero-actions">
               <a class="btn primary" href="#blueprint">Get the Free AI Blueprint</a>
               <a class="btn" href="#offers">See offers</a>
@@ -537,23 +521,22 @@
             </div>
 
             <div class="meta-row" aria-label="Quick proof">
-              <div class="pill">Shipped: 2 apps</div>
+              <div class="pill">Proof: real systems</div>
               <div class="pill">10 years in tech</div>
               <div class="pill money">Clear pricing</div>
               <div class="pill money">Satisfaction guarantee</div>
             </div>
 
             <p class="fineprint">
-              Artificial Intelligence (AI) is the tool. Your workflow is the foundation. We build around how you operate day to day.
+              Artificial Intelligence (AI) is the tool. Your operations are the foundation. We build around how you run jobs day to day.
             </p>
           </div>
 
           <div class="side">
-            <!-- Visual: uses webselfie_phone.jpg -->
             <div class="card image-card">
               <div class="image-wrap">
                 <img
-                  src="webselfie_phone.jpg?v=12"
+                  src="webselfie_phone.jpg?v=14"
                   alt="Drew holding a phone graphic"
                   loading="lazy"
                   decoding="async"
@@ -576,7 +559,7 @@
             <div class="card" style="box-shadow:none; background: rgba(7,12,24,.48);">
               <h3 style="color:var(--blue2);">Fast start options</h3>
               <p class="fineprint" style="margin-top:8px;">
-                If you are unsure where to start, grab the Free AI Blueprint or text me your bottleneck.
+                If you are unsure where to start, grab the Free AI Blueprint or text me your main issue.
               </p>
               <div class="hero-actions" style="margin-top:12px;">
                 <a class="btn green" href="sms:+17173478749">Text: “BLUEPRINT”</a>
@@ -597,7 +580,7 @@
           <div class="card step">
             <div class="num">1</div>
             <h3>Map</h3>
-            <p>We map your real workflow and identify the bottleneck.</p>
+            <p>We map how leads and jobs move through your business and find the main pain point.</p>
           </div>
           <div class="card step">
             <div class="num">2</div>
@@ -633,8 +616,8 @@
             </ul>
             <div class="shot">
               <img
-                src="ops_command_center.jpg?v=12"
-                data-alt-src="ops_command_center.png?v=12"
+                src="ops_command_center.jpg?v=14"
+                data-alt-src="ops_command_center.png?v=14"
                 alt="Operations Command Center screenshot"
                 loading="lazy"
                 decoding="async"
@@ -646,14 +629,14 @@
           <div class="card">
             <h3 style="color:var(--blue2);">Player Development Command Center</h3>
             <ul class="list">
-              <li>Tracking and evaluation workflow</li>
+              <li>Tracking and evaluation system</li>
               <li>Clear development plan and accountability</li>
               <li>Coach-friendly setup and reporting</li>
             </ul>
             <div class="shot">
               <img
-                src="player_dev_command_center.jpg?v=12"
-                data-alt-src="player_dev_command_center.png?v=12"
+                src="player_dev_command_center.jpg?v=14"
+                data-alt-src="player_dev_command_center.png?v=14"
                 alt="Player Development Command Center screenshot"
                 loading="lazy"
                 decoding="async"
@@ -687,9 +670,9 @@
               <span class="amt">$299</span>
               <span class="badge">fastest start</span>
             </div>
-            <p class="fine">One bottleneck fixed in 7 days.</p>
+            <p class="fine">One issue fixed in 7 days.</p>
             <ul class="list">
-              <li>Workflow map</li>
+              <li>Process map</li>
               <li>One build delivered</li>
               <li>Short training handoff</li>
             </ul>
@@ -699,19 +682,19 @@
           </div>
 
           <div class="card offer">
-            <h3 style="color:var(--blue2);">Workflow Audit (Systems Analysis)</h3>
+            <h3 style="color:var(--blue2);">Systems Analysis</h3>
             <div class="price">
               <span class="amt">$499</span>
               <span class="badge">clarity first</span>
             </div>
             <p class="fine">Top 3 fixes ranked by impact.</p>
             <ul class="list">
-              <li>Workflow diagnosis</li>
+              <li>Process diagnosis</li>
               <li>Build blueprint</li>
               <li>Tool simplification</li>
             </ul>
             <div class="cta2">
-              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book the audit call</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book the analysis call</a>
             </div>
           </div>
 
@@ -725,7 +708,7 @@
             <ul class="list">
               <li>Reusable prompts</li>
               <li>Templates</li>
-              <li>Owner and team workflow</li>
+              <li>Owner and team system</li>
             </ul>
             <div class="cta2">
               <a class="btn primary" href="sms:+17173478749">Text “COACHING”</a>
@@ -741,7 +724,7 @@
             <p class="fine">A clean page built to capture leads.</p>
             <ul class="list">
               <li>Mobile first</li>
-              <li>Clear CTAs</li>
+              <li>Clear calls-to-action</li>
               <li>Proof and FAQ</li>
             </ul>
             <div class="cta2">
@@ -755,7 +738,7 @@
               <span class="amt">$1299+</span>
               <span class="badge">implementation</span>
             </div>
-            <p class="fine">One major workflow built end to end.</p>
+            <p class="fine">One major process built end to end.</p>
             <ul class="list">
               <li>Design + build</li>
               <li>Automation + dashboards</li>
@@ -775,7 +758,7 @@
             <p class="fine">Stops leads slipping through the cracks.</p>
             <ul class="list">
               <li>Custom stages</li>
-              <li>Follow-up workflow</li>
+              <li>Follow-up system</li>
               <li>Daily “Today view”</li>
             </ul>
             <div class="cta2">
@@ -813,7 +796,10 @@
               <a class="btn green" href="sms:+17173478749">Text “BLUEPRINT”</a>
             </div>
             <p class="fineprint">
-              Or email: <a href="mailto:blueprintaiconsultingco@gmail.com" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">blueprintaiconsultingco@gmail.com</a>
+              Or email:
+              <a href="mailto:CoachDrew@blueprintaiconsultingco.com" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">
+                CoachDrew@blueprintaiconsultingco.com
+              </a>
             </p>
           </div>
 
@@ -827,144 +813,14 @@
               <a class="btn green" href="sms:+17173478749">Text me</a>
             </div>
             <p class="fineprint">
-              Prefer a call? <a href="https://calendar.app.google/ABoSgYjoUzyC41sD7" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">Book a free discovery call</a>
+              Prefer a call?
+              <a href="https://calendar.app.google/ABoSgYjoUzyC41sD7" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">
+                Book a free discovery call
+              </a>
             </p>
           </div>
         </div>
       </section>
 
       <!-- TESTIMONIALS -->
-      <section id="testimonials" aria-label="Testimonials">
-        <div class="kicker">Testimonials</div>
-        <h2>What clients say.</h2>
-
-        <div class="card quote-card" style="margin-top:14px">
-          <p class="quote-text">
-            “For someone who pushed against AI and being an old-school type of guy, I can see the benefit of using this tool for many different areas of my life. It will help my life in areas of scheduling, bidding, tracking my cost, and other areas of business.
-            <br><br>
-            I can see the time-saving benefits and systems that Drew has built for my business to run more efficiently without much thinking on my part. Sometimes letting the computer do the work in parts of our business makes sense.
-            <br><br>
-            I’ve come to know how to use it myself with the lessons he has given me. I can’t say how thankful I am for his insight and teaching this God-loving, blue-collar worker that technology isn’t always the enemy.”
-          </p>
-          <p class="quote-author">
-            <strong>Chad G.</strong><br />
-            Owner/Operator, God’s Grace Lawn Care
-          </p>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" aria-label="FAQ">
-        <div class="kicker">FAQ</div>
-        <h2>Quick answers.</h2>
-
-        <div class="grid2">
-          <div class="card">
-            <h3 style="color:var(--blue2);">Do I need to be techy?</h3>
-            <p class="fineprint">No. The system is built to run daily. Training is simple and practical.</p>
-          </div>
-          <div class="card">
-            <h3 style="color:var(--blue2);">How do I start?</h3>
-            <p class="fineprint">Free AI Blueprint or Quick Win Build. If you are unsure, text me your bottleneck.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" aria-label="Contact">
-        <div class="kicker">Contact</div>
-        <h2>Start here.</h2>
-        <p class="sub">Message or text first. Calls are optional.</p>
-
-        <div class="grid2">
-          <div class="card grid-overlay">
-            <h3 style="color:var(--blue2);">Fastest routes</h3>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me</a>
-              <a class="btn green" href="sms:+17173478749">Text me</a>
-            </div>
-            <p class="fineprint">
-              Text preferred: <a href="sms:+17173478749" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">(717) 347-8749</a><br />
-              Email: <a href="mailto:blueprintaiconsultingco@gmail.com" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">blueprintaiconsultingco@gmail.com</a>
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 style="color:var(--blue2);">Book a call (optional)</h3>
-            <p class="fineprint">If you prefer to talk it through, book a free discovery call.</p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book a free discovery call</a>
-              <a class="btn green" href="tel:+17173478749">Call</a>
-            </div>
-            <p class="fineprint">Serving Central PA and remote builds nationwide.</p>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="footer" aria-label="Footer">
-      <div class="footer-grid">
-        <div style="display:flex; gap:10px; align-items:center;">
-          <img
-            src="logo.png"
-            alt="Blueprint AI Consulting Co. logo"
-            style="height:30px; width:auto; filter:drop-shadow(0 10px 25px rgba(58,160,255,.18));"
-            onerror="this.style.display='none';"
-          />
-          <div><strong>Blueprint AI Consulting Co.</strong></div>
-        </div>
-
-        <small>© <span id="year"></span> Blueprint AI Consulting Co.</small>
-      </div>
-
-      <div class="fineprint" style="margin-top:10px;">
-        Text: <a href="sms:+17173478749" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">(717) 347-8749</a>
-        &nbsp;|&nbsp;
-        Email: <a href="mailto:blueprintaiconsultingco@gmail.com" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">blueprintaiconsultingco@gmail.com</a>
-      </div>
-
-      <div>Facebook: <a href="https://www.facebook.com/Blueprintaiconsultingco" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">Blueprintaiconsultingco</a></div>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
-  <script>
-    (function () {
-      const demoCard = document.getElementById("demo-card");
-      const demoVideo = document.getElementById("demoVideo");
-      if (!demoCard || !demoVideo) return;
-
-      const hide = () => { demoCard.style.display = "none"; };
-
-      const source = demoVideo.querySelector("source");
-      if (source) source.addEventListener("error", hide);
-      demoVideo.addEventListener("error", hide);
-    })();
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Blueprint AI Consulting Co.",
-    "description": "We design, build, and deploy AI tools tailored to your operations.",
-    "url": "https://blueprintaiconsultingco.com/",
-    "logo": "logo.png",
-    "email": "blueprintaiconsultingco@gmail.com",
-    "telephone": "+1-717-347-8749",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+1-717-347-8749",
-      "contactType": "customer service",
-      "areaServed": "US"
-    }],
-    "areaServed": ["Central Pennsylvania", "United States"],
-    "sameAs": ["https://www.facebook.com/Blueprintaiconsultingco"]
-  }
-  </script>
-</body>
-</html>
+      <section id="test
