@@ -1,11 +1,11 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Blueprint AI Consulting Co. — We design, build, and deploy AI tools tailored to your operations." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0B1220" />
+  <meta name="theme-color" content="#070c18" />
 
   <title>Blueprint AI Consulting Co. | AI Tools Built Around Your Operations</title>
 
@@ -26,67 +26,50 @@
 
   <style>
     :root{
-      --bg:#070B12;
-      --panel:#0B1220;
-      --panel2:#0E1730;
-      --text:#EAF1FF;
-      --muted:#A6B1CC;
-      --muted2:#8793B2;
+      /* Base */
+      --bg:#070c18;
+      --panel: rgba(10,16,40,.55);
+      --panel2: rgba(7,12,24,.55);
 
-      /* Neon BLUE is the main glow */
-      --b1:#3AA0FF;
-      --b2:#66D0FF;
-      --b3:#2E7BFF;
+      --text:#e9eefc;
+      --muted:#e2e8f0;
+      --muted2:#b7c4e6;
 
-      /* Neon GREEN stays as accent (slightly darker but still neon/glow) */
-      --g1:#19E36C;
-      --g2:#0FD361;
-      --g3:#0BBF58;
+      /* Neon BLUE (primary identity) */
+      --blue:#3aa0ff;
+      --blue2:#66d0ff;
+      --blue3:#8cbcff;
 
-      --lineBlue:rgba(102, 208, 255, .16);
-      --lineGreen:rgba(25, 227, 108, .16);
+      /* Green (accent only) */
+      --green:#19e36c;
 
-      --shadow:0 10px 40px rgba(0,0,0,.45);
-      --radius:18px;
-      --max:1120px;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1120px;
+
+      /* Blueprint grid pattern (from your older iteration) */
+      --grid:
+        linear-gradient(to right, rgba(140,190,255,.085) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(140,190,255,.085) 1px, transparent 1px);
     }
 
     *{box-sizing:border-box;}
     html,body{height:100%;}
     body{
       margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
-
-      /* Main blueprint glow = neon blue */
-      background:
-        radial-gradient(900px 600px at 18% -10%, rgba(58,160,255,.26), transparent 55%),
-        radial-gradient(900px 600px at 90% 0%, rgba(102,208,255,.18), transparent 55%),
-        radial-gradient(900px 700px at 55% 120%, rgba(58,160,255,.14), transparent 55%),
-
-        /* Green stays subtle */
-        radial-gradient(700px 520px at 72% 20%, rgba(25,227,108,.10), transparent 60%),
-        radial-gradient(800px 700px at 20% 120%, rgba(15,211,97,.07), transparent 60%),
-
-        linear-gradient(180deg, #060A10, #070B12 40%, #060A10);
-
       line-height:1.5;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-    }
 
-    /* Blueprint grid (blue) */
-    body:before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
+      /* Stronger neon blue glow like earlier */
       background:
-        linear-gradient(to right, rgba(102,208,255,.08) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(102,208,255,.08) 1px, transparent 1px);
-      background-size:48px 48px;
-      mask-image:radial-gradient(900px 600px at 50% 10%, rgba(0,0,0,1), rgba(0,0,0,.18) 55%, rgba(0,0,0,0) 78%);
-      opacity:.95;
+        radial-gradient(1100px 760px at 14% 8%, rgba(58,160,255,.34), transparent 60%),
+        radial-gradient(900px 680px at 86% 12%, rgba(102,208,255,.22), transparent 62%),
+        radial-gradient(1100px 820px at 50% 105%, rgba(58,160,255,.16), transparent 62%),
+        radial-gradient(900px 700px at 55% 45%, rgba(140,190,255,.08), transparent 66%),
+        var(--bg);
     }
 
     a{color:inherit; text-decoration:none;}
@@ -97,31 +80,24 @@
     .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
     .topbar{
       position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background:linear-gradient(180deg, rgba(7,11,18,.78), rgba(7,11,18,.48));
-      border-bottom:1px solid rgba(102,208,255,.16);
+      backdrop-filter: blur(12px);
+      background: rgba(7,12,24,.85);
+      border-bottom: 1px solid rgba(120,180,255,.14);
     }
 
-    header{
-      padding:14px 0; /* slightly smaller header */
-    }
+    header{padding:14px 0;} /* ~10% smaller */
+    nav{display:flex; align-items:center; justify-content:space-between; gap:14px;}
 
-    nav{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px;
-    }
-
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width:240px;
-    }
+    .brand{display:flex; align-items:center; gap:12px; min-width:240px;}
     .brand img{
       height:32px; width:auto;
-      filter: drop-shadow(0 0 14px rgba(58,160,255,.22));
+      filter: drop-shadow(0 10px 25px rgba(58,160,255,.18));
     }
     .brand .name{
-      font-weight:800; letter-spacing:.2px;
+      font-weight:800;
       font-size:14px;
       line-height:1.05;
+      letter-spacing:.2px;
     }
 
     .links{
@@ -132,61 +108,85 @@
     }
     .links a{
       font-size:13px;
-      color:var(--muted);
-      font-weight:600;
+      color:rgba(226,232,240,.90);
+      font-weight:650;
       padding:8px 10px;
-      border-radius:10px;
+      border-radius:12px;
       border:1px solid transparent;
+      background: rgba(255,255,255,0.00);
     }
     .links a:hover{
-      border-color:rgba(102,208,255,.18);
+      border-color: rgba(120,180,255,.22);
+      background: rgba(255,255,255,0.04);
       color:var(--text);
-      background:rgba(14,23,48,.35);
     }
 
-    .cta{
-      display:flex; gap:10px; align-items:center; justify-content:flex-end;
-      min-width:240px;
-    }
+    .cta{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width:240px;}
 
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:11px 14px;
-      border-radius:999px;
-      border:1px solid rgba(25,227,108,.18);
-      background:rgba(14,23,48,.35);
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(120,180,255,.22);
+      background: rgba(12,20,48,.55);
       color:var(--text);
-      font-weight:800;
-      font-size:13px;
-      letter-spacing:.1px;
-      box-shadow: 0 0 0 rgba(0,0,0,0);
-      transition:transform .08s ease, box-shadow .2s ease, border-color .2s ease;
+      font-weight:700;
+      font-size:14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
       white-space:nowrap;
+      cursor:pointer;
+      transition: transform .1s ease, filter .15s ease, border-color .15s ease, background .15s ease;
     }
+    .btn:active{transform:scale(.985);}
     .btn:hover{
-      transform:translateY(-1px);
-      border-color:rgba(25,227,108,.30);
-      box-shadow:0 0 26px rgba(25,227,108,.12);
+      border-color: rgba(120,180,255,.38);
+      background: rgba(12,20,48,.70);
     }
+
+    /* Primary = BLUE (back to original vibe) */
     .btn.primary{
-      background:linear-gradient(135deg, rgba(25,227,108,.20), rgba(15,211,97,.10));
-      border-color:rgba(25,227,108,.34);
-      box-shadow:0 0 30px rgba(25,227,108,.12);
+      background: linear-gradient(135deg, rgba(58,160,255,.95), rgba(102,208,255,.78));
+      border-color: rgba(102,208,255,.60);
+      color:#061023;
+      box-shadow: 0 14px 40px rgba(58,160,255,.25);
     }
-    .btn.secondary{
-      background:rgba(14,23,48,.55);
-      border-color:rgba(102,208,255,.18);
-      box-shadow:0 0 26px rgba(102,208,255,.08);
+    .btn.primary:hover{filter:brightness(1.05);}
+
+    /* Accent button = subtle green (optional use) */
+    .btn.accent{
+      border-color: rgba(25,227,108,.28);
+      box-shadow: 0 12px 34px rgba(25,227,108,.08);
     }
-    .btn.secondary:hover{
-      border-color:rgba(102,208,255,.28);
-      box-shadow:0 0 30px rgba(102,208,255,.10);
+    .btn.accent:hover{
+      border-color: rgba(25,227,108,.38);
+      box-shadow: 0 14px 40px rgba(25,227,108,.10);
     }
 
     main{padding:30px 0 60px;}
-    section{padding:36px 0; border-top:1px solid rgba(102,208,255,.10);}
+    section{padding:36px 0; border-top:1px solid rgba(120,180,255,.12);}
     section:first-of-type{border-top:none;}
+
+    /* Reusable container card */
+    .card{
+      border-radius: var(--radius);
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(7,12,24,.50);
+      box-shadow: var(--shadow);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* Blueprint grid overlay (used selectively, not site-wide) */
+    .grid-overlay:before{
+      content:"";
+      position:absolute; inset:0;
+      background-image: var(--grid);
+      background-size: 44px 44px;
+      opacity:.65;
+      mask-image: radial-gradient(circle at 30% 18%, black 10%, transparent 70%);
+      pointer-events:none;
+    }
 
     .hero{padding:44px 0 28px;}
     .hero-grid{
@@ -196,23 +196,22 @@
       align-items:start;
     }
 
-    .card{
-      background:linear-gradient(180deg, rgba(11,18,32,.78), rgba(11,18,32,.56));
-      border:1px solid rgba(102,208,255,.16);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-    }
-    .card:before{
-      content:"";
-      position:absolute; inset:-2px;
+    .hero-card{
       background:
-        radial-gradient(560px 140px at 22% 0%, rgba(58,160,255,.18), transparent 58%),
-        radial-gradient(520px 120px at 75% 0%, rgba(25,227,108,.10), transparent 60%);
-      pointer-events:none;
-      opacity:.95;
+        radial-gradient(700px 520px at 0% 0%, rgba(58,160,255,.22), transparent 58%),
+        radial-gradient(700px 520px at 100% 0%, rgba(102,208,255,.14), transparent 58%),
+        rgba(10,16,40,.55);
+      border:1px solid rgba(120,180,255,.18);
+    }
+
+    .kicker{
+      color: rgba(102,208,255,.92);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+      text-shadow: 0 0 22px rgba(102,208,255,.10);
     }
 
     h1{
@@ -220,49 +219,47 @@
       line-height:1.06;
       margin:0;
       letter-spacing:-.7px;
+      text-shadow: 0 0 22px rgba(102,208,255,.10);
     }
+
     .sub{
       margin:12px 0 0;
       color:var(--muted);
       font-size:15px;
       line-height:1.5;
       font-weight:600;
+      max-width:70ch;
     }
-    .hero-ctas{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:16px;
-    }
+
+    .hero-ctas{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
 
     .proofline{
       margin-top:14px;
       display:flex; flex-wrap:wrap; gap:10px;
-      color:var(--muted2);
+      color:rgba(226,232,240,.90);
       font-size:12.5px;
       font-weight:700;
     }
     .proofline .pill{
-      border:1px solid rgba(102,208,255,.14);
-      background:rgba(14,23,48,.32);
-      border-radius:999px;
-      padding:7px 10px;
+      border:1px solid rgba(120,180,255,.16);
+      background: rgba(255,255,255,.04);
+      border-radius:14px;
+      padding:10px 12px;
+    }
+
+    .fineprint{
+      color:rgba(226,232,240,.85);
+      font-weight:600;
+      font-size:13px;
+      line-height:1.5;
+      margin-top:10px;
     }
 
     .side{display:grid; gap:12px;}
-    .side .mini{padding:14px;}
+    .side .mini{box-shadow:none; background: rgba(7,12,24,.50);}
 
-    .kicker{
-      color:rgba(102,208,255,.95);
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-      text-shadow: 0 0 14px rgba(58,160,255,.18);
-    }
-
-    h2{margin:0; font-size:26px; letter-spacing:-.3px;}
+    h2{margin:0; font-size:26px; letter-spacing:-.3px; line-height:1.2;}
     h3{margin:0; font-size:16px; letter-spacing:-.2px;}
-
     .list{
       margin:12px 0 0;
       padding:0 0 0 18px;
@@ -280,38 +277,30 @@
       margin-top:14px;
     }
 
-    .work strong{
-      font-size:15px;
-      display:block;
-      margin-bottom:8px;
-    }
-
-    .meta{
-      display:flex; flex-wrap:wrap; gap:8px;
-      margin-top:8px;
-    }
-
+    .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
     .chip{
       font-size:12px;
-      color:var(--muted);
+      color:rgba(226,232,240,.92);
       font-weight:800;
-      border:1px solid rgba(102,208,255,.14);
+      border:1px solid rgba(120,180,255,.16);
       padding:6px 9px;
       border-radius:999px;
-      background:rgba(14,23,48,.26);
+      background: rgba(255,255,255,.04);
     }
+    /* Green only as an accent tag */
     .chip.green{
-      border-color:rgba(25,227,108,.28);
-      color:rgba(225,255,237,.95);
-      box-shadow:0 0 18px rgba(25,227,108,.10);
+      border-color: rgba(25,227,108,.28);
+      color: rgba(233,252,242,.92);
+      box-shadow: none; /* keep green subtle */
     }
 
     .shot{
       border-radius:14px;
       overflow:hidden;
-      border:1px solid rgba(102,208,255,.12);
-      background:rgba(0,0,0,.25);
+      border:1px solid rgba(120,180,255,.14);
+      background: rgba(0,0,0,.22);
     }
+    .shot video{width:100%; display:block;}
 
     .offers{
       display:grid;
@@ -324,8 +313,8 @@
       font-weight:900;
       font-size:20px;
       letter-spacing:-.4px;
-      color:rgba(234,241,255,.98);
-      text-shadow:0 0 18px rgba(58,160,255,.10);
+      color:rgba(233,238,252,.98);
+      text-shadow: 0 0 18px rgba(58,160,255,.10);
     }
     .offer .fine{
       margin-top:8px;
@@ -337,36 +326,29 @@
     .offer .cta2{margin-top:12px;}
 
     .quote-card{
-      border-color:rgba(102,208,255,.18);
-      background:linear-gradient(180deg, rgba(14,23,48,.70), rgba(11,18,32,.55));
+      border-color:rgba(120,180,255,.16);
+      background: rgba(7,12,24,.50);
+      border-left: 4px solid var(--blue);
     }
     .quote-text{
       margin:0;
-      color:rgba(234,241,255,.96);
+      color:rgba(233,238,252,.98);
       font-weight:650;
       line-height:1.65;
       font-size:14px;
     }
     .quote-author{
       margin-top:12px;
-      color:var(--muted);
+      color:rgba(226,232,240,.85);
       font-weight:800;
       font-size:13px;
     }
 
-    .fineprint{
-      color:var(--muted);
-      font-weight:650;
-      font-size:13px;
-      line-height:1.5;
-      margin-top:10px;
-    }
-
     .footer{
       padding:34px 0 44px;
-      border-top:1px solid rgba(102,208,255,.10);
-      color:var(--muted);
-      font-weight:650;
+      border-top:1px solid rgba(120,180,255,.14);
+      color:rgba(226,232,240,.80);
+      font-weight:600;
       font-size:13px;
     }
     .footer-grid{
@@ -390,6 +372,12 @@
       .offers{grid-template-columns:1fr;}
       .grid2{grid-template-columns:1fr;}
       h1{font-size:34px;}
+    }
+
+    @media (max-width: 600px){
+      .btn{white-space:normal; text-align:center; line-height:1.3;}
+      .hero-ctas{flex-direction:column;}
+      .hero-ctas .btn{width:100%; padding:16px; font-size:16px;}
     }
   </style>
 </head>
@@ -419,11 +407,11 @@
           </div>
 
           <div class="cta">
-            <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">
+            <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">
               Message me
               <span class="sr-only"> on Facebook</span>
             </a>
-            <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">
+            <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">
               Book a call
             </a>
           </div>
@@ -437,7 +425,7 @@
       <!-- HERO -->
       <section class="hero" aria-label="Hero">
         <div class="hero-grid">
-          <div class="card">
+          <div class="card hero-card grid-overlay">
             <div class="kicker">Blueprint AI Consulting Co.</div>
             <h1>We design, build, and deploy AI tools tailored to your operations.</h1>
             <p class="sub">
@@ -446,9 +434,9 @@
             </p>
 
             <div class="hero-ctas">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me on Facebook</a>
-              <a class="btn secondary" href="#blueprint">Get the Free AI Blueprint</a>
-              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me on Facebook</a>
+              <a class="btn" href="#blueprint">Get the Free AI Blueprint</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book a free discovery call</a>
             </div>
 
             <div class="proofline" aria-label="Quick proof">
@@ -465,25 +453,25 @@
 
           <div class="side">
             <div class="card mini">
-              <h3>Home services</h3>
+              <h3 style="color:var(--blue2);">Home services</h3>
               <p class="fineprint" style="margin-top:8px;">
                 Lead capture, follow-up, pipeline, quoting, scheduling, and “where did that customer info go?” fixes.
               </p>
             </div>
             <div class="card mini">
-              <h3>Coaches & programs</h3>
+              <h3 style="color:var(--blue2);">Coaches & programs</h3>
               <p class="fineprint" style="margin-top:8px;">
                 Player development tracking, evaluation systems, practice planning workflows, and coach-friendly dashboards.
               </p>
             </div>
             <div class="card mini">
-              <h3>Build before you buy</h3>
+              <h3 style="color:var(--blue2);">Build before you buy</h3>
               <p class="fineprint" style="margin-top:8px;">
                 We map your workflow first, then build the simplest system that fits how you actually operate.
               </p>
             </div>
             <div class="card mini">
-              <h3>Implementation, not theory</h3>
+              <h3 style="color:var(--blue2);">Implementation, not theory</h3>
               <p class="fineprint" style="margin-top:8px;">
                 You leave with working deliverables: templates, automations, and apps, plus training to run it.
               </p>
@@ -499,7 +487,7 @@
 
         <div class="grid2">
           <div class="card">
-            <h3>What we fix</h3>
+            <h3 style="color:var(--blue2);">What we fix</h3>
             <ul class="list">
               <li>Leads falling through the cracks</li>
               <li>Inconsistent follow-up</li>
@@ -510,7 +498,7 @@
           </div>
 
           <div class="card">
-            <h3>The Blueprint method</h3>
+            <h3 style="color:var(--blue2);">The Blueprint method</h3>
             <ul class="list">
               <li><strong>1) Map it:</strong> We map your real workflow (not the ideal one).</li>
               <li><strong>2) Design it:</strong> We design the simplest system that solves the bottleneck.</li>
@@ -528,8 +516,8 @@
         <p class="sub">Here’s what we’ve already shipped: working systems and deployed apps.</p>
 
         <div class="grid2" style="margin-top:14px;">
-          <div class="card work">
-            <strong>Operations Command Center</strong>
+          <div class="card">
+            <strong style="display:block; font-size:15px; margin-bottom:8px;">Operations Command Center</strong>
             <div class="meta">
               <span class="chip green">Operations</span>
               <span class="chip">Tracking</span>
@@ -541,20 +529,20 @@
               <li>Built to be simple enough to run daily</li>
             </ul>
 
-            <!-- Cache-bust param forces browsers to load your latest image -->
             <div class="shot" style="margin-top:10px;">
               <img
-                src="ops_command_center.jpg?v=2"
+                src="ops_command_center.jpg?v=7"
+                data-alt-src="ops_command_center.png?v=7"
                 alt="Operations Command Center screenshot"
                 loading="lazy"
                 decoding="async"
-                onerror="this.parentElement.style.display='none';"
+                onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc; this.removeAttribute('data-alt-src');} else {this.parentElement.style.display='none';}"
               />
             </div>
           </div>
 
-          <div class="card work">
-            <strong>Player Development Command Center</strong>
+          <div class="card">
+            <strong style="display:block; font-size:15px; margin-bottom:8px;">Player Development Command Center</strong>
             <div class="meta">
               <span class="chip green">Coaching</span>
               <span class="chip">Evaluations</span>
@@ -568,18 +556,19 @@
 
             <div class="shot" style="margin-top:10px;">
               <img
-                src="player_dev_command_center.jpg?v=2"
+                src="player_dev_command_center.jpg?v=7"
+                data-alt-src="player_dev_command_center.png?v=7"
                 alt="Player Development Command Center screenshot"
                 loading="lazy"
                 decoding="async"
-                onerror="this.parentElement.style.display='none';"
+                onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc; this.removeAttribute('data-alt-src');} else {this.parentElement.style.display='none';}"
               />
             </div>
           </div>
         </div>
 
         <div class="card" style="margin-top:14px;" id="demo-card">
-          <h3>Quick demo (60–90 sec)</h3>
+          <h3 style="color:var(--blue2);">Quick demo (60–90 sec)</h3>
           <p class="fineprint">A short walkthrough of the kinds of systems we ship. If the video doesn’t load, message me and I’ll send the link.</p>
           <div class="shot" style="margin-top:12px;">
             <video id="demoVideo" controls preload="metadata" playsinline>
@@ -597,7 +586,7 @@
 
         <div class="offers">
           <div class="card offer">
-            <h3>Quick Win Build (Pilot)</h3>
+            <h3 style="color:var(--blue2);">Quick Win Build (Pilot)</h3>
             <div class="price">$299</div>
             <p class="fine">Best first step • 7 days • One bottleneck, fixed</p>
             <ul class="list">
@@ -607,12 +596,12 @@
               <li>15–30 min handoff training</li>
             </ul>
             <div class="cta2">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “QUICK WIN”</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me “QUICK WIN”</a>
             </div>
           </div>
 
           <div class="card offer">
-            <h3>Workflow Audit (Systems Analysis)</h3>
+            <h3 style="color:var(--blue2);">Workflow Audit (Systems Analysis)</h3>
             <div class="price">$499</div>
             <p class="fine">Clarity-first • 3 priorities • Build plan included</p>
             <ul class="list">
@@ -622,12 +611,12 @@
               <li>Build blueprint: what to implement next and why</li>
             </ul>
             <div class="cta2">
-              <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book the audit call</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book the audit call</a>
             </div>
           </div>
 
           <div class="card offer">
-            <h3>AI Coaching Sprint</h3>
+            <h3 style="color:var(--blue2);">AI Coaching Sprint</h3>
             <div class="price">$799</div>
             <p class="fine">Hands-on training • Your real work • Templates included</p>
             <ul class="list">
@@ -637,12 +626,12 @@
               <li>Process you can teach your team</li>
             </ul>
             <div class="cta2">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “COACHING”</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me “COACHING”</a>
             </div>
           </div>
 
           <div class="card offer">
-            <h3>Lead-Ready Website Sprint (Front Door)</h3>
+            <h3 style="color:var(--blue2);">Lead-Ready Website Sprint (Front Door)</h3>
             <div class="price">$499</div>
             <p class="fine">Fast • Mobile-first • Built to capture leads</p>
             <ul class="list">
@@ -652,12 +641,12 @@
               <li>Basic credibility blocks (proof + FAQ)</li>
             </ul>
             <div class="cta2">
-              <a class="btn secondary" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book the sprint call</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book the sprint call</a>
             </div>
           </div>
 
           <div class="card offer">
-            <h3>Operations Buildout (Core)</h3>
+            <h3 style="color:var(--blue2);">Operations Buildout (Core)</h3>
             <div class="price">$1299+</div>
             <p class="fine">One major workflow end-to-end • Implementation + training</p>
             <ul class="list">
@@ -667,12 +656,12 @@
               <li>Launch support</li>
             </ul>
             <div class="cta2">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “BUILDOUT”</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me “BUILDOUT”</a>
             </div>
           </div>
 
           <div class="card offer">
-            <h3>Blueprint CRM Build</h3>
+            <h3 style="color:var(--blue2);">Blueprint CRM Build</h3>
             <div class="price">$1499+</div>
             <p class="fine">Sales pipeline v1 • Stops leads from slipping • Owner-friendly</p>
             <ul class="list">
@@ -682,7 +671,7 @@
               <li>Handoff training so you can run it</li>
             </ul>
             <div class="cta2">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “CRM”</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me “CRM”</a>
             </div>
           </div>
         </div>
@@ -696,13 +685,11 @@
       <section id="roofers" aria-label="Roofing businesses">
         <div class="kicker">Roofing businesses</div>
         <h2>A simple pipeline that stops missed leads.</h2>
-        <p class="sub">
-          Roofers lose money on follow-up, quoting delays, and “we meant to call them back.”
-        </p>
+        <p class="sub">Roofers lose money on follow-up, quoting delays, and “we meant to call them back.”</p>
 
         <div class="grid2">
           <div class="card">
-            <h3>Common roofing bottlenecks</h3>
+            <h3 style="color:var(--blue2);">Common roofing bottlenecks</h3>
             <ul class="list">
               <li>Leads from Facebook/Google not logged anywhere</li>
               <li>Quotes delayed, follow-up inconsistent</li>
@@ -712,7 +699,7 @@
           </div>
 
           <div class="card">
-            <h3>What we build for roofers (v1)</h3>
+            <h3 style="color:var(--blue2);">What we build for roofers (v1)</h3>
             <ul class="list">
               <li>One pipeline: New Lead → Scheduled → Quoted → Won/Lost</li>
               <li>One “Today view” for owner follow-up</li>
@@ -721,19 +708,15 @@
             </ul>
 
             <div class="hero-ctas" style="margin-top:14px;">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “ROOFER”</a>
-              <a class="btn secondary" href="#blueprint">Get the Free AI Blueprint</a>
-              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me “ROOFER”</a>
+              <a class="btn" href="#blueprint">Get the Free AI Blueprint</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book a free discovery call</a>
             </div>
           </div>
         </div>
-
-        <p class="fineprint">
-          Later, we can split this into a dedicated page (/roofers/) for ads and local search.
-        </p>
       </section>
 
-      <!-- FREE BLUEPRINT (link only, no embed) -->
+      <!-- FREE BLUEPRINT (link only) -->
       <section id="blueprint" aria-label="Free AI Blueprint">
         <div class="kicker">Free resource</div>
         <h2>Free AI Blueprint</h2>
@@ -743,38 +726,28 @@
 
         <div class="grid2">
           <div class="card">
-            <h3>Get it by email</h3>
+            <h3 style="color:var(--blue2);">Get it by email</h3>
             <p class="fineprint">Open the form, submit it, and you’ll receive the Free AI Blueprint at the email you enter.</p>
 
             <div class="hero-ctas" style="margin-top:14px;">
-              <a
-                class="btn secondary"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdc5BAzjItuaRQkZadhzkM5Q5R3Np1AFY2ko66DiOYJXydlBw/viewform?usp=dialog"
-                rel="noopener"
-              >
+              <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdc5BAzjItuaRQkZadhzkM5Q5R3Np1AFY2ko66DiOYJXydlBw/viewform?usp=dialog">
                 Open the Free AI Blueprint form
               </a>
             </div>
 
-            <p class="fineprint">
-              Prefer Facebook Messenger? Message me “BLUEPRINT” and your business type.
-            </p>
+            <p class="fineprint">Prefer Facebook Messenger? Message me “BLUEPRINT” and your business type.</p>
           </div>
 
           <div class="card">
-            <h3>Prefer a fast conversation?</h3>
+            <h3 style="color:var(--blue2);">Prefer a fast conversation?</h3>
             <p class="fineprint">
               Message me your business type (roofer, landscaper, pressure washing, coach, etc.) and the #1 bottleneck you want fixed first.
             </p>
 
             <div class="hero-ctas" style="margin-top:14px;">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me “BLUEPRINT”</a>
-              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me “BLUEPRINT”</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book a free discovery call</a>
             </div>
-
-            <p class="fineprint">
-              Fastest outcomes usually start with one focused bottleneck (lead capture or follow-up).
-            </p>
           </div>
         </div>
       </section>
@@ -793,14 +766,14 @@
             I’ve come to know how to use it myself with the lessons he has given me. I can’t say how thankful I am for his insight and teaching this God-loving, blue-collar worker that technology isn’t always the enemy.”
           </p>
           <p class="quote-author">
-            <strong>Chad G.</strong><br>
+            <strong>Chad G.</strong><br />
             Owner/Operator, God’s Grace Lawn Care
           </p>
         </div>
 
         <div class="grid2" style="margin-top:14px;">
           <div class="card">
-            <h3 style="margin:0 0 8px 0;">Mini case study: God’s Grace Lawn Care</h3>
+            <h3 style="color:var(--blue2); margin:0 0 8px 0;">Mini case study: God’s Grace Lawn Care</h3>
             <p class="fineprint" style="margin-top:0;">
               A simple operations system + coaching for an “old-school” owner who wanted less mental load and cleaner follow-up.
             </p>
@@ -812,7 +785,7 @@
           </div>
 
           <div class="card">
-            <h3 style="margin:0 0 8px 0;">What shipped (in plain terms)</h3>
+            <h3 style="color:var(--blue2); margin:0 0 8px 0;">What shipped (in plain terms)</h3>
             <ul class="list" style="margin-top:10px;">
               <li>A single “Today view” so the system actually gets used</li>
               <li>Tracking blocks for scheduling, bidding, and cost notes</li>
@@ -822,7 +795,7 @@
             <p class="fineprint" style="margin-top:12px;">
               Want something similar? Message me your business type and your #1 bottleneck.
             </p>
-            <a class="btn primary" style="margin-top:10px;" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me on Facebook</a>
+            <a class="btn primary" style="margin-top:10px;" href="https://www.facebook.com/Blueprintaiconsultingco">Message me on Facebook</a>
           </div>
         </div>
       </section>
@@ -834,27 +807,27 @@
 
         <div class="grid2">
           <div class="card">
-            <h3>Do I need to be “techy” for this to work?</h3>
+            <h3 style="color:var(--blue2);">Do I need to be “techy” for this to work?</h3>
             <p class="fineprint">No. The goal is a system you can run daily. I build for owners and crews, then train you in plain language.</p>
           </div>
           <div class="card">
-            <h3>What tools do you build in?</h3>
+            <h3 style="color:var(--blue2);">What tools do you build in?</h3>
             <p class="fineprint">Whatever fits your workflow. In many cases we use simple tools first. If you need a custom app, we deploy that too.</p>
           </div>
           <div class="card">
-            <h3>How fast can we ship a first version?</h3>
+            <h3 style="color:var(--blue2);">How fast can we ship a first version?</h3>
             <p class="fineprint">Quick Win Builds are designed to ship fast. Larger buildouts depend on scope, but the goal is always an early working version.</p>
           </div>
           <div class="card">
-            <h3>What does “custom app” mean?</h3>
+            <h3 style="color:var(--blue2);">What does “custom app” mean?</h3>
             <p class="fineprint">A lightweight app tailored to your process: pipeline, notes, follow-up, job tracking, dashboards, built so your team actually uses it.</p>
           </div>
           <div class="card">
-            <h3>Do you offer support after launch?</h3>
+            <h3 style="color:var(--blue2);">Do you offer support after launch?</h3>
             <p class="fineprint">Yes. You’ll also get documentation and training so you’re not dependent on me for basic changes.</p>
           </div>
           <div class="card">
-            <h3>What should I start with?</h3>
+            <h3 style="color:var(--blue2);">What should I start with?</h3>
             <p class="fineprint">If you’re unsure, start with the Free AI Blueprint or a Quick Win Build focused on your biggest bottleneck (often lead capture or follow-up).</p>
           </div>
         </div>
@@ -885,11 +858,11 @@
           </div>
 
           <div class="card">
-            <h3>Photos</h3>
+            <h3 style="color:var(--blue2);">Photos</h3>
             <div class="grid2" style="grid-template-columns:1fr 1fr; margin-top:12px;">
               <div class="shot">
                 <img
-                  src="coach_drew_profile_master_4k.jpg?v=2"
+                  src="coach_drew_profile_master_4k.jpg?v=7"
                   alt="Drew Hufnagle"
                   loading="lazy"
                   decoding="async"
@@ -898,7 +871,7 @@
               </div>
               <div class="shot">
                 <img
-                  src="drew_on_phone.jpg?v=2"
+                  src="drew_on_phone.jpg?v=7"
                   alt="Drew on phone"
                   loading="lazy"
                   decoding="async"
@@ -918,7 +891,7 @@
 
         <div class="grid2">
           <div class="card">
-            <h3>Fastest way to start</h3>
+            <h3 style="color:var(--blue2);">Fastest way to start</h3>
             <p class="fineprint">
               Message me first. Grab the Free AI Blueprint if you want to start solo. Book a call if you want a deeper walkthrough.
             </p>
@@ -928,17 +901,16 @@
             </p>
           </div>
 
-          <div class="card">
-            <h3>Choose your path</h3>
+          <div class="card grid-overlay">
+            <h3 style="color:var(--blue2);">Choose your path</h3>
             <div style="display:grid; gap:12px; margin-top:12px;">
-              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" rel="noopener">Message me</a>
-              <a class="btn secondary" href="#blueprint">Get the Free AI Blueprint</a>
-              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7" rel="noopener">Book a free discovery call</a>
+              <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco">Message me</a>
+              <a class="btn" href="#blueprint">Get the Free AI Blueprint</a>
+              <a class="btn" href="https://calendar.app.google/ABoSgYjoUzyC41sD7">Book a free discovery call</a>
             </div>
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="footer" aria-label="Footer">
@@ -947,7 +919,7 @@
           <img
             src="logo.png"
             alt="Blueprint AI Consulting Co. logo"
-            style="height:30px; width:auto; filter:drop-shadow(0 0 14px rgba(58,160,255,.18));"
+            style="height:30px; width:auto; filter:drop-shadow(0 10px 25px rgba(58,160,255,.18));"
             onerror="this.style.display='none';"
           />
           <div><strong>Blueprint AI Consulting Co.</strong></div>
