@@ -22,7 +22,12 @@
   <meta property="og:description" content="We design, build, and deploy AI tools tailored to your operations." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blueprintaiconsultingco.com/" />
-  <meta property="og:image" content="logo.png" />
+  <meta property="og:image" content="https://blueprintaiconsultingco.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blueprint AI Consulting Co." />
+  <meta name="twitter:description" content="We design, build, and deploy AI tools tailored to your operations." />
+  <meta name="twitter:image" content="https://blueprintaiconsultingco.com/logo.png" />
+  <link rel="canonical" href="https://blueprintaiconsultingco.com/" />
 
   <style>
     :root{
@@ -466,7 +471,7 @@
 </head>
 
 <body>
-  <a href="#top" class="sr-only">Skip to content</a>
+  <a href="#content" class="sr-only">Skip to content</a>
 
   <div class="topbar">
     <div class="wrap">
@@ -616,8 +621,8 @@
             </ul>
             <div class="shot">
               <img
-                src="ops_command_center.jpg?v=14"
-                data-alt-src="ops_command_center.png?v=14"
+                src="ops_command_center.png?v=14"
+                data-alt-src="ops_command_center.jpg?v=14"
                 alt="Operations Command Center screenshot"
                 loading="lazy"
                 decoding="async"
@@ -648,12 +653,16 @@
 
         <div class="card" style="margin-top:14px;" id="demo-card">
           <h3 style="color:var(--blue2);">Short demo (optional)</h3>
-          <p class="fineprint">If the video does not load, message me and I will send the link.</p>
+          <p class="fineprint">If playback fails on your browser, use the direct video link below.</p>
           <div class="shot">
             <video id="demoVideo" controls preload="metadata" playsinline>
               <source src="demo.mp4" type="video/mp4" />
+              Your browser does not support embedded video. Use the direct link below.
             </video>
           </div>
+          <p class="fineprint" id="demoVideoFallback" style="margin-top:10px; display:none;">
+            Video not loading? <a id="demoVideoLink" href="demo.mp4" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);" target="_blank" rel="noopener noreferrer">Open the demo in a new tab</a>.
+          </p>
         </div>
       </section>
 
@@ -823,4 +832,107 @@
       </section>
 
       <!-- TESTIMONIALS -->
-      <section id="test
+      <section id="testimonials" aria-label="Testimonials">
+        <div class="kicker">Testimonials</div>
+        <h2>What clients say after launch.</h2>
+        <p class="sub">Built for owners who need execution, not fluff.</p>
+
+        <div class="grid2">
+          <article class="card quote-card">
+            <p class="quote-text">“Drew helped us simplify our follow-up and gave us a dashboard that finally made sense. We stopped losing leads because everyone could see what needed attention each day.”</p>
+            <p class="quote-author">— Home Service Owner</p>
+          </article>
+
+          <article class="card quote-card">
+            <p class="quote-text">“The process was clear and fast. We had a working system in under two weeks and my team actually uses it because it is simple.”</p>
+            <p class="quote-author">— Program Director</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" aria-label="Frequently asked questions">
+        <div class="kicker">FAQ</div>
+        <h2>Common questions.</h2>
+
+        <div class="grid2" style="margin-top:14px;">
+          <article class="card">
+            <h3 style="color:var(--blue2);">Do I need new software to work with you?</h3>
+            <p class="fineprint">Usually no. We start with your current tools and only add what is needed to solve the bottleneck.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="color:var(--blue2);">How fast can we launch?</h3>
+            <p class="fineprint">Most Quick Win builds launch in 7 days. Larger buildouts are scoped first so timelines are predictable.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="color:var(--blue2);">Will my team be able to run this?</h3>
+            <p class="fineprint">Yes. Every project includes a practical handoff and simple documentation so daily execution is easy.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="color:var(--blue2);">What if we are not sure where to begin?</h3>
+            <p class="fineprint">Start with the Free AI Blueprint or the Systems Analysis offer. Both are designed to give clarity quickly.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-label="Contact">
+        <div class="kicker">Contact</div>
+        <h2>Ready to fix the bottleneck?</h2>
+        <p class="sub">Send one message with your biggest operations issue and we will map a practical next step.</p>
+
+        <div class="card hero-card" style="margin-top:14px;">
+          <div class="hero-actions">
+            <a class="btn primary" href="https://www.facebook.com/Blueprintaiconsultingco" target="_blank" rel="noopener noreferrer">Message on Facebook</a>
+            <a class="btn green" href="sms:+17173478749">Text: (717) 347-8749</a>
+            <a class="btn" href="mailto:CoachDrew@blueprintaiconsultingco.com">Email CoachDrew@blueprintaiconsultingco.com</a>
+          </div>
+          <p class="fineprint">Prefer a scheduled call? <a href="https://calendar.app.google/ABoSgYjoUzyC41sD7" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);" target="_blank" rel="noopener noreferrer">Book a free discovery call</a>.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer" aria-label="Footer">
+    <div class="wrap footer-grid">
+      <p>© <span id="year"></span> Blueprint AI Consulting Co. All rights reserved.</p>
+      <p>Serving home service businesses and coaches with practical AI systems.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const demoVideo = document.getElementById('demoVideo');
+    const demoFallback = document.getElementById('demoVideoFallback');
+    const demoFallbackLink = document.getElementById('demoVideoLink');
+
+    if (demoVideo && demoFallback && demoFallbackLink) {
+      const candidateSources = [
+        { src: 'demo.mp4', type: 'video/mp4' },
+        { src: 'playerdev.mp4.mp4', type: 'video/mp4' }
+      ];
+
+      const firstPlayableSource = candidateSources.find((source) => {
+        if (!source.type) return true;
+        const support = demoVideo.canPlayType(source.type);
+        return support === 'probably' || support === 'maybe';
+      }) || candidateSources[0];
+
+      demoVideo.src = firstPlayableSource.src;
+      demoFallbackLink.href = firstPlayableSource.src;
+
+      const showFallback = () => {
+        demoFallback.style.display = 'block';
+      };
+
+      demoVideo.addEventListener('error', showFallback, { once: true });
+      demoVideo.addEventListener('stalled', showFallback, { once: true });
+      demoVideo.addEventListener('abort', showFallback, { once: true });
+    }
+  </script>
+</body>
+</html>
