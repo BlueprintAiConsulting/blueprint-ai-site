@@ -358,6 +358,42 @@
       margin-top:14px;
     }
 
+    .systems-bubbles{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .bubble-card{
+      text-align:center;
+      background: rgba(7,12,24,.48);
+      border:1px solid rgba(120,180,255,.14);
+      box-shadow:none;
+    }
+    .bubble-image{
+      width:132px;
+      height:132px;
+      border-radius:50%;
+      overflow:hidden;
+      margin:2px auto 12px;
+      border:1px solid rgba(120,180,255,.24);
+      box-shadow: 0 10px 28px rgba(0,0,0,.24);
+      background: rgba(12,20,48,.58);
+    }
+    .bubble-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .bubble-card p{
+      margin:8px 0 0;
+      color:rgba(207,216,234,.9);
+      font-size:13px;
+      line-height:1.45;
+      font-weight:650;
+    }
+
     .list{
       margin:12px 0 0;
       padding:0 0 0 18px;
@@ -456,6 +492,7 @@
       .offers{grid-template-columns:1fr;}
       .grid2{grid-template-columns:1fr;}
       .steps{grid-template-columns:1fr 1fr;}
+      .systems-bubbles{grid-template-columns:repeat(2, minmax(0, 1fr));}
       h1{font-size:34px;}
     }
 
@@ -466,6 +503,7 @@
       .cta{width:100%;}
       .cta .btn{width:100%;}
       .steps{grid-template-columns:1fr;}
+      .systems-bubbles{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -595,6 +633,48 @@
             <p class="fineprint">
               Customer relationship management (CRM) setup, lead capture and follow up, quoting workflows, dashboards, simple custom apps, local search engine optimization (SEO) systems, and done for you social media execution.
             </p>
+          </article>
+        </div>
+      </section>
+
+
+
+      <section id="systems" aria-label="Main systems">
+        <div class="kicker">Main systems</div>
+        <h2>The four systems we build most.</h2>
+        <p class="sub">Built for daily use and easy handoff.</p>
+
+        <div class="systems-bubbles">
+          <article class="card bubble-card">
+            <div class="bubble-image">
+              <img src="bubble-ops-command-center.svg" alt="Operations Command Center bubble image" loading="lazy" decoding="async" />
+            </div>
+            <h3 style="color:var(--blue2);">Operations Command Center</h3>
+            <p>See jobs, team handoffs, and priorities in one place.</p>
+          </article>
+
+          <article class="card bubble-card">
+            <div class="bubble-image">
+              <img src="bubble-player-development-tracker.svg" alt="Player Development Tracker bubble image" loading="lazy" decoding="async" />
+            </div>
+            <h3 style="color:var(--blue2);">Player Development Tracker</h3>
+            <p>Track plans, progress, and coach notes over time.</p>
+          </article>
+
+          <article class="card bubble-card">
+            <div class="bubble-image">
+              <img src="bubble-lead-capture-followup.svg" alt="Lead Capture and Follow-Up System bubble image" loading="lazy" decoding="async" />
+            </div>
+            <h3 style="color:var(--blue2);">Lead Capture and Follow-Up System</h3>
+            <p>Capture every lead and trigger consistent follow up.</p>
+          </article>
+
+          <article class="card bubble-card">
+            <div class="bubble-image">
+              <img src="bubble-smart-quoting-system.svg" alt="Smart Quoting System bubble image" loading="lazy" decoding="async" />
+            </div>
+            <h3 style="color:var(--blue2);">Smart Quoting System</h3>
+            <p>Send clean quotes faster and track status clearly.</p>
           </article>
         </div>
       </section>
