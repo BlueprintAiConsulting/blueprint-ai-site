@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Operations Command Center bubble image">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#204a7d"/>
+      <stop offset="100%" stop-color="#2f85c8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="248" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="214" fill="none" stroke="#66d0ff" stroke-opacity="0.45" stroke-width="3"/>
+  <rect x="122" y="192" width="268" height="154" rx="16" fill="#0d1d36" stroke="#66d0ff" stroke-opacity="0.45"/>
+  <rect x="142" y="220" width="228" height="12" rx="6" fill="#66d0ff" fill-opacity="0.85"/>
+  <rect x="142" y="246" width="160" height="10" rx="5" fill="#d6e9fa" fill-opacity="0.85"/>
+  <rect x="142" y="268" width="130" height="10" rx="5" fill="#d6e9fa" fill-opacity="0.7"/>
+  <rect x="142" y="290" width="110" height="10" rx="5" fill="#d6e9fa" fill-opacity="0.55"/>
+  <circle cx="332" cy="286" r="34" fill="#12d35f" fill-opacity="0.25"/>
+  <path d="M317 286l10 10 20-20" fill="none" stroke="#12d35f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
