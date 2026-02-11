@@ -496,6 +496,25 @@
     }
     .offer .cta2{margin-top:12px;}
 
+    .offer.featured{
+      border-color: rgba(102,208,255,.42);
+      box-shadow: 0 18px 36px rgba(58,160,255,.18);
+    }
+    .offer.featured .featured-badge{
+      display:inline-flex;
+      align-items:center;
+      margin-bottom:10px;
+      padding:6px 11px;
+      border-radius:999px;
+      border:1px solid rgba(102,208,255,.45);
+      background: rgba(58,160,255,.14);
+      color:rgba(233,238,252,.96);
+      font-size:11px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.4px;
+    }
+
     .quote-card{
       border-color:rgba(120,180,255,.16);
       background: rgba(7,12,24,.50);
@@ -709,7 +728,7 @@
         <div class="systems-bubbles">
           <article class="card bubble-card">
             <div class="bubble-image">
-              <img src="bubble-ops-command-center.svg" alt="Operations Command Center bubble image" loading="lazy" decoding="async" />
+              <img src="ops_command_center.png" alt="Operations Command Center dashboard preview" loading="lazy" decoding="async" />
             </div>
             <h3 style="color:var(--blue2);">Operations Command Center</h3>
             <p>See jobs, team handoffs, and priorities in one place.</p>
@@ -717,7 +736,7 @@
 
           <article class="card bubble-card">
             <div class="bubble-image">
-              <img src="bubble-player-development-tracker.svg" alt="Player Development Tracker bubble image" loading="lazy" decoding="async" />
+              <img src="player_dev_command_center.jpg" alt="Player Development Command Center dashboard preview" loading="lazy" decoding="async" />
             </div>
             <h3 style="color:var(--blue2);">Player Development Tracker</h3>
             <p>Track plans, progress, and coach notes over time.</p>
@@ -838,16 +857,34 @@
         <h2>Clear options. Transparent pricing.</h2>
         <p class="sub">Build first. Then scale with monthly execution.</p>
 
+        <div class="card offer featured" style="margin-top:14px;">
+          <div class="featured-badge">Featured offer</div>
+          <h3 style="color:var(--blue2);">Custom all-in-one business systems</h3>
+          <p class="fine">Custom all-in-one business systems are one click away.</p>
+          <p class="fineprint">Custom dashboards and custom applications built to match your exact workflow.</p>
+          <ul class="list">
+            <li>One dashboard to run the day-to-day</li>
+            <li>Leads → quotes → jobs → follow-ups in one place</li>
+            <li>Built around your exact process (not generic software)</li>
+            <li>Works on phone + desktop</li>
+            <li>Fast build + simple training for your team</li>
+          </ul>
+          <div class="hero-actions" style="margin-top:12px;">
+            <a class="btn primary" href="#contact" data-contact="messenger">Message me</a>
+            <a class="btn" href="#" data-contact="booking">Book a call</a>
+          </div>
+        </div>
+
         <h3 style="color:var(--blue2); margin:18px 0 12px;">Build the system (one time)</h3>
         <div class="offers">
           <div class="card offer">
-            <h3 style="color:var(--blue2);">Systems Analysis</h3>
-            <div class="price"><span class="amt">$499</span></div>
-            <p class="fine">Diagnostic plus plan. Clear priorities.</p>
+            <h3 style="color:var(--blue2);">Simple System</h3>
+            <div class="price"><span class="amt">$799</span></div>
+            <p class="fine">A fast, practical build for one high-impact workflow.</p>
             <ul class="list">
-              <li>Workflow map of how work moves today</li>
-              <li>Top 3 fixes ranked by impact</li>
-              <li>Build plan with next steps</li>
+              <li>Workflow map and streamlined dashboard setup</li>
+              <li>Lead-to-job tracking aligned to your daily operations</li>
+              <li>Build handoff plus simple team training</li>
             </ul>
           </div>
 
