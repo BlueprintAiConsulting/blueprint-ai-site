@@ -371,8 +371,8 @@
       box-shadow:none;
     }
     .bubble-image{
-      width:132px;
-      height:132px;
+      width:148px;
+      height:148px;
       border-radius:50%;
       overflow:hidden;
       margin:2px auto 12px;
@@ -392,6 +392,49 @@
       font-size:13px;
       line-height:1.45;
       font-weight:650;
+    }
+
+    .proof-image{
+      width:320px;
+      height:200px;
+      border-radius:14px;
+      overflow:hidden;
+      margin:12px auto 4px;
+      border:1px solid rgba(120,180,255,.26);
+      box-shadow: 0 12px 30px rgba(0,0,0,.24);
+      background: rgba(12,20,48,.58);
+    }
+    .proof-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center center;
+      display:block;
+    }
+
+    .proof-image img{cursor:zoom-in;}
+
+    .lightbox{
+      position:fixed; inset:0; z-index:120;
+      background: rgba(4,8,18,.88);
+      display:none; align-items:center; justify-content:center;
+      padding:20px;
+    }
+    .lightbox.open{display:flex;}
+    .lightbox img{
+      max-width:min(1200px, 96vw);
+      max-height:88vh;
+      border-radius:14px;
+      border:1px solid rgba(120,180,255,.34);
+      box-shadow: 0 18px 40px rgba(0,0,0,.45);
+      background:#0a132a;
+    }
+    .lightbox .close{
+      position:absolute; top:16px; right:16px;
+      border:1px solid rgba(120,180,255,.34);
+      background: rgba(10,19,42,.85);
+      color:#e9eefc; border-radius:10px;
+      padding:8px 10px; font-weight:800; cursor:pointer;
     }
 
     .list{
@@ -493,6 +536,7 @@
       .grid2{grid-template-columns:1fr;}
       .steps{grid-template-columns:1fr 1fr;}
       .systems-bubbles{grid-template-columns:repeat(2, minmax(0, 1fr));}
+      .proof-image{width:280px; height:175px;}
       h1{font-size:34px;}
     }
 
@@ -504,6 +548,7 @@
       .cta .btn{width:100%;}
       .steps{grid-template-columns:1fr;}
       .systems-bubbles{grid-template-columns:1fr;}
+      .proof-image{width:240px; height:150px;}
     }
   </style>
 </head>
@@ -549,7 +594,7 @@
         <div class="card" style="background: rgba(10,16,40,.58); border:1px solid rgba(102,208,255,.28);">
           <div class="kicker">New marketing offer</div>
           <h2 style="font-size:22px;">Lead Generator Engine (Ads + SEO + Social)</h2>
-          <p class="sub" style="margin-top:8px;">A done-for-you lead generation system combining paid ads, local SEO, and consistent social content—built to turn attention into booked jobs.</p>
+          <p class="sub" style="margin-top:8px;">Done-for-you ads, SEO, and social that turn attention into booked jobs.</p>
           <div class="hero-actions" style="margin-top:12px;">
             <a class="btn primary" href="lead-generator-engine.html">View Starter / Standard / Premium</a>
             <a class="btn" href="target-lead-list-builder.html">View Target Lead List Builder</a>
@@ -566,7 +611,7 @@
             <div class="kicker">Blueprint AI Consulting Co.</div>
             <h1>We implement real systems and run your online growth.</h1>
 
-            <p class="sub">Custom apps, lead follow up, social media, and local Google visibility. Built fast. Simple to run.</p>
+            <p class="sub">Custom systems and marketing execution for real-world growth.</p>
 
             <div class="hero-actions">
               <a class="btn primary" href="#" data-contact="booking">Book a free discovery call</a>
@@ -586,7 +631,7 @@
             </div>
 
             <p class="fineprint">
-              Artificial Intelligence (AI) is the tool. Your operations are the foundation. We build around how you run jobs day to day.
+              Built around how your team actually works.
             </p>
           </div>
 
@@ -698,45 +743,7 @@
 
 
 
-      <section id="systems" aria-label="Main systems">
-        <div class="kicker">Main systems</div>
-        <h2>The four systems we build most.</h2>
-        <p class="sub">Built for daily use and easy handoff.</p>
-
-        <div class="systems-bubbles">
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="bubble-ops-command-center.svg" alt="Operations Command Center bubble image" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Operations Command Center</h3>
-            <p>See jobs, team handoffs, and priorities in one place.</p>
-          </article>
-
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="bubble-player-development-tracker.svg" alt="Player Development Tracker bubble image" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Player Development Tracker</h3>
-            <p>Track plans, progress, and coach notes over time.</p>
-          </article>
-
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="bubble-lead-capture-followup.svg" alt="Lead Capture and Follow-Up System bubble image" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Lead Capture and Follow-Up System</h3>
-            <p>Capture every lead and trigger consistent follow up.</p>
-          </article>
-
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="bubble-smart-quoting-system.svg" alt="Smart Quoting System bubble image" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Smart Quoting System</h3>
-            <p>Send clean quotes faster and track status clearly.</p>
-          </article>
-        </div>
-      </section>
+      
 
 
       <!-- PROOF -->
@@ -753,6 +760,9 @@
               <li>Workflow tracking from incoming work to completion</li>
               <li>Owner-friendly view so priorities are clear</li>
             </ul>
+            <div class="proof-image">
+              <img src="ops_command_center.png" alt="Ops Command Center dashboard preview" loading="lazy" decoding="async" data-full="ops_command_center.png" onerror="this.src='ops_command_center.png'" />
+            </div>
           </div>
 
           <div class="card">
@@ -762,6 +772,9 @@
               <li>Tracking system for progress and coach notes</li>
               <li>Simple reporting for staff accountability</li>
             </ul>
+            <div class="proof-image">
+              <img src="player_dev_command_center.jpg" alt="Player Development Command Center dashboard preview" loading="lazy" decoding="async" data-full="player_dev_command_center.jpg" onerror="this.src='player_dev_command_center.jpg'" />
+            </div>
           </div>
         </div>
       </section>
@@ -777,7 +790,7 @@
         <div class="grid2">
           <article class="card">
             <h3 style="color:var(--blue2);">Lead Generator Engine (Ads + SEO + Social)</h3>
-            <p class="fineprint">A done-for-you lead generation system combining paid ads, local SEO, and consistent social content—built to turn attention into booked jobs.</p>
+            <p class="fineprint">Done-for-you ads, SEO, and social that turn attention into booked jobs.</p>
             <ul class="list">
               <li>Done-for-you Meta campaign setup + campaign management</li>
               <li>Local SEO, on-page SEO, technical baseline, and reporting</li>
@@ -805,7 +818,7 @@
 
           <article class="card">
             <h3 style="color:var(--blue2);">Website Design / Website Sprint</h3>
-            <p class="fineprint">A focused website build service to launch or improve your digital front door. This is separate from monthly marketing execution.</p>
+            <p class="fineprint">Website build service for launch or refresh, separate from monthly marketing execution.</p>
             <ul class="list">
               <li>One page or multi-page website scope</li>
               <li>Clear calls to action and lead capture setup</li>
@@ -827,17 +840,6 @@
 
         <h3 style="color:var(--blue2); margin:18px 0 12px;">Build the system (one time)</h3>
         <div class="offers">
-          <div class="card offer">
-            <h3 style="color:var(--blue2);">Blueprint Pilot</h3>
-            <div class="price"><span class="amt">$299</span></div>
-            <p class="fine">Fast win. One bottleneck. Same week result.</p>
-            <ul class="list">
-              <li>Pick one problem that costs you money</li>
-              <li>Build the fix inside your current tools</li>
-              <li>Quick handoff so you can run it immediately</li>
-            </ul>
-          </div>
-
           <div class="card offer">
             <h3 style="color:var(--blue2);">Systems Analysis</h3>
             <div class="price"><span class="amt">$499</span></div>
@@ -879,7 +881,7 @@
           <div class="card offer">
             <h3 style="color:var(--blue2);">Lead Generator Engine (Ads + SEO + Social)</h3>
             <div class="price"><span class="amt">Starter / Standard / Premium</span></div>
-            <p class="fine">A done-for-you lead generation system combining paid ads, local SEO, and consistent social content—built to turn attention into booked jobs.</p>
+            <p class="fine">Done-for-you ads, SEO, and social that turn attention into booked jobs.</p>
             <ul class="list">
               <li>Meta campaign setup + campaign management + optimization</li>
               <li>Local SEO + on-page SEO + technical baseline + reporting</li>
@@ -1048,6 +1050,11 @@
     </main>
   </div>
 
+  <div id="image-lightbox" class="lightbox" aria-hidden="true">
+    <button class="close" type="button" aria-label="Close image preview">Close</button>
+    <img src="" alt="Expanded proof screenshot" />
+  </div>
+
   <footer class="footer" aria-label="Footer">
     <div class="wrap footer-grid">
       <p>© <span id="year"></span> Blueprint AI Consulting Co. All rights reserved.</p>
@@ -1086,6 +1093,31 @@
         el.setAttribute('rel', 'noreferrer');
       }
     });
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = lightbox?.querySelector('img');
+    const closeLightbox = () => {
+      if (!lightbox) return;
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      if (lightboxImg) lightboxImg.setAttribute('src', '');
+    };
+
+    document.querySelectorAll('#proof .proof-image img').forEach((img) => {
+      img.addEventListener('click', () => {
+        if (!lightbox || !lightboxImg) return;
+        lightboxImg.setAttribute('src', img.getAttribute('data-full') || img.getAttribute('src') || '');
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    lightbox?.addEventListener('click', (event) => {
+      if (event.target === lightbox || event.target.classList.contains('close')) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeLightbox();
+    });
+
   </script>
 </body>
 </html>
