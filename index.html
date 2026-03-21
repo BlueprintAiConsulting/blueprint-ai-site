@@ -3,1226 +3,148 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Blueprint AI Consulting Co. — We design, build, and deploy AI tools tailored to your operations." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#070c18" />
-
-  <title>Blueprint AI Consulting Co. | AI Tools Built Around Your Operations</title>
-
-  <link rel="icon" href="logo.png" type="image/png" />
-  <link rel="apple-touch-icon" href="logo.png" />
-
-  <!-- Inter -->
+  <meta name="description" content="Blueprint AI Consulting Co. builds websites, online presence systems, ad creative, and custom apps for companies that need execution." />
+  <meta name="theme-color" content="#050b18" />
+  <title>Blueprint AI Consulting Co. | Command-Center Digital Implementation</title>
+  <link rel="icon" href="/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Blueprint AI Consulting Co." />
-  <meta property="og:description" content="We design, build, and deploy AI tools tailored to your operations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://blueprintaiconsultingco.com/" />
-  <meta property="og:image" content="https://blueprintaiconsultingco.com/logo.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blueprint AI Consulting Co." />
-  <meta name="twitter:description" content="We design, build, and deploy AI tools tailored to your operations." />
-  <meta name="twitter:image" content="https://blueprintaiconsultingco.com/logo.png" />
+  <link rel="stylesheet" href="/site-shell.css" />
   <link rel="canonical" href="https://blueprintaiconsultingco.com/" />
-
-  <style>
-    :root{
-      --bg:#070c18;
-      --panel: rgba(7,12,24,.52);
-      --panel2: rgba(10,16,40,.58);
-      --text:#e9eefc;
-
-      /* Primary glow (blue) */
-      --blue:#3aa0ff;
-      --blue2:#66d0ff;
-
-      /* Accent glow (money green) - slightly darker but still neon */
-      --green:#12d35f;
-
-      --radius: 18px;
-      --max: 1120px;
-
-      --border: rgba(120,180,255,.16);
-      --border2: rgba(120,180,255,.22);
-
-      --shadow: 0 22px 70px rgba(0,0,0,.48);
-
-      --grid:
-        linear-gradient(to right, rgba(140,190,255,.085) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(140,190,255,.085) 1px, transparent 1px);
-    }
-
-    *{box-sizing:border-box;}
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      line-height:1.45;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-
-      background:
-        radial-gradient(1100px 760px at 14% 8%, rgba(58,160,255,.36), transparent 60%),
-        radial-gradient(900px 680px at 86% 12%, rgba(102,208,255,.22), transparent 62%),
-        radial-gradient(1100px 820px at 50% 105%, rgba(58,160,255,.14), transparent 62%),
-        radial-gradient(900px 700px at 55% 45%, rgba(140,190,255,.08), transparent 66%),
-        var(--bg);
-    }
-
-    a{color:inherit; text-decoration:none;}
-    a:hover{opacity:.94;}
-    img{max-width:100%; height:auto; display:block;}
-
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
-    .sr-only{
-      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
-      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-    }
-
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(12px);
-      background: rgba(7,12,24,.86);
-      border-bottom: 1px solid rgba(120,180,255,.14);
-    }
-
-    header{padding:13px 0;}
-    nav{display:flex; align-items:center; justify-content:space-between; gap:14px;}
-
-    .brand{display:flex; align-items:center; gap:12px; min-width:240px;}
-    .brand img{
-      height:32px; width:auto;
-      filter: drop-shadow(0 10px 25px rgba(58,160,255,.18));
-    }
-    .brand .name{
-      font-weight:900;
-      font-size:14px;
-      line-height:1.05;
-      letter-spacing:.2px;
-    }
-
-    .links{
-      display:flex; align-items:center; gap:10px;
-      flex-wrap:wrap; justify-content:center; flex:1;
-    }
-    .links a{
-      font-size:13px;
-      color:rgba(226,232,240,.90);
-      font-weight:750;
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px solid transparent;
-      background: rgba(255,255,255,0.00);
-    }
-    .links a:hover{
-      border-color: rgba(120,180,255,.22);
-      background: rgba(255,255,255,0.04);
-      color:var(--text);
-    }
-
-    .cta{
-      display:flex; gap:10px; align-items:center; justify-content:flex-end;
-      min-width:240px; flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid var(--border2);
-      background: rgba(12,20,48,.58);
-      color:var(--text);
-      font-weight:800;
-      font-size:14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.22);
-      white-space:nowrap;
-      cursor:pointer;
-      transition: transform .1s ease, filter .15s ease, border-color .15s ease, background .15s ease;
-    }
-    .btn:active{transform:scale(.985);}
-    .btn:hover{
-      border-color: rgba(120,180,255,.40);
-      background: rgba(12,20,48,.76);
-    }
-
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(58,160,255,.95), rgba(102,208,255,.78));
-      border-color: rgba(102,208,255,.60);
-      color:#061023;
-      box-shadow: 0 16px 44px rgba(58,160,255,.26);
-    }
-    .btn.primary:hover{filter:brightness(1.05);}
-
-    .btn.green{
-      border-color: rgba(18,211,95,.55);
-      background: rgba(18,211,95,.10);
-      box-shadow: 0 0 0 rgba(0,0,0,0);
-    }
-    .btn.green:hover{
-      background: rgba(18,211,95,.14);
-      border-color: rgba(18,211,95,.70);
-      filter:brightness(1.02);
-    }
-
-    main{padding:26px 0 62px;}
-    section{padding:36px 0; border-top:1px solid rgba(120,180,255,.12);}
-    section:first-of-type{border-top:none;}
-
-    .card{
-      border-radius: var(--radius);
-      border:1px solid var(--border);
-      background: var(--panel);
-      box-shadow: var(--shadow);
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .grid-overlay:before{
-      content:"";
-      position:absolute; inset:0;
-      background-image: var(--grid);
-      background-size: 44px 44px;
-      opacity:.65;
-      mask-image: radial-gradient(circle at 30% 18%, black 10%, transparent 70%);
-      pointer-events:none;
-    }
-
-    .kicker{
-      color: rgba(102,208,255,.92);
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-      text-shadow: 0 0 22px rgba(102,208,255,.10);
-    }
-
-    h1{
-      font-size:40px;
-      line-height:1.06;
-      margin:0;
-      letter-spacing:-.7px;
-      text-shadow: 0 0 22px rgba(102,208,255,.10);
-    }
-    h2{margin:0; font-size:26px; letter-spacing:-.3px; line-height:1.2;}
-    h3{margin:0; font-size:16px; letter-spacing:-.2px;}
-
-    .sub{
-      margin:12px 0 0;
-      color:rgba(207,216,234,.92);
-      font-size:15px;
-      line-height:1.5;
-      font-weight:650;
-      max-width:70ch;
-    }
-
-    .meta-row{
-      margin-top:14px;
-      display:flex; flex-wrap:wrap; gap:10px;
-    }
-
-    .pill{
-      border:1px solid rgba(120,180,255,.16);
-      background: rgba(255,255,255,.04);
-      border-radius:14px;
-      padding:10px 12px;
-      font-size:12.5px;
-      font-weight:850;
-      color:rgba(233,238,252,.95);
-    }
-
-    .pill.money{
-      border-color: rgba(18,211,95,.34);
-      box-shadow: 0 0 26px rgba(18,211,95,.18);
-    }
-
-    .fineprint{
-      color:rgba(226,232,240,.85);
-      font-weight:650;
-      font-size:13px;
-      line-height:1.55;
-      margin-top:10px;
-    }
-
-    .hero{padding:46px 0 28px;}
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap:16px;
-      align-items:start;
-    }
-    .hero-left-stack{
-      display:grid;
-      gap:12px;
-      align-content:start;
-    }
-    .hero-inline-image{
-      padding:0;
-      overflow:hidden;
-      background: rgba(7,12,24,.52);
-    }
-    .hero-inline-image .image-wrap{
-      aspect-ratio: 16/10;
-      border-radius: var(--radius);
-      overflow:hidden;
-      border:1px solid rgba(120,180,255,.16);
-    }
-    .hero-inline-image .image-wrap img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      border-bottom:none;
-    }
-
-    .hero-card{
-      background:
-        radial-gradient(700px 520px at 0% 0%, rgba(58,160,255,.22), transparent 58%),
-        radial-gradient(700px 520px at 100% 0%, rgba(102,208,255,.14), transparent 58%),
-        var(--panel2);
-      border:1px solid rgba(120,180,255,.18);
-    }
-
-    .hero-actions{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;
-    }
-
-    .mini-link{
-      margin-top:12px;
-      font-size:13px;
-      font-weight:700;
-      color:rgba(226,232,240,.84);
-    }
-    .mini-link a{
-      color: rgba(102,208,255,.95);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .side{display:grid; gap:12px;}
-
-    .image-card{
-      padding:0;
-      overflow:hidden;
-      background:
-        radial-gradient(700px 520px at 20% 10%, rgba(58,160,255,.16), transparent 58%),
-        rgba(7,12,24,.52);
-    }
-    .image-wrap{
-      position:relative;
-      border-radius: var(--radius);
-      overflow:hidden;
-    }
-    .image-wrap img{
-      width:100%;
-      height:auto;
-      border-bottom: 1px solid rgba(120,180,255,.14);
-    }
-    .image-caption{
-      padding:14px 16px 16px;
-    }
-    .tagline{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top:10px;
-    }
-    .chip{
-      font-size:12px;
-      font-weight:900;
-      border-radius:999px;
-      padding:7px 10px;
-      border:1px solid rgba(120,180,255,.16);
-      background: rgba(255,255,255,.04);
-      color:rgba(233,238,252,.92);
-    }
-    .chip.green{
-      border-color: rgba(18,211,95,.38);
-      box-shadow: 0 0 22px rgba(18,211,95,.16);
-      color: rgba(236,255,246,.92);
-    }
-
-    .steps{
-      display:grid;
-      grid-template-columns:repeat(4, minmax(0, 1fr));
-      gap:12px;
-      margin-top:14px;
-    }
-    .step{
-      box-shadow:none;
-      background: rgba(7,12,24,.48);
-      border:1px solid rgba(120,180,255,.14);
-    }
-    .step .num{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:30px;
-      height:30px;
-      border-radius:10px;
-      font-weight:900;
-      color:#061023;
-      background: linear-gradient(135deg, rgba(58,160,255,.95), rgba(102,208,255,.76));
-      box-shadow: 0 14px 30px rgba(58,160,255,.18);
-      margin-bottom:10px;
-    }
-    .step p{margin:8px 0 0; color:rgba(207,216,234,.92); font-weight:650; font-size:13px; line-height:1.5;}
-
-    .grid2{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      gap:14px;
-      margin-top:14px;
-    }
-
-    .systems-bubbles{
-      display:grid;
-      grid-template-columns:repeat(4, minmax(0, 1fr));
-      gap:12px;
-      margin-top:14px;
-    }
-    .bubble-card{
-      text-align:center;
-      background: rgba(7,12,24,.48);
-      border:1px solid rgba(120,180,255,.14);
-      box-shadow:none;
-    }
-    .bubble-image{
-      width:148px;
-      height:148px;
-      border-radius:50%;
-      overflow:hidden;
-      margin:2px auto 12px;
-      border:1px solid rgba(120,180,255,.24);
-      box-shadow: 0 10px 28px rgba(0,0,0,.24);
-      background: rgba(12,20,48,.58);
-    }
-    .bubble-image img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-    .bubble-card p{
-      margin:8px 0 0;
-      color:rgba(207,216,234,.9);
-      font-size:13px;
-      line-height:1.45;
-      font-weight:650;
-    }
-
-    .proof-image{
-      width:320px;
-      height:200px;
-      border-radius:14px;
-      overflow:hidden;
-      margin:12px auto 4px;
-      border:1px solid rgba(120,180,255,.26);
-      box-shadow: 0 12px 30px rgba(0,0,0,.24);
-      background: rgba(12,20,48,.58);
-    }
-    .proof-image img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center center;
-      display:block;
-    }
-
-    .proof-image img{cursor:zoom-in;}
-
-    .lightbox{
-      position:fixed; inset:0; z-index:120;
-      background: rgba(4,8,18,.88);
-      display:none; align-items:center; justify-content:center;
-      padding:20px;
-    }
-    .lightbox.open{display:flex;}
-    .lightbox img{
-      max-width:min(1200px, 96vw);
-      max-height:88vh;
-      border-radius:14px;
-      border:1px solid rgba(120,180,255,.34);
-      box-shadow: 0 18px 40px rgba(0,0,0,.45);
-      background:#0a132a;
-    }
-    .lightbox .close{
-      position:absolute; top:16px; right:16px;
-      border:1px solid rgba(120,180,255,.34);
-      background: rgba(10,19,42,.85);
-      color:#e9eefc; border-radius:10px;
-      padding:8px 10px; font-weight:800; cursor:pointer;
-    }
-
-    .list{
-      margin:12px 0 0;
-      padding:0 0 0 18px;
-      color:rgba(207,216,234,.92);
-      font-weight:650;
-      line-height:1.55;
-      font-size:13.5px;
-    }
-    .list li{margin:7px 0;}
-
-    .shot{
-      border-radius:14px;
-      overflow:hidden;
-      border:1px solid rgba(120,180,255,.14);
-      background: rgba(0,0,0,.22);
-      margin-top:12px;
-    }
-    .shot video{width:100%; display:block;}
-
-    .offers{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      gap:14px;
-      margin-top:14px;
-    }
-
-    .offer .price{
-      margin-top:10px;
-      display:flex;
-      align-items:baseline;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .price .amt{
-      font-weight:950;
-      font-size:22px;
-      letter-spacing:-.4px;
-      color:rgba(233,238,252,.98);
-      text-shadow: 0 0 18px rgba(58,160,255,.10);
-    }
-    .price .badge{
-      font-weight:900;
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(18,211,95,.45);
-      background: rgba(18,211,95,.10);
-      box-shadow: 0 0 26px rgba(18,211,95,.18);
-      color: rgba(236,255,246,.92);
-    }
-    .offer .fine{
-      margin-top:8px;
-      color:rgba(207,216,234,.92);
-      font-weight:650;
-      font-size:13px;
-      line-height:1.45;
-    }
-    .offer .cta2{margin-top:12px;}
-
-    .offer.featured{
-      border-color: rgba(102,208,255,.42);
-      box-shadow: 0 18px 36px rgba(58,160,255,.18);
-    }
-    .offer.featured .featured-badge{
-      display:inline-flex;
-      align-items:center;
-      margin-bottom:10px;
-      padding:6px 11px;
-      border-radius:999px;
-      border:1px solid rgba(102,208,255,.45);
-      background: rgba(58,160,255,.14);
-      color:rgba(233,238,252,.96);
-      font-size:11px;
-      font-weight:900;
-      text-transform:uppercase;
-      letter-spacing:.4px;
-    }
-
-    .quote-card{
-      border-color:rgba(120,180,255,.16);
-      background: rgba(7,12,24,.50);
-      border-left: 4px solid var(--blue);
-    }
-    .quote-text{
-      margin:0;
-      color:rgba(233,238,252,.98);
-      font-weight:650;
-      line-height:1.65;
-      font-size:14px;
-    }
-    .quote-author{
-      margin-top:12px;
-      color:rgba(226,232,240,.85);
-      font-weight:850;
-      font-size:13px;
-    }
-
-    .footer{
-      padding:34px 0 44px;
-      border-top:1px solid rgba(120,180,255,.14);
-      color:rgba(226,232,240,.80);
-      font-weight:650;
-      font-size:13px;
-    }
-    .footer-grid{
-      display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
-      gap:12px;
-    }
-
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr;}
-      .cta{min-width:auto;}
-      .brand{min-width:auto;}
-      .links{display:none;}
-      .offers{grid-template-columns:1fr;}
-      .grid2{grid-template-columns:1fr;}
-      .steps{grid-template-columns:1fr 1fr;}
-      .systems-bubbles{grid-template-columns:repeat(2, minmax(0, 1fr));}
-      .proof-image{width:280px; height:175px;}
-      h1{font-size:34px;}
-    }
-
-    @media (max-width: 600px){
-      .btn{white-space:normal; text-align:center; line-height:1.3;}
-      .hero-actions{flex-direction:column;}
-      .hero-actions .btn{width:100%; padding:16px; font-size:16px;}
-      .cta{width:100%;}
-      .cta .btn{width:100%;}
-      .steps{grid-template-columns:1fr;}
-      .systems-bubbles{grid-template-columns:1fr;}
-      .proof-image{width:240px; height:150px;}
-    }
-  </style>
 </head>
-
 <body>
-  <a href="#content" class="sr-only">Skip to content</a>
-
   <div class="topbar">
     <div class="wrap">
-      <header>
-        <nav aria-label="Primary">
-          <div class="brand">
-            <img src="logo.png" alt="Blueprint AI Consulting Co. logo" onerror="this.style.display='none';" />
-            <div class="name">Blueprint AI Consulting Co.</div>
-          </div>
-
-          <div class="links" aria-label="Site pages">
-            <a href="/">Home</a>
-            <a href="/services">Services</a>
-            <a href="/work">Work</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/faq">FAQ</a>
-            <a href="/contact">Contact</a>
-          </div>
-
-          <div class="cta">
-            <a class="btn primary" href="/contact">Start a project</a>
-            <a class="btn green" href="sms:+17173478749">Text me</a>
-          </div>
-        </nav>
-      </header>
+      <nav aria-label="Primary">
+        <a class="brand" href="/">
+          <img src="/logo.png" alt="Blueprint AI Consulting Co. logo" />
+          <div class="name">Blueprint AI<br/>Consulting Co.</div>
+        </a>
+        <div class="links">
+          <a href="/" aria-current="page">Home</a>
+          <a href="/services">Services</a>
+          <a href="/website-builds">Websites</a>
+          <a href="/ad-creative">AI Media</a>
+          <a href="/app-builds">Apps</a>
+          <a href="/work">Founder</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="/contact" data-contact="booking">Book Build Call</a>
+        </div>
+      </nav>
     </div>
   </div>
 
-  <div id="top" class="wrap">
-    <main id="content">
-
-      <section aria-label="Site overview quick access" style="padding:14px 0 6px; border-top:none;">
-        <div class="card" style="background: rgba(10,16,40,.58); border:1px solid rgba(102,208,255,.28);">
-          <div class="kicker">Now structured as a multi-page site</div>
-          <h2 style="font-size:22px;">Start with Services, then go deeper by category.</h2>
-          <p class="sub" style="margin-top:8px;">Blueprint AI Consulting Co. now has dedicated pages for each core service area, plus separate Work, Pricing, FAQ, and Contact pages.</p>
-          <div class="hero-actions" style="margin-top:12px;">
-            <a class="btn primary" href="/services">View all services</a>
-            <a class="btn" href="/pricing">See pricing</a>
-            <a class="btn" href="/contact">Contact us</a>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- HERO -->
-      <section class="hero" aria-label="Hero">
-        <div class="hero-grid">
-          <div class="hero-left-stack">
-            <div class="card hero-card grid-overlay">
-              <div class="kicker">Blueprint AI Consulting Co.</div>
-              <h1>Your business needs a command center—not another subscription.</h1>
-
-              <p class="sub">We build and implement custom apps and business systems.</p>
-
-              <div class="hero-actions">
-                <a class="btn primary" href="#" data-contact="booking">Book a free discovery call</a>
-                <a class="btn" href="lead-generator-engine.html">Lead Generator Engine</a>
-              </div>
-
-              <div class="mini-link">
-                Prefer a call? <a href="#" data-contact="booking">Book a free discovery call</a>
-                &nbsp;|&nbsp; Text: <a href="sms:+17173478749">717-347-8749</a>
-              </div>
-
-              <div class="meta-row" aria-label="Quick proof">
-                <div class="pill">Proof: real systems</div>
-                <div class="pill">10 years in tech</div>
-                <div class="pill money">Clear pricing</div>
-                <div class="pill money">Satisfaction guarantee</div>
-              </div>
-
-              <p class="fineprint">
-                Plus website, online presence, and marketing execution.
-              </p>
-            </div>
-
-            <div class="card hero-inline-image">
-              <div class="image-wrap">
-                <img src="ops_command_center.png" alt="Blueprint AI command center workspace with analytics dashboards" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-
-          <div class="side">
-            <div class="card image-card">
-              <div class="image-wrap">
-                <img
-                  src="webselfie_phone.jpg?v=14"
-                  alt="Drew holding a phone graphic"
-                  loading="lazy"
-                  decoding="async"
-                  onerror="this.parentElement.parentElement.style.display='none';"
-                />
-              </div>
-              <div class="image-caption">
-                <h3 style="color:var(--blue2);">Built by a coach, not a theorist</h3>
-                <p class="fineprint" style="margin-top:8px;">
-                  Practical systems. Clear handoff. Simple daily execution.
-                </p>
-                <div class="tagline">
-                  <span class="chip">Trades-friendly</span>
-                  <span class="chip green">Money-green wins</span>
-                  <span class="chip">Fast to launch</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="card" style="box-shadow:none; background: rgba(7,12,24,.48);">
-              <h3 style="color:var(--blue2);">Fast start options</h3>
-              <p class="fineprint" style="margin-top:8px;">
-                If you are unsure where to start, grab the Free AI Blueprint or text me your main issue.
-              </p>
-              <div class="hero-actions" style="margin-top:12px;">
-                <a class="btn green" href="sms:+17173478749">Text: “BLUEPRINT”</a>
-                <a class="btn" href="#proof">See proof</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section aria-label="Core service categories overview">
-        <div class="kicker">Core services</div>
-        <h2>Explore each service with its own dedicated page.</h2>
-        <p class="sub">Use the Services page as the hub, then review specific delivery lanes based on your immediate priority.</p>
-
-        <div class="grid2" style="margin-top:14px;">
-          <article class="card">
-            <h3 style="color:var(--blue2);">Online Presence Builds</h3>
-            <p class="fineprint">Positioning and channel structure for a consistent public-facing brand presence.</p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="/online-presence-builds">View page</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3 style="color:var(--blue2);">Website Builds</h3>
-            <p class="fineprint">One-page and multi-page website implementation focused on conversion clarity.</p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="/website-builds">View page</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3 style="color:var(--blue2);">Ad Creative</h3>
-            <p class="fineprint">Campaign asset and creative systems for paid and organic distribution.</p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="/ad-creative">View page</a>
-            </div>
-          </article>
-          <article class="card">
-            <h3 style="color:var(--blue2);">App Builds</h3>
-            <p class="fineprint">Custom app and internal system builds with automation and team handoff support.</p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="/app-builds">View page</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- WHAT WE FIX + WHAT WE BUILD -->
-      <section id="how" aria-label="What we fix and what we build">
-        <div class="kicker">How we help</div>
-        <h2>What we fix. What we build.</h2>
-        <p class="sub">Simple systems that get used every day.</p>
-
-        <div class="grid2" style="margin-top:14px;">
-          <article class="card">
-            <h3 style="color:var(--blue2);">What we fix</h3>
-            <ul class="list">
-              <li>Not enough calls from Google</li>
-              <li>Social pages look inactive or random</li>
-              <li>No review system, so trust is low</li>
-              <li>No tracking, so you do not know what is working</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3 style="color:var(--blue2);">What we build</h3>
-            <p class="fineprint">
-              Customer relationship management (CRM) setup, lead capture and follow up, quoting workflows, dashboards, simple custom apps, local search engine optimization (SEO) systems, and done for you social media execution.
-            </p>
-          </article>
-        </div>
-      </section>
-
-
-
-      <section id="systems" aria-label="Main systems">
-        <div class="kicker">Main systems</div>
-        <h2>The four systems we build most.</h2>
-        <p class="sub">Built for daily use and easy handoff.</p>
-
-        <div class="systems-bubbles">
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="ops_command_center.png" alt="Operations Command Center dashboard preview" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Operations Command Center</h3>
-            <p>See jobs, team handoffs, and priorities in one place.</p>
-          </article>
-
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="player_dev_command_center.jpg" alt="Player Development Command Center dashboard preview" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Player Development Tracker</h3>
-            <p>Track plans, progress, and coach notes over time.</p>
-          </article>
-
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="bubble-lead-capture-followup.svg" alt="Lead Capture and Follow-Up System bubble image" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Lead Capture and Follow-Up System</h3>
-            <p>Capture every lead and trigger consistent follow up.</p>
-          </article>
-
-          <article class="card bubble-card">
-            <div class="bubble-image">
-              <img src="bubble-smart-quoting-system.svg" alt="Smart Quoting System bubble image" loading="lazy" decoding="async" />
-            </div>
-            <h3 style="color:var(--blue2);">Smart Quoting System</h3>
-            <p>Send clean quotes faster and track status clearly.</p>
-          </article>
-        </div>
-      </section>
-
-
-
-      
-
-
-      <!-- PROOF -->
-      <section id="proof" aria-label="Proof">
-        <div class="kicker">Proof</div>
-        <h2>What we have shipped.</h2>
-        <p class="sub">Real systems in use right now.</p>
-
+  <div class="wrap">
+    <main>
+      <section>
         <div class="grid2">
-          <div class="card">
-            <h3 style="color:var(--blue2);">Ops Command Center (God's Grace Law &amp; Landscape)</h3>
-            <ul class="list">
-              <li>Operations command center for daily work flow</li>
-              <li>Workflow tracking from incoming work to completion</li>
-              <li>Owner-friendly view so priorities are clear</li>
-            </ul>
-            <div class="proof-image">
-              <img src="ops_command_center.png" alt="Ops Command Center dashboard preview" loading="lazy" decoding="async" data-full="ops_command_center.png" onerror="this.src='ops_command_center.png'" />
+          <article class="card hero-card">
+            <p class="kicker">Blueprint AI Command Center</p>
+            <h1>We implement the systems that make your business look sharper and run faster.</h1>
+            <p class="sub">Blueprint AI is an execution partner. We build websites, online presence systems, ad creatives with AI media production, and custom business apps so your operation moves with clarity.</p>
+            <div class="pill-row">
+              <span class="pill">Website Systems</span>
+              <span class="pill">Online Presence</span>
+              <span class="pill">Ad + AI Media</span>
+              <span class="pill">Custom App Builds</span>
             </div>
-          </div>
-
-          <div class="card">
-            <h3 style="color:var(--blue2);">Player Development Command Center (baseball)</h3>
-            <ul class="list">
-              <li>Player development planning by athlete and phase</li>
-              <li>Tracking system for progress and coach notes</li>
-              <li>Simple reporting for staff accountability</li>
-            </ul>
-            <div class="proof-image">
-              <img src="player_dev_command_center.jpg" alt="Player Development Command Center dashboard preview" loading="lazy" decoding="async" data-full="player_dev_command_center.jpg" onerror="this.src='player_dev_command_center.jpg'" />
+            <div class="hero-actions">
+              <a class="btn primary" href="/contact" data-contact="booking">Start Implementation</a>
+              <a class="btn" href="/services">View Service Stack</a>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      <!-- SERVICES -->
-      <section id="services" aria-label="Services">
-        <div class="kicker">Services</div>
-        <h2>Three clear services you can run separately or together.</h2>
-        <p class="sub">Website services and marketing execution are separate. They can also be bundled when needed.</p>
-
-        <div class="grid2">
-          <article class="card">
-            <h3 style="color:var(--blue2);">Lead Generator Engine (Ads + SEO + Social)</h3>
-            <p class="fineprint">Done-for-you ads, SEO, and social that turn attention into booked jobs.</p>
-            <ul class="list">
-              <li>Done-for-you Meta campaign setup + campaign management</li>
-              <li>Local SEO, on-page SEO, technical baseline, and reporting</li>
-              <li>Consistent social content tied to your offers</li>
-            </ul>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn primary" href="#contact" data-contact="messenger">Message me “ENGINE”</a>
-              <a class="btn" href="#" data-contact="booking">Book a call</a>
-              <a class="btn" href="lead-generator-engine.html">View service details</a>
-            </div>
+            <img class="watermark-logo" src="/logo.png" alt="" aria-hidden="true" />
           </article>
-
-          <article class="card">
-            <h3 style="color:var(--blue2);">Target Lead List Builder</h3>
-            <p class="fineprint">Want more customers? I will build you a targeted prospect list you can call, email, and follow up with.</p>
-            <ul class="list">
-              <li>Starter / Standard / Premium tiers with lead volume options</li>
-              <li>Dedupe + verification pass with source links included</li>
-              <li>Optional Outreach Pack add-on for message scripts and follow-up sequence</li>
-            </ul>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="target-lead-list-builder.html">View service details</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3 style="color:var(--blue2);">Website Design / Website Sprint</h3>
-            <p class="fineprint">Website build service for launch or refresh, separate from monthly marketing execution.</p>
-            <ul class="list">
-              <li>One page or multi-page website scope</li>
-              <li>Clear calls to action and lead capture setup</li>
-              <li>Can be bundled with Lead Generator Engine when needed</li>
-            </ul>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="#offers">See website build options</a>
-            </div>
+          <article class="card image-panel">
+            <span class="panel-label">Operations Room Visual</span>
+            <img src="/player_dev_command_center.jpg" alt="Blueprint command-center style operations room mood image" loading="lazy" />
+            <p class="fineprint">Dark technical interface language, high-contrast dashboards, and premium implementation detail drive every engagement.</p>
           </article>
         </div>
       </section>
 
-
-      <!-- OFFERS -->
-      <section id="offers" aria-label="Offers">
-        <div class="kicker">Offers</div>
-        <h2>Clear options. Transparent pricing.</h2>
-        <p class="sub">Start with a custom system foundation, then scale with monthly execution.</p>
-
-        <div class="card offer featured" style="margin-top:14px;">
-          <div class="featured-badge">Featured offer</div>
-          <h3 style="color:var(--blue2);">Custom all-in-one business systems</h3>
-          <p class="fine">Custom all-in-one business systems are one click away.</p>
-          <p class="fineprint">Custom dashboards and custom applications built to match your exact workflow.</p>
-          <ul class="list">
-            <li>One dashboard to run the day-to-day</li>
-            <li>Leads → quotes → jobs → follow-ups in one place</li>
-            <li>Built around your exact process (not generic software)</li>
-            <li>Works on phone + desktop</li>
-            <li>Fast build + simple training for your team</li>
-          </ul>
-          <div class="hero-actions" style="margin-top:12px;">
-            <a class="btn primary" href="#contact" data-contact="messenger">Message me</a>
-            <a class="btn" href="#" data-contact="booking">Book a call</a>
-          </div>
+      <section>
+        <h2>Offer stack built for execution, not theory.</h2>
+        <div class="service-grid" style="margin-top:14px;">
+          <article class="card">
+            <p class="panel-label">01</p>
+            <h3>Website Builds</h3>
+            <p class="fineprint">Conversion-focused sites with architecture, copy, and implementation that support real sales conversations.</p>
+            <div class="hero-actions"><a class="btn" href="/website-builds">Explore Websites</a></div>
+          </article>
+          <article class="card">
+            <p class="panel-label">02</p>
+            <h3>Online Presence Builds</h3>
+            <p class="fineprint">Search-facing profile systems, trust signals, and channel alignment that help prospects choose you faster.</p>
+            <div class="hero-actions"><a class="btn" href="/online-presence-builds">Explore Presence</a></div>
+          </article>
+          <article class="card">
+            <p class="panel-label">03</p>
+            <h3>Ad Creation + AI Media</h3>
+            <p class="fineprint">Campaign creative production with AI-assisted video, voice, and rapid content variants built for testing.</p>
+            <div class="hero-actions"><a class="btn" href="/ad-creative">Explore Creative</a></div>
+          </article>
+          <article class="card">
+            <p class="panel-label">04</p>
+            <h3>Custom App Builds</h3>
+            <p class="fineprint">Internal and client-facing tools that remove friction, centralize workflows, and increase operating speed.</p>
+            <div class="hero-actions"><a class="btn" href="/app-builds">Explore Apps</a></div>
+          </article>
         </div>
+      </section>
 
-        <h3 style="color:var(--blue2); margin:18px 0 12px;">Build the system (one time)</h3>
-        <div class="offers">
-          <div class="card offer">
-            <h3 style="color:var(--blue2);">Simple System</h3>
-            <div class="price"><span class="amt">$799</span><span class="badge">One-time build</span></div>
-            <p class="fine">A fast, practical build for one high-impact workflow.</p>
-            <ul class="list">
-              <li>Workflow map and streamlined dashboard setup</li>
-              <li>Lead-to-job tracking aligned to your daily operations</li>
-              <li>Build handoff plus simple team training</li>
-            </ul>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn primary" href="#contact" data-contact="messenger">Message me</a>
-              <a class="btn" href="#" data-contact="booking">Book a call</a>
-            </div>
-          </div>
-
-          <div class="card offer">
-            <h3 style="color:var(--blue2);">Phase 1 System Buildout</h3>
-            <div class="price"><span class="amt">From $1,299</span></div>
-            <p class="fine">One major workflow end to end.</p>
-            <ul class="list">
-              <li>Lead capture to follow up to close, built inside your tools</li>
-              <li>Owner friendly Today view so it gets used</li>
-              <li>Documentation and training</li>
-            </ul>
-            <p class="fineprint">Pay in full incentive: $1,199 setup when paid upfront.</p>
-          </div>
-
-          <div class="card offer">
-            <h3 style="color:var(--blue2);">Phase 1 Pro System Buildout</h3>
-            <div class="price"><span class="amt">$2,300</span></div>
-            <p class="fine">Higher leverage automation and reporting.</p>
-            <ul class="list">
-              <li>Automation for follow up and handoffs</li>
-              <li>Dashboards for pipeline and jobs</li>
-              <li>Training and clean documentation</li>
-            </ul>
-            <p class="fineprint">Pay in full incentive: $2,000 flat when paid upfront.</p>
-          </div>
-        </div>
-
-        <h3 style="color:var(--blue2); margin:18px 0 12px;">Run it for you (monthly)</h3>
+      <section>
         <div class="grid3">
-          <div class="card offer">
-            <h3 style="color:var(--blue2);">Lead Generator Engine (Ads + SEO + Social)</h3>
-            <div class="price"><span class="amt">Starter / Standard / Premium</span></div>
-            <p class="fine">Done-for-you ads, SEO, and social that turn attention into booked jobs.</p>
-            <ul class="list">
-              <li>Meta campaign setup + campaign management + optimization</li>
-              <li>Local SEO + on-page SEO + technical baseline + reporting</li>
-              <li>Content production and posting cadence for social</li>
-            </ul>
-            <p class="fineprint">Explore all tier details on the service page.</p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn primary" href="#contact" data-contact="messenger">Message me “ENGINE”</a>
-              <a class="btn" href="#" data-contact="booking">Book a call</a>
-              <a class="btn" href="lead-generator-engine.html">View Starter / Standard / Premium</a>
-            </div>
-          </div>
-
-          <div class="card offer">
-            <h3 style="color:var(--blue2);">Target Lead List Builder</h3>
-            <div class="price"><span class="amt">Starter / Standard / Premium</span></div>
-            <p class="fine">Want more customers? I will build you a targeted prospect list you can call, email, and follow up with.</p>
-            <ul class="list">
-              <li>100 / 250 / 500 lead tiers with name, phone, email (if available), address, website, source link, and notes</li>
-              <li>Dedupe + best-effort verification on every tier</li>
-              <li>Optional Outreach Pack add-on for email, DM, call, and follow-up scripts</li>
-            </ul>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn" href="target-lead-list-builder.html">View Starter / Standard / Premium</a>
-            </div>
-          </div>
-
-          <div class="card offer">
-            <h3 style="color:var(--blue2);">Website Design / Website Sprint</h3>
-            <div class="price"><span class="amt">One-time build service</span></div>
-            <p class="fine">Website creation and sprint work stays separate from the Lead Generator Engine monthly service.</p>
-            <ul class="list">
-              <li>Build or refresh your website front door</li>
-              <li>Set clear conversion paths and form capture</li>
-              <li>Can bundle with Lead Generator Engine when launch-ready</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:14px;">
-          <h3 style="color:var(--blue2);">Add ons</h3>
-          <ul class="list">
-            <li><strong>Facebook Ads Management</strong><br />From $500 per month management fee.<br />Ad spend is separate.</li>
-            <li><strong>Website Care Plan</strong><br />$149 per month.<br />Small edits, updates, and basic monitoring.</li>
-            <li><strong>Digital Front Door</strong><br />$499 one time.<br />One page landing page built to convert.</li>
-            <li><strong>Target Lead List Builder + Outreach Pack</strong><br />Starter / Standard / Premium tiers.<br />Targeted lead data with optional outreach scripts.</li>
-          </ul>
+          <article class="metric">
+            <strong>Implementer Mindset</strong>
+            Strategy only matters after it is shipped into your operation.</article>
+          <article class="metric">
+            <strong>Command-Center UX</strong>
+            Structured panel design and technical clarity create confidence for buyers and teams.</article>
+          <article class="metric">
+            <strong>Built To Iterate</strong>
+            Every deliverable is designed for ongoing optimization, not one-time launch hype.</article>
         </div>
       </section>
 
-
-      <!-- FREE BLUEPRINT -->
-      <section id="blueprint" aria-label="Free AI Blueprint">
-        <div class="kicker">Free resource</div>
-        <h2>Free AI Blueprint</h2>
-        <p class="sub">A practical, trade-friendly starting point.</p>
-
+      <section>
         <div class="grid2">
-          <div class="card grid-overlay">
-            <h3 style="color:var(--blue2);">Get it by email</h3>
-            <p class="fineprint" style="margin-top:8px;">
-              Opens a short form. You will receive it at the email you enter.
-            </p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a
-                class="btn primary"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdc5BAzjItuaRQkZadhzkM5Q5R3Np1AFY2ko66DiOYJXydlBw/viewform?usp=dialog"
-                target="_blank"
-                rel="noopener"
-              >
-                Open the Free AI Blueprint form
-              </a>
-              <a class="btn green" href="sms:+17173478749">Text “BLUEPRINT”</a>
+          <article class="card image-panel">
+            <span class="panel-label">Founder</span>
+            <img src="/webselfie.jpeg" alt="Founder portrait for Blueprint AI Consulting Co." loading="lazy" />
+          </article>
+          <article class="card">
+            <p class="kicker">Trust + Delivery</p>
+            <h2>Hands-on leadership from blueprint to deployment.</h2>
+            <p class="sub">You work directly with the team responsible for architecture and implementation. No handoff maze, no consultant theater. We scope, build, deploy, and refine.</p>
+            <ul class="list">
+              <li>Clear milestones and launch plans.</li>
+              <li>Technical implementation with business context.</li>
+              <li>Optional retention for ongoing optimization.</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn primary" href="/work">Meet the Founder</a>
+              <a class="btn" href="/contact">Request Proposal</a>
             </div>
-            <p class="fineprint">
-              Or email:
-              <a href="#" data-contact="email" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">
-                coachdrew@blueprintaiconsultingco.com
-              </a>
-            </p>
-          </div>
-
-          <div class="card">
-            <h3 style="color:var(--blue2);">Fastest contact</h3>
-            <p class="fineprint" style="margin-top:8px;">
-              Facebook Messenger is the fastest. Text is the next best.
-            </p>
-            <div class="hero-actions" style="margin-top:12px;">
-              <a class="btn primary" href="#contact" data-contact="messenger">Message me</a>
-              <a class="btn green" href="sms:+17173478749">Text me</a>
-            </div>
-            <p class="fineprint">
-              Prefer a call?
-              <a href="#" data-contact="booking" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">
-                Book a free discovery call
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIALS -->
-      <section id="testimonials" aria-label="Testimonials">
-        <div class="kicker">Testimonials</div>
-        <h2>What clients say after launch.</h2>
-        <p class="sub">Built for owners who need execution, not fluff.</p>
-
-        <div class="grid2">
-          <article class="card quote-card">
-            <p class="quote-text">“Drew helped us simplify our follow-up and gave us a dashboard that finally made sense. We stopped losing leads because everyone could see what needed attention each day.”</p>
-            <p class="quote-author">— Home Service Owner</p>
           </article>
-
-          <article class="card quote-card">
-            <p class="quote-text">“The process was clear and fast. We had a working system in under two weeks and my team actually uses it because it is simple.”</p>
-            <p class="quote-author">— Program Director</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" aria-label="Frequently asked questions">
-        <div class="kicker">FAQ</div>
-        <h2>Common questions.</h2>
-
-        <div class="grid2" style="margin-top:14px;">
-          <article class="card">
-            <h3 style="color:var(--blue2);">Do I need new software to work with you?</h3>
-            <p class="fineprint">Usually no. We start with your current tools and only add what is needed to solve the bottleneck.</p>
-          </article>
-
-          <article class="card">
-            <h3 style="color:var(--blue2);">How fast can we launch?</h3>
-            <p class="fineprint">Most Quick Win builds launch in 7 days. Larger buildouts are scoped first so timelines are predictable.</p>
-          </article>
-
-          <article class="card">
-            <h3 style="color:var(--blue2);">Will my team be able to run this?</h3>
-            <p class="fineprint">Yes. Every project includes a practical handoff and simple documentation so daily execution is easy.</p>
-          </article>
-
-          <article class="card">
-            <h3 style="color:var(--blue2);">What if we are not sure where to begin?</h3>
-            <p class="fineprint">Start with the Free AI Blueprint or the Simple System offer. Both are designed to give clarity quickly.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" aria-label="Contact">
-        <div class="kicker">Contact</div>
-        <h2>Ready to fix the bottleneck?</h2>
-        <p class="sub">Send one message with your biggest operations issue and we will map a practical next step.</p>
-
-        <div class="card hero-card" style="margin-top:14px;">
-          <div class="hero-actions">
-            <a class="btn primary" href="#contact" data-contact="messenger" target="_blank" rel="noopener noreferrer">Message on Facebook</a>
-            <a class="btn green" href="sms:+17173478749">Text: 717-347-8749</a>
-            <a class="btn" href="#" data-contact="email">Email coachdrew@blueprintaiconsultingco.com</a>
-          </div>
-          <p class="fineprint">Prefer a scheduled call? <a href="#" data-contact="booking" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);" target="_blank" rel="noreferrer">Book a free discovery call</a>.</p>
-          <p class="fineprint" style="margin-top:10px;"><a href="#contact" data-contact="messenger" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">Message me “SOCIAL”</a></p>
-          <p class="fineprint"><a href="#contact" data-contact="messenger" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">Message me “SEO”</a></p>
         </div>
       </section>
     </main>
   </div>
 
-  <div id="image-lightbox" class="lightbox" aria-hidden="true">
-    <button class="close" type="button" aria-label="Close image preview">Close</button>
-    <img src="" alt="Expanded proof screenshot" />
-  </div>
-
-  <footer class="footer" aria-label="Footer">
-    <div class="wrap footer-grid">
-      <p>© <span id="year"></span> Blueprint AI Consulting Co. All rights reserved.</p>
-      <p>Serving home service businesses and coaches with practical systems and marketing execution. <a href="lead-generator-engine.html" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">Lead Generator Engine (Ads + SEO + Social)</a> and <a href="target-lead-list-builder.html" style="text-decoration:underline; text-underline-offset:3px; color:rgba(102,208,255,.95);">Target Lead List Builder</a>.</p>
-      <p style="font-size:11px; opacity:.7; margin-top:6px;">Build: ENGINE-OFFERS-2026-02-10</p>
+  <footer class="footer">
+    <div class="wrap" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;">
+      <div class="footer-brand">
+        <img src="/logo.png" alt="Blueprint AI logo" />
+        <span>© <span data-year></span> Blueprint AI Consulting Co.</span>
+      </div>
+      <div>Built as a digital operations room for modern growth systems.</div>
     </div>
   </footer>
 
-  <script src="contact-config.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const { BOOKING_URL, EMAIL, FACEBOOK_MESSENGER_URL } = window.CONTACT_CONFIG || {};
-
-    document.querySelectorAll('[data-contact="booking"]').forEach((el) => {
-      if (BOOKING_URL) {
-        el.setAttribute('href', BOOKING_URL);
-        el.setAttribute('target', '_blank');
-        el.setAttribute('rel', 'noreferrer');
-      }
-    });
-
-    document.querySelectorAll('[data-contact="email"]').forEach((el) => {
-      if (EMAIL) {
-        const emailHref = `mailto:${EMAIL}`;
-        el.setAttribute('href', emailHref);
-        const emailLabel = el.classList.contains('btn') ? `Email ${EMAIL}` : EMAIL;
-        el.textContent = emailLabel;
-      }
-    });
-
-    document.querySelectorAll('[data-contact="messenger"]').forEach((el) => {
-      if (FACEBOOK_MESSENGER_URL) {
-        el.setAttribute('href', FACEBOOK_MESSENGER_URL);
-        el.setAttribute('target', '_blank');
-        el.setAttribute('rel', 'noreferrer');
-      }
-    });
-    const lightbox = document.getElementById('image-lightbox');
-    const lightboxImg = lightbox?.querySelector('img');
-    const closeLightbox = () => {
-      if (!lightbox) return;
-      lightbox.classList.remove('open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      if (lightboxImg) lightboxImg.setAttribute('src', '');
-    };
-
-    document.querySelectorAll('#proof .proof-image img').forEach((img) => {
-      img.addEventListener('click', () => {
-        if (!lightbox || !lightboxImg) return;
-        lightboxImg.setAttribute('src', img.getAttribute('data-full') || img.getAttribute('src') || '');
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
-      });
-    });
-
-    lightbox?.addEventListener('click', (event) => {
-      if (event.target === lightbox || event.target.classList.contains('close')) closeLightbox();
-    });
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') closeLightbox();
-    });
-
-  </script>
+  <script src="/contact-config.js"></script>
+  <script src="/site-shell.js"></script>
 </body>
 </html>
