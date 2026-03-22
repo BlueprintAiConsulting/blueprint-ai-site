@@ -41,14 +41,14 @@ const facebookRecommendations = [
     name: 'J.Z. Construction Services',
     source: 'Facebook Recommendation',
     quote:
-      'Blueprint AI Consulting helped us build out our entire online presence, from our website to Google Business Profile, Facebook setup, and ad creation. Drew was extremely timely and responsive throughout the process and made everything easy to understand. Everything was tailored to our business and handled start to finish.'
+      'Blueprint AI Consulting helped us build out our entire online presence, from our website to Google Business Profile, Facebook setup, and ad creation. Drew was extremely timely and responsive throughout the process and made everything easy to understand. Everything was tailored to our business and handled start to finish. Highly recommend.'
   },
   {
     name: 'Tanner Zortman',
     detail: 'ATP Power Washing Solutions LLC',
     source: 'Facebook Recommendation',
     quote:
-      'This is your guy. Highly recommend Blueprint AI Consulting Co. They will give your business a new look with modern technology. Super responsive, great turnaround time, and a great investment for business owners. He knocked this one out of the park for me at ATP Power Washing Solutions LLC.'
+      'This is your guy. Highly recommend Blueprint AI Consulting Co. They will give your business or company a new look with modern technology. Super responsive, great turnaround time, and a great investment for business owners. He knocked this one out of the park for me at ATP Power Washing Solutions LLC.'
   }
 ];
 
