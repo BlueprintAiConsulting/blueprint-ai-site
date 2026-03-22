@@ -205,37 +205,59 @@ h3{margin:0;font-size:1.08rem}
 .review-cards{
   margin-top:18px;
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:12px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
 }
 .review-card{
   border-radius:14px;
   border:1px solid rgba(97,186,255,.22);
   background:linear-gradient(160deg, rgba(8,24,46,.94), rgba(7,18,35,.96));
-  padding:16px;
-  min-height:170px;
+  padding:18px;
+  min-height:220px;
   display:flex;
   flex-direction:column;
 }
-.review-rating{
-  margin:0;
-  letter-spacing:.1em;
-  color:#87e4ff;
-  font-size:.9rem;
-}
 .review-copy{
-  margin:10px 0 0;
+  margin:0;
   color:#d6e4f7;
   font-size:.95rem;
   line-height:1.45;
   flex:1;
 }
+.review-footer{
+  margin-top:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:12px;
+}
 .review-meta{
-  margin:12px 0 0;
+  margin:0;
   color:var(--text-muted);
-  font-size:.82rem;
+  font-size:.84rem;
   letter-spacing:.03em;
   text-transform:uppercase;
+}
+.review-detail{
+  display:block;
+  margin-top:4px;
+  color:#9cb5d7;
+  font-size:.78rem;
+  letter-spacing:.02em;
+  text-transform:none;
+}
+.review-source{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(133,212,255,.35);
+  background:rgba(15,40,70,.8);
+  color:#bfe9ff;
+  font-size:.72rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  white-space:nowrap;
 }
 
 .footer{padding:30px 0 44px;border-top:1px solid rgba(97,186,255,.16);color:var(--text-muted);font-size:13px}
@@ -259,6 +281,11 @@ h3{margin:0;font-size:1.08rem}
   .links{display:none}
   .grid2,.service-grid{grid-template-columns:1fr}
   .review-cards{grid-template-columns:1fr}
+  .review-card{min-height:unset}
+  .review-footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
   .cta{width:100%}
   .cta .btn{width:100%}
   .real-businesses-section{padding:20px}
